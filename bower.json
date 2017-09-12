@@ -1,0 +1,31 @@
+{
+  "name": "i-care-life",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "*",
+    "angular-resource": "*",
+    "angular-cookies": "*",
+    "angular-sanitize": "*",
+    "angular-route": "*",
+    "angular-animate": "*",
+    "angular-ui-utils": "*",
+    "angular-ui-router": "*",
+    "ng-grid": "*",
+    "jquery": "*",
+    "underscore": "*",
+    "bootstrap": "~3.3.1",
+    "ng-file-upload": "~2.1.1",
+    "ng-file-upload-shim": "~2.1.1",
+    "venturocket-angular-slider": "~0.3.2",
+    "angular-touch": "~1.3.10",
+    "jquery-ui": "~1.11.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "*",
+    "angular-scenario": "*"
+  },
+  "overrides": {},
+  "resolutions": {
+    "angular": "1.3.10"
+  }
+}
