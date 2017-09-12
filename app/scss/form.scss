@@ -1,0 +1,96 @@
+/*-------------------------------------------*\
+  		#ALL PAGES - Form styles 
+\*-------------------------------------------*/
+
+/* SELECT OPTION */
+
+.form-select {
+	padding: 10px;
+}
+
+/*-------------- FORM VALIDATION HELPER CLASS ------------*/
+
+
+/* VALID WITH DIRTY */
+
+form .ng-dirty.ng-valid {
+  border-color: #ccc !important;
+}
+
+/* INVALID WITH DIRTY */
+
+form .ng-dirty.ng-invalid {
+  border-color: #d44949 !important;
+  border-bottom: 1px solid #d44949 !important;
+  background-color: #FEF9F9;
+}
+
+/* INPUT HELPER CLASS ON DEFAULT */
+
+form input.ng-pristine ~ .input-help, .signup-help {
+  display: none;
+}
+
+
+form .ng-invalid:focus ~ .input-help, .signup-help {
+  display: none;
+}
+
+/* INVALID */
+
+form .ng-invalid ~ .input-help, .signup-help {
+  display: block;
+  border-color: #d44949;
+  font-size: 16px;
+}
+
+/* VALID */
+
+form .ng-valid ~ .input-help {
+  border-color: #ccc;
+}
+
+form .ng-valid ~ .input-help::before {
+  color: #d44949;
+}
+
+form .ng-invalid ~ .input-help::before {
+  color: #d44949;
+}
+
+/* INPUT HELPER CLASS FOR VALIDATION */
+
+.input-help {
+  display: none;
+  position: relative;
+	top: 7px;
+	display: inline-block;
+	z-index: 12;
+	color: #d44949;
+}
+
+.login-err-msg {
+  top: 10px;
+  left: 20px;
+}
+
+/* FOR DISABLED SUBMIT BUTTON, REDUCE OPACITY */
+
+.btn[disabled="disabled"] {
+	opacity: 0.5;
+}
+
+/* LOGIN FORM EMAIL */
+
+.user-pwd.ng-dirty.ng-invalid {
+	border-top: 1px solid #d44949 !important;
+}
+
+/* DISABLE INPUT TYPE NUMBER SPINNER */
+
+
+ /*input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }*/

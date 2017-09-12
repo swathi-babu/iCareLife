@@ -1,0 +1,97 @@
+<div class="main-container-color">
+	<!-- <header>
+        <div class="new-container">
+            <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <a href="" class="search-icon"></a>
+                </div>
+            </div>
+            <div class="action-buttons" ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>  
+         </div>
+    </header> -->
+
+    <!-- Header-->
+    @@include('header.html')
+
+    <div class="container" ng-controller="aboutmeCtrl">
+    	<div class="profile-highlight-container">
+			<div class="profile-highlight-text">
+				<h6>Profile Highlight</h6>
+				<span>I am a service seeker and i want to learn driving</span>
+			</div>
+			<div class="profile-highlight-change-btn">
+				<input type="button" ng-click="showRegisterPopup();" class="usersignup-modal btn btn-primary custom-width" value="Change" id="profileHighlightButton">
+			</div>
+		</div>
+		<div class="know-better">
+			<h1>We’d love to get to know you better!</h1>
+			<p>Please Fill the following credentials which will enhance your credibility and chances of being hired quicker</p>
+		</div>
+		
+		<div class="project-completetion-wrap">
+			<div class="project-completetion">
+				<h4>Profile Completion</h4>
+				<div class="project-completetion-progress">
+					<div style="width:{{progressBar}}" class="project-completetion-progress-bar"></div>
+				</div>
+				<span class="progress-txt">{{progressBar}}</span>
+			</div>
+		</div>
+
+        <div class="profile-contents">
+            <div class="profile-tabs">
+                <ul>
+                    <li class="active"><a data-toggle="tab"  ng-click="selectTab(0)" >{{AboutMe}}</a></li>
+                    <li><a data-toggle="tab"  ng-click="selectTab(1)" ng-hide="onlyForServiceProvider">{{MySkills}}</a></li>
+                    <li><a data-toggle="tab"  ng-click="selectTab(2)">{{MyPayment}}</a></li>
+                    <li><a data-toggle="tab"  ng-click="selectTab(3)" >{{MyReferences}}</a></li>
+                    <li><a data-toggle="tab"  ng-click="selectTab(4)" ng-hide="onlyForServiceProvider">{{MyProfile}}</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="aboutMe" ng-hide="panel0">
+                  @@include('personalDetails.html')      
+                </div>
+                <div id="mySkills" ng-hide="panel1" >
+                   @@include('mySkills.html')
+                </div>
+                <div id="myPayments"  ng-hide="panel2">
+                    @@include('myPayments.html')
+                </div>
+                <div id="myReference"  ng-hide="panel3">
+                    @@include('myReference.html')
+                </div>
+                <div id="myProfile"  ng-hide="panel4">
+                    @@include('myProfile.html')
+                </div>
+            </div>
+        </div>   
+
+        
+		
+	</div>
+
+</div>
+
+
+

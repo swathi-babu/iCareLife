@@ -1,0 +1,770 @@
+
+.none {
+  display: none;
+}
+
+
+  .popup-nav{
+    top: 78px;
+    border-radius: 1px;
+  }
+
+
+
+  .fade{
+    background:rgba(0, 0, 0, 0.78);
+  }
+
+
+
+  .modal-title.popup-title {
+    position: relative;
+    top: 14px;
+    left: 20px;
+    margin-right: 40px;
+  }
+
+
+.popup-header {
+  border-bottom: none !important;
+  padding-bottom: 0;
+}
+
+.popup-body {
+  margin: 10px 20px 0 20px;
+}
+
+/*login popup*/
+
+.login-footer-text{
+  font-weight: bold;
+  font-size: 14px;
+  cursor:pointer;
+}
+
+.rememberMe {
+  cursor: pointer;
+  color: rgb(159, 150, 164);
+  font-weight: normal;
+}
+
+  
+.login-fotter-text {
+  margin-top: 14px;
+}
+
+.login-reg {
+  text-align:left;
+  float: left;
+}
+
+.label-icons {
+  .login-email,.login-pwd {
+    padding-left: 45px;
+  }
+
+
+  #email, #password {
+    border-color:  #e1dbe4;
+    border-width: thin;
+    border-radius: 0px !important;
+    height: 60px;
+  }
+  input#email::-webkit-input-placeholder {
+    font-family: Lato, Helvetica, sans-serif;
+    color : #9f96a4;
+    font-size : 100pt;
+  }
+  input#password::-webkit-input-placeholder {
+    font-family: Lato, Helvetica, sans-serif;
+    color : #9f96a4;
+    font-size : 100pt;
+  }
+  .inl-blk {
+      display: inline-block;  
+  }
+  .btn-primary,.btn-info {
+    width : 100%;
+    margin-bottom : 12px;
+    border-radius : 4px;
+    background-color:   #7c3a93;
+  }
+  .email-icon,.password-icon {
+    display: inline;
+    position: absolute;
+    left: 20px;
+  }
+
+  .email-icon {
+    width: 15px;
+    height: 13px;
+    top: 22px;
+    background: url('../images/mail-icon.png') no-repeat;
+  }
+
+  .password-icon {
+    width: 15px;
+    height: 18px;
+    top: 79px;
+    background: url('../images/password-icon.png') no-repeat;
+  }
+}
+
+
+
+.line-seprarator{
+  .login-separator-new {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEXd3d3u346CAAAACklEQVQIHWNgAAAAAgABz8g15QAAAABJRU5ErkJggg==") repeat-y scroll center top rgba(0, 0, 0, 0);
+    text-align: $align-center;
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+
+  .login-separator-new {
+    strong {
+      background: #fff;
+      line-height: 27px;
+      margin: 72px auto;
+      color: #A7A3A3;
+      font-size: 13px;
+      font-family: 'LatoLight', sans-serif;
+      margin-left: 3px;
+    }
+  }
+  .lineDrawer:before,{
+    border-top: 1px solid black;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+  }
+  .lineDrawer:after {
+   border-top: 1px solid black;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+  }
+    
+  span:after {
+   right: 0;  
+   left: auto; 
+  }
+
+    
+  .lineDrawer strong {
+    background: #fff;
+    line-height: 27px;
+    margin: 72px auto;
+    color: #A7A3A3;
+    font-size: 13px;
+    font-family: 'LatoLight', sans-serif;
+  }
+}
+
+
+/*---- socila networks---*/   
+.social-networks{
+
+  .btn-fb, .btn-gm, .btn-tw {
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 3px;
+  }
+
+  .btn-fb-icon{
+    background :url('../images/facebook.png') no-repeat 0;
+  }
+
+  .btn-gm-icon {
+    background :url('../images/gmail.png') no-repeat 0;
+  }
+
+  .btn-tw-icon{
+    background :url('../images/twitter 2.png') no-repeat 0;
+  }
+
+  .btn-fb-icon,.btn-gm-icon,.btn-tw-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 15px;
+  }
+  .icon-fb-new,.icon-google-new,.icon-twit-new {
+    font-size : 14px; 
+    width: 225px;
+    height: 51px;
+    position: relative;
+    color: white;
+  }
+  .icon-fb-new {
+    background : #48629b;
+    text-indent: 20px;
+  }
+  .icon-google-new {
+    background : #dc4b38 ;
+    text-indent: 10px;
+  }
+  .icon-twit-new{
+    background : #23b0e6 ;
+    text-indent: 1px;
+  }
+
+}
+/*---ends here---*/
+
+
+/*login popup ends*/
+
+
+
+  .flexslider .slides > li {
+        width: 368.666666666667px;
+        float: left;
+        display: block;
+      }
+
+.slider-css {
+  width: 368.666666666667px !important;
+  float: left !important;
+  display: block !important;
+}
+
+
+.btn-login {
+  width: 145px;
+  height: 46px;
+  background: #7c3a93;
+  color: white;
+  margin-top: 20px;
+  border-color:#7c3a93; 
+  box-shadow: none;
+  border: 0;
+  border-radius: 2px;
+}
+
+
+
+/* login CSS ENd HEre*/
+
+
+/* registration style*/
+
+.pwd-conform{
+  
+  margin-left: 206px;
+  margin-top:2px;
+}
+
+.registration-form{
+  .regist-fields {
+    @include column(3)
+  }
+  .label-name{
+  @include column(3)
+  }
+ .label-fields{
+ @include column(6)
+ }
+ .reg-font p{
+    font-size: small;
+    margin-top: 1px;
+  }
+  .reg-margin{
+    margin-top: 18px;
+  }
+  .reg-label{
+    border-radius: 1px;
+    height: 50px;
+    font-size: 19px;
+  }
+  .reg-bck-btn{
+    text-align: right;
+  }
+  .formAlignment {
+    padding-bottom: 4px;
+  }
+  .email-conform{
+    margin-top: 2px;
+  }
+  .dropdownMenu {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: none;
+  }     
+  .dropdownMenu:hover {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #ccc;  
+  }     
+}
+.reg-footer p {
+  float: left;
+}
+
+
+
+
+input::-webkit-input-placeholder {
+  color: #ccc !important;
+  font-size : 15px !important;
+}
+
+.selecteddivContent {
+  border-width: 2px !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: #7c3a93 !important;
+  border-bottom-style: groove;
+}
+
+/* signup popup css starts here */
+
+.signup-steps{
+ @include column(4);
+}
+
+
+.signup-header {
+  background: #F2F0EA;
+  margin-left:-11px;
+}
+.signup-header-text {
+  padding-left: 33px;
+}
+.signup-header-title{
+  margin-left:-13px
+}
+.signin-submit {
+  .btn-purple-medium {
+   float:right;
+   width:145px;
+   height:45px;
+  }
+}
+
+.signup-module {
+  .signup-list {
+    margin-top: 20px;
+    margin-left: 13px;
+  }
+  .signup-select {
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+  }
+  .listStyling {
+    margin-bottom: 5px;
+    height : 60px;
+    line-height : 40px;
+    border-radius: 0px !important;
+  } 
+  .imagePageNation {
+    width: 20px;
+    height: 20px;
+  }
+  .selectedOption {
+  border: 1px solid #7c3a93;
+  background: #e1dbe4;
+}
+}
+
+
+
+
+/* CUSTOM CAPTCHA STYLE */
+
+.row.captcha-container {
+  margin-bottom: 15px;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+.captcha-refresh {
+  width: 17px;
+  height: 17px;
+  margin-top: 12px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.g-recaptcha > div > div  {
+  width: 412px !important;
+}
+
+.g-recaptcha iframe {
+  width: 100%;
+}
+
+.rc-anchor.rc-anchor-standard {
+  width: 99% !important;
+}
+
+label#recaptcha-anchor-label {
+  width: 240px !important;
+}
+
+.rc-anchor-privacy {
+  margin-right: 35px;
+  margin-bottom: 5px;
+}
+
+div.form-control {
+  border: 0;
+  background-color: #f7f7f8;
+  border-color: #e1dbe4;
+  margin-bottom: 16px;
+}
+
+
+
+.form-control:focus {
+  border-color: #e1dbe4;
+  box-shadow: none !important;
+}
+
+.selectpicker {
+  outline: 0;
+  font-family: 'LatoLight', sans-serif;
+}
+
+/* LOGIN POPUP STYLES */
+
+.modal-title h2 {
+  font-size: 23px;
+  color: #463d4b;
+}
+
+.forgot-password {
+  padding-top: 2px;
+  margin-top:-29px;
+}
+
+
+
+.forgot-password,
+.forgot-password:hover,
+.forgot-password:active {
+  color: rgb(159, 150, 164);
+  text-decoration: none;
+}
+
+#rememberMe {
+  margin-left: 0;
+  font-size: 50px;
+  zoom:1.2;
+}
+
+.btn-login {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.btn-login:disabled {
+  opacity: 0.6;
+}
+
+.modal-header .close {
+  margin-top: -15px;
+  font-size: 35px;
+}
+
+.modal-header .close:active,
+.modal-header .close:focus {
+  outline: none;
+}
+
+
+
+/* FORGOT FORM */
+.margin-popup{
+  margin-left: 154px !important;
+}
+.fgtPassword-modal{
+  cursor:pointer;
+}
+.forgotpassword-module{
+  .forgot-pwd-form {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .otp-input {
+    width: 440px;
+    height: 60px;
+    border-radius: 2px;
+    outline: none !important;
+    padding-right: 158px;
+  }
+  
+  .forgt-text {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .otp-form {
+    width: 450px;
+    margin: 5px;
+  }
+  .otp-subbtn {
+    margin: 20px;
+    float:right;
+    margin-top:-53px;
+
+  }
+  
+}
+
+/* OTP FORM */
+.otp-module{
+  .otp-input {
+    width: 440px;
+    height: 60px;
+    border-radius: 2px;
+    outline: none !important;
+    padding-right: 158px;
+    margin-left:20px;
+  }
+
+
+  .otp-modal-title {
+    border-bottom: 0;
+    color: #463d4b;
+    margin-left: 5px;
+  }
+  .otp-subbtn {
+    margin-right: 668px;
+    float:right;
+    margin-top:-53px;
+
+  }
+}
+
+  .otp-text {
+    color: #9f96a4;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+
+  .otp-link,
+  .otp-text {
+    text-align: left;
+  }
+
+  .otp-text,
+  .otp-link a {
+    font-size: 16px;
+  }
+
+  .otp-link a,
+  .otp-link a:hover {
+    color: #463d4b;
+  }
+
+  .otp-msg {
+    margin: 0;
+    position: relative;
+    top: 0px;
+  }
+
+  .otp-success-msg {
+    color: green;
+  }
+
+  
+
+.btn-back {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.signup-agreement {
+  cursor: pointer;
+}
+
+.signup-title {
+  margin-bottom: 30px;
+}
+
+.login-btn, .join-now-btn {
+  cursor: pointer;
+}
+
+/********************************** PopUp Css ***************************/
+
+.modal-overlay {
+  .otp-popup-module{
+    background: none;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  background: #4C4C4C;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+.login-module, .signup-module, .forgotpwd-module{
+  top: 105px;
+}
+.border {
+  border-radius: 1px !important;
+}
+.register-module, .otp-popup-module {
+top: 50px;
+}
+
+.login-module, .signup-module, .register-module, .forgotpwd-module, .otp-popup-module{
+  /*display: inline;*/
+  float: left;
+  width: 92.59259%;
+  margin: 0 0.92593%;
+  clear: both;
+  position: absolute;
+  max-width: 936px;
+  /*height: 653px;*/
+  background-color: #FFF;
+  margin: auto;
+  
+  right: 0px;
+  left: 0px;
+}
+
+
+/*********************************** Popup Css End **********************/
+
+/*-------------------------------------------------
+ MEDIA QURIES :: LAPTOP AND TABLETS
+-------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-popup{
+    
+    margin-left:0px;
+  }
+}
+
+
+/*-------------------------------------------------
+  For Selected Resume
+-------------------------------------------------*/
+.selected-resume {
+  border: 1px solid #7c3a93;
+  background: #e1dbe4;
+}
+
+
+/*-------------------------------------------------
+ MEDIA QURIES :: MOBILE
+-------------------------------------------------*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .login-popup{
+    width:320px   
+  }
+  .login-rememberMe,.fgtPassword-modal{
+  @include column(12)
+  }
+  .signup-steps{
+    @include column(12);
+  }
+
+  .registration-form{
+    .regist-fields {
+      @include column(12)
+    }
+    .label-name{
+    @include column(12)
+    }
+   .label-fields{
+   @include column(12)
+   }
+   .pwd-conform{
+   margin-left:0px;
+   }
+  }
+
+  .forgotpassword-module{
+    .otp-input {
+      width: 312px;
+      height: 60px;
+      border-radius: 2px;
+      outline: none !important;
+      padding-right: 182px;
+    }
+    .otp-subbtn {
+      margin: 142px;
+      
+      margin-top:-53px;
+    }
+  }
+  .margin-popup{
+  margin-left: 0px !important;
+}
+  .otp-module{
+    .otp-input {
+      width: 298px;
+      height: 60px;
+      border-radius: 2px;
+      outline: none !important;
+      padding-right: 178px;
+      margin-left:20px;
+      font-size: 12px;
+    }
+    .otp-subbtn {
+      margin: 24px;
+      margin-top:-53px;
+    }
+
+    .otp-modal-title {
+      border-bottom: 0;
+      color: #463d4b;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+/*-------------------------------------------------
+ MEDIA QURIES ::
+-------------------------------------------------*/
+@media (min-width: 480px) and (max-width: 768px) {
+
+.registration-form{
+    .regist-fields {
+      @include column(6)
+    }
+    .label-name{
+    @include column(2)
+    }
+   .label-fields{
+   @include column(3)
+   }
+   .pwd-conform{
+   margin-left:0px;
+   }
+  }
+
+
+
+}
+/*-------------------------------------------------
+ MEDIA QURIES :: large screens
+-------------------------------------------------*/
+@media (max-width: 1224px) {
+  .login-popup{
+   
+    
+  }
+}
+

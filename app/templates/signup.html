@@ -1,0 +1,236 @@
+<section ng-controller="signUpCtrl">
+
+
+	<div class="select-category-list" ng-show="signupPage == 'select-category'">
+		<div class="header-text">
+			￼<span>Set up your account</span>
+		</div>
+
+		<div class="table-header">
+			<table class="W100">
+				<tr>
+					<th ng-class="{selected: headerSelect == 'iam'}"><span>step1</span> <label>I am a</label><div></div></th>
+					<th ng-class="{selected: headerSelect == 'iwant'}"><span>step2</span> <label>I want to</label><div ></div></th>
+					<th ng-class="{selected: headerSelect == 'lookingfor'}"><span>step3</span> <label>I am Looking for</label><div></div></th>
+				</tr>
+			</table>
+		</div>
+		<ul class="clearfix setup-accountlist">
+			<li class="profile-select">
+				<div class="select-type">
+					<ul class="profile-type">
+						<li ng-click="setProfileType('ServiceSeeker')">
+							<div ng-class="{selected: profileSelect == 'ServiceSeeker'}">
+								<img src="images/check.jpg"></img>
+								<p></p>
+								<span>Service Seeker</span>
+							</div>
+						</li>
+						<li ng-click="setProfileType('ServiceProvider')">
+							<div ng-class="{selected: profileSelect == 'ServiceProvider'}">
+								<img src="images/check.jpg"></img>
+								<p></p>
+								<span>Service Provider</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="access-reason profile-select" > 
+				<div class="select-type">
+					<ul class="accessreason-type">
+						<li ng-repeat="item in accessReason">
+							<div ng-class="{selected: accessReasonSelect == item.id}" id="{{item.id}}" ng-click="setAccessReason(item.id)">
+								<img src="images/check.jpg"></img>
+								<p></p>
+								<span>{{item.name}}</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="domain profile-select">    
+				<div class="select-type">
+					<ul class="domain-type">
+						<li ng-repeat="item in domains">
+							<div ng-class="{selected: domainSelect == item.id}" id="{{item.id}}" ng-click="setDomainType(item.id)">
+								<img src="images/check.jpg"></img>
+								<p></p>
+								<span>{{item.name}}</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="clearfix bottom-btn"> 
+			<div class="exp-div" ng-click="navPage('signForm')">
+				<p></p>
+				<input type="button" class="btn exp-btn" value="I am just exploring">
+			</div>
+			<input type="button" class="btn nxt-btn" value="Submit" ng-click="navPage('signForm')">
+		</div>
+	</div>
+	
+
+	<!-- sign up form -->
+
+	<div class="signup-container clearfix" ng-show="signupPage == 'signForm'">
+		<ul class="category-header">	
+			<li class="float-left"><h1>Enter your details</h1></li>
+		</ul>
+
+		<div class="signup-form">
+			<form name="signupForm" novalidate ng-submit="joinIcare($event, signupForm, user)">
+					<div class="space-btn-cell">
+						<div class="row">Name</div>
+						<input type="text" class="form-first-name form-control" ng-model="user.firstName" placeholder="First Name" required>
+						<input type="text" class="form-middle-name form-control" ng-model="user.middleName" placeholder="Middle Name" required>
+						<input type="text" class="form-last-name form-control" ng-model="user.lastName" placeholder="Last Name" required>
+					</div>
+					<div class="space-btn-conf-cel clearfix">
+						<div class="row" for="">Email id</div>
+						<input type="email" name="emailId" class="form-control float-left" ng-model="user.emailId" placeholder="Enter your Email" required>
+						<div class="confirmation-text" ng-show="signupForm.emailId.$valid">Verification mail with link to activate will be sent to this mail id</div>
+						<p class="confirmation-text" ng-show="signupForm.emailId.$error.email" class="help-block">Enter a valid email.</p>
+					</div>
+					<div class="clearfix">
+						<div class="row"></div>
+						<input type="text" class="form-control float-left" name="confirmEmail" ng-model="user.confirmEmailId" data-match="user.emailId" placeholder="Confirm Email" required/>
+						<span class="signup-help confirmation-text" data-ng-show="signupForm.confirmEmail.$error.match" value="">Email do not match.</span>
+					</div>
+					<div class="space-btn-cell"></div>
+
+					<!-- <li>
+				   	<input type="password" class="form-control" placeholder="Password" name="password" ng-model="password" ng-minlength="8" ng-maxlength="20" required>
+				   	<span class="signup-help" ng-show="signupForm.password.$invalid && !signupForm.password.$pristine && signupForm.password.$error.minlength">Password should at least 8 characters.</span>
+				   	<span class="signup-help" ng-show="signupForm.password.$invalid && !signupForm.password.$pristine && signupForm.password.$error.maxlength">Password is too long.</span>
+				   </li>
+
+				   <li>
+				   	<input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" ng-model="confirmPassword" checkpassword>
+				   	<span class="signup-help" ng-show="signupForm.confirmPassword.$error.pwdMatch" value="">Password do not match.</span>
+				   </li>  -->   
+
+
+					<div class="space-btn-conf-cel clearfix password-cls">
+						<div class="row">Password</div>
+						<input type="password" class="form-control float-left" ng-model="user.password" name="password" ng-minlength="8" placeholder="Enter your password" required>
+						<span class="signup-help" ng-show="signupForm.password.$invalid && signupForm.password.$dirty && signupForm.password.$error.minlength">Password should at least 8 characters.</span>
+				   		<span class="signup-help" ng-show="signupForm.password.$valid">Password Strength: <label>Strong</label></span>
+					</div>
+					<div class="password-cls clearfix">
+						<div  class="row"></div>
+						<input type="password" class="form-control float-left" name="confirmPassword" ng-model="user.confirmPassword" placeholder="Confirm your password" checkpassword>
+						<span class="signup-help" ng-show="signupForm.confirmPassword.$error.pwdMatch" value="">Password do not match.</span>
+					</div>
+					<div class="space-btn-cell">
+						<div class="row">Country</div>
+						<div class="customSelect rel inlBlk">
+							<div dropdown class="arrowWrapper inlBlk rel pointer noSelect form-control">
+								<input id="inp-country" type="text" class="form-control select-country pointer" name="country" ng-model="user.country" value="{{user.country}}" placeholder="Select" disabled="true" required/>
+								<span class="arrowSection">
+									<span class="arrow"></span>
+								</span>
+							</div>
+							<ul class="ddmenu fb14 mLeft customSelectMenu W100 rel">
+								<li ng-repeat="list in countryList"><div ng-click="setSlectOption(list.id,list.name, 'country')">{{list.name}}</div></li>
+							</ul>
+						</div>
+					</div>
+					
+					 <div class="space-btn-cell clearfix">
+						<div class="row">Mobile no.</div>
+						<span class="country-code" ng-model="user.countryCode">{{user.countryCode}}</span>
+						<input type="text" class="form-control float-left mobile-number" name="mobileNumber" ng-model="user.mobileNumber" placeholder="Enter your mobile no" required integer>
+						<div class="confirmation-text">Verification OTP will be sent to this mobile number</div>
+					</div>
+					<div class="space-btn-conf-cel">
+						<div class="row">How do you know about us?</div>
+						<div class="customSelect rel inlBlk">
+							<div dropdown class="arrowWrapper inlBlk rel pointer noSelect form-control">
+								<input id="inp-country" type="text" class="form-control select-country pointer" name="aboutUs" ng-model="user.aboutUs" value="{{user.aboutUs}" placeholder="Select" disabled="true" required/>
+								<span class="arrowSection">
+									<span class="arrow"></span>
+								</span>
+							</div>
+							<ul class="ddmenu fb14 mLeft customSelectMenu W100 rel">
+								<li ng-click="setSlectOption('', 'Twitter', 'aboutus')">Twitter</li>
+								<li ng-click="setSlectOption('', 'Facebook', 'aboutus')">Facebook</li>
+								<li ng-click="setSlectOption('', 'LinkedIn', 'aboutus')">LinkedIn</li>
+							</ul>
+						</div>
+					</div> 
+					<div class="space-btn-cell terms-con-cls">
+						<div><input class="confirm-checkbox" type="checkbox" name="confirm" ng-model="user.confirm" required></div>
+						<p>I confirm that i have gone through <a href="">iCare Life Terms of Use and Policies</a> and by clicking on join iCare button i agree with iCare Terms of Use and Policeis.</p>
+					</div>
+					<div class="nav-btn float-right">
+						<a href="" ng-click="navPage('select-category')">Back</a>
+						<input type="submit" ng-disabled="signupForm.$invalid" class="btn nxt-btn" value="Join iCare">
+					</div>
+				</form>
+			</div>
+	</div>
+ 
+	<!-- Verify Number -->
+
+	<div class="verify-number" ng-show="signupPage == 'verifyNumber'">
+		<div class="W100">
+			<ul class="verify-header verify-header-h">
+				<li><h1>Thank you</h1></li>		
+				<li class="registered-succ"><label>You have been successfully registered</label></li>
+				<li><label>Please enter the one time password sent to your phone number to activate your account. </label></li>
+			</ul>
+		</div>
+		<div class="W100 clearfix">
+			<div class="onetime-pwd-field float-left">
+				<input class="otpClass form-control" id="otp" type="text" placeholder="One Time Password"></input>
+				<input class="btn" type="button" text="submit" value="submit" ng-click="verifyOTP()"></input>
+			</div>
+			<div class="otp-error-msg"><span class="input-help" ng-bind="otpErrorMsg"></span></div>
+		</div>
+		<div class="confirm-email-con">
+			<ul>
+				<li class="des"><div class="W100"><p>A confirmation email has been sent to <span>{{user.emailId}}.</span> Click on the confirmation link in the email to activate your account.</p></div></li>
+				<li class="verify-link"><div class="W100"><a ng-click="resendEmail()" class="resend-email">Resend email</a><a ng-click="navPage('changeAddress')" class="change-add">Change your address</a></div></li>
+			</ul>	
+		</div>
+	</div>
+
+	<!-- Change Address or mail Id -->
+
+	<div class="verify-number" ng-show="signupPage == 'changeAddress'">
+		<div class="W100">
+			<ul class="verify-header">
+				<li><h1>Thank you</h1></li>	
+				<li><label>Please change the mail id to which cofirmation mail to be sent. </label></li>
+			</ul>
+		</div>
+		<div class="W100 clearfix">
+			<div class="onetime-pwd-field float-left">
+				<input class="otpClass form-control" id="address" type="text" placeholder="Change mail Id"></input>
+				<input class="btn" type="button" text="submit" value="submit" ng-click="changeAddress()"></input>
+			</div>
+			<div class="otp-error-msg"><span class="input-help" ng-bind="changeAdressErrorMsg"></span></div>
+		</div>
+<!-- 		<div class="confirm-email-con">
+			<ul>
+				<li class="des"><div class="W100"><p>A confirmation email has been sent to <span>{{user.emailId}}.</span> Click on the confirmation link in the email to activate your account.</p></div></li>
+				<li class="verify-link"><div class="W100"><a ng-click="resendEmail()" class="resend-email">Resend email</a><a class="change-add">Change your address</a></div></li>
+			</ul>	
+		</div> -->
+	</div>
+
+
+	<!-- link below the modal -->
+    <div class="corporate-link clearfix" ng-hide="signupPage == 'verifyNumber' || 'changeAddress'">
+      <div class="float-left" ng-show="1 !== isSelected && 3 !== isSelected">
+        Member?<a class="inl" href="" ng-click="toggleMenu(1);"> Login</a>
+      </div>
+      <div class="float-left" ng-show="2 !== isSelected">
+        New to iCare?<a class="inl" href="" ng-click="toggleMenu(2);"> Register Here</a>
+      </div>
+      <div class="float-right">For business?<a class="inl" href=""> Click Here</a></div>
+    </div>
+</section>

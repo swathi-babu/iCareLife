@@ -1,0 +1,81 @@
+<section ng-controller="signupCtrl">
+  <div class="popup-nav setup-account">
+    <div class="modal-header popup-header">
+      <button type="button" class="close closePopup" data-dismiss="modal" ng-click="closePopup()" aria-hidden="true">
+      &times;
+      </button>
+      <h4 class="modal-title popup-title signup-header-title">Set up your account</h4>  
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="signup-header">
+          <form name="userSignup" class="css-form" novalidate ng-submit="">
+            <div class="row signup-header-text" >
+            <div class="signup-steps firstDiv" id="firstDiv" >
+            <h4>Step 1 I am a</h4>
+            </div>
+            <div class="signup-steps secondDiv" id="secondDiv" ng-hide="secondList" >
+            <h4>Step 2 I want to</h4>
+            </div>
+            <div class="signup-steps thirdDiv" id="thirdDiv"  ng-hide="thirdList">
+            <h4>Step 3 I am looking for</h4>
+            </div>
+            </div>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="signup-steps"  ng-click="" >          
+            <ul class="list-group signup-list"  id="list1" >
+            <li ng-repeat="item in keyValues" class="list-group-item listStyling " ng-click="selectUserType(item)"       required>
+            <img src="images/uncheck-box.png" class="imagePageNation signup-select" id='{{item}}image' >  {{item}}
+            </li>    
+            </ul>
+          </div>
+          <div class="signup-steps" id="list2" ng-click="" >
+            <ul class="list-group  signup-list" id="listOfWantedCourse" >
+            <li ng-repeat="item in wantedCourseList" class="list-group-item listStyling" ng-click="courseName(item)" required>
+            <img src="images/uncheck-box.png" class="imagePageNation">  {{item}}
+            </li>    
+            </ul>
+          </div>  
+          <div class="signup-steps" id="list3" ng-click="" >
+            <ul class="list-group  signup-list"  id="listOfLookingFor" >
+            <li ng-repeat="item in courseList" class="list-group-item listStyling"  ng-click="getcourseContent(item)" required>
+            <img src="images/uncheck-box.png" class="imagePageNation">  {{item}}
+            </li>  
+            </ul>
+          </div>
+        </div>     
+        <div class="row">
+          <div class="signup-steps exploring" id="exploring" >
+            <ul class="list-group signup-list" id="listOfLookingFor">
+            <li class="list-group-item listStyling" id="exploring" ng-click="selectJustExploring()">
+            <img src="images/uncheck-box.png" class="imagePageNation" id="exploringTab">I am just exploring
+            </li>
+            </ul>
+          </div>
+          <div class="signin-submit" id="" >
+            <input id="submit_id" type="submit" class="btn btn-purple-medium userDetails-modal" ng-click="showRegistrationPopup()"  value="Submit"  disabled="true">
+          </div>
+        </div>               
+      </form>
+      <div class="modal-footer">
+        <div>
+          <div class="reg-footer">
+            <p> Member?  <a class="open-modal login-footer-text" ng-click="showloginpage()">Login</a></p>
+            For Business? <a href="#" class="login-footer-text">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+      <div class="none register-module">
+        @@include('regist-popup.html')
+      </div>
+
+
+</section>
+
+      

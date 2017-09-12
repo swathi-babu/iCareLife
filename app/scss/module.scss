@@ -1,0 +1,451 @@
+/*-------------------------------------------------
+MODULE :: SITE COMMON STYLES
+-------------------------------------------------*/
+
+/* LAYOUT GRID */
+
+.grid {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.grid-1244 {
+  width: 1244px;
+  margin: 0 auto;
+}
+
+.new-container {
+  @include clearfix();
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+html input[disabled] {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*---------------- DISPLAY ----------------*/
+
+.inl {
+    display: inline;
+}
+
+.blk {
+    display: block !important;
+}
+
+.inl-blk {
+    display: inline-block;  
+}
+
+.active-bg-check {
+  border: 1px solid #68317b !important;
+}
+
+/*--------------- POSITION ----------------*/
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+
+input[type="file"] {
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  -o-transform: translate(250px, -50px) scale(1);
+  -moz-transform: translate(-300px, 0) scale(4);
+  cursor: pointer;
+  height: 49px;
+  padding: 12px;*/
+}
+
+input[type="file"]:focus {
+  outline: none !important;
+}
+
+/* INPUT NUMBER scroller hide */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/*------------- BROWSER SUPPORT  --------------*/
+
+/* RANGE BAR fix in IE10/11 */
+
+::-ms-tooltip {
+  display: none;
+}
+
+
+/*------------- LIST STYLES -----------*/ 
+
+.list-dot {
+  list-style-type: disc;
+}
+
+/*------------- TEXT STYLES -----------*/ 
+
+.txt-left {
+  text-align: left;
+}
+
+/*--------------- VISIBILITY ---------------*/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*-------------- MENU ARROW -----------------*/ 
+
+.arrow-top {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccc;
+}
+
+/*-------------- TEXT ELLIPSiS ----------------*/
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*--------------- Display Table ---------------*/
+.dis-table {
+    display: table;
+}
+
+/*-------------- TEXT ALIGN CENTER --------------*/
+.txt-algn-center {
+    text-align: center;
+}
+
+/* SPINNER STYLES */
+
+#spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // background: rgba(0, 0, 0, 0.05);
+}
+
+.spin {
+  width: 2px;
+  height: 18px;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  margin: 160px auto;
+  z-index: -9999;
+}
+
+/* BOOTSTRAP OVERRIDE */
+
+#myNavbar .navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #50326a!important;
+}
+#myNavbar .navbar-nav > li > a:hover {
+  color: #7a737d!important;
+}
+
+.caption {
+  text-align : center;
+}
+
+
+
+/*-------------- Forms UI Module ----------------------*/
+.form-container {
+  @include column(12);
+  display: inline-flex;
+  margin: 12px 0px;
+}
+
+
+.form-left-container {
+  margin-left: 49px;
+  color: $formFieldColor;
+  font-family:  LatoMedium;
+  font-size: em($font-19);
+  @include column(4);
+  height: inherit;
+  padding: 12px 0px;
+}
+
+.form-center-container {
+  @include column(4);
+  color: $placeholderColor;
+}
+
+.form-right-container {
+  margin-right: 49px;
+  color: $placeholderColor;
+  @include column(4);
+}
+/*------------- Custom Select Field---------------------*/
+.custom-select-field {
+  height: 60px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $color-white;
+}
+
+.custom-select-field,
+.custom-text-box {
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid rgb(166, 166, 166);
+}
+
+/*-------------- Custom Text Box ------------------------*/
+.custom-text-box {
+  height: 60px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/*------ Custom file upload -----*/ 
+
+.custom-file-upload {
+  padding: 19px;
+  text-indent: -3px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.uploaded-thumb {
+  width: 100px;
+  height: 100px;
+  float: right;
+  margin-top: -100px;
+  margin-right: 50px;
+}
+
+/*------------- Custom Radio & Checkbox Button-----------------------*/
+
+.checkbox-radio-specific {
+    .radio,.checkbox {
+      display: inline-block !important;
+      cursor: pointer;
+      margin-right: 10px;
+      line-height: 18px;
+      font-size: em($font-17) !important;
+    }
+    input[type=radio],input[type=checkbox] {
+      display: none;
+    }
+    .radio:before,.checkbox:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-color: $unselectedCheckBox;
+    color: $placeholderColor;
+    text-align: center;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    font-size: 30px;
+    border-radius: 10px;
+  }
+  input[type=radio]:checked + .radio:before,input[type=checkbox]:checked + .checkbox:before {
+    background: url("../images/aboutme-icons.png") -2px -358px;
+  }
+  select,input[type=text],input[type=email],input[type=number],input[type=date],input[type=file] {
+    padding-left: 12px;
+    font-family: LatoLight !important;
+  }
+  .radio-button-text {
+    margin-left: 18px;
+    color: $placeholderColor;
+    font-family: LatoLight;  
+  }
+}
+
+
+
+
+/*-------------------------- Image Upload ---------------------------------*/
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  padding-top: 12px;
+  text-align: center;
+  font-family: 'LatoBOLD' !important;
+  font-size: em(15);
+}
+
+.fileUpload {
+  input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+/*------ RANGE BAR STYESL -------*/
+
+slider {
+  display: inline-block;
+  position: relative;
+  height: 7px;
+  width: 100%;
+  margin: 25px 5px 25px 5px;
+  vertical-align: middle;
+}
+
+slider span {
+  white-space: nowrap;
+  position: absolute;
+  display: inline-block;
+}
+
+slider span.base {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+slider span.bar {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-border-radius: 1em/1em;
+  border-radius: 1em/1em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c0c0c0), color-stop(1, #8d8d8d));
+  background: -webkit-linear-gradient(top, #c0c0c0 0, #8d8d8d 100%);
+  background: -moz-linear-gradient(top, #c0c0c0 0, #8d8d8d 100%);
+  background: -o-linear-gradient(top, #c0c0c0 0, #8d8d8d 100%);
+  background: -ms-linear-gradient(top, #c0c0c0 0, #8d8d8d 100%);
+  background: linear-gradient(top, #c0c0c0 0, #8d8d8d 100%);
+  -webkit-box-shadow: inset 2px 2px 5px;
+  box-shadow: inset 2px 2px 5px;
+}
+
+slider span.bar.selection {
+  width: 0%;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #13b6ff), color-stop(1, #00a8f3));
+  background: -webkit-linear-gradient(top, #13b6ff 0, #00a8f3 100%);
+  background: -moz-linear-gradient(top, #13b6ff 0, #00a8f3 100%);
+  background: -o-linear-gradient(top, #13b6ff 0, #00a8f3 100%);
+  background: -ms-linear-gradient(top, #13b6ff 0, #00a8f3 100%);
+  background: linear-gradient(top, #13b6ff 0, #00a8f3 100%);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+slider span.pointer {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  background-color: #FFF;
+  border: #68317b 1px solid;
+  z-index: 2;
+  -webkit-border-radius: 1em/1em;
+  border-radius: 1em/1em;
+}
+
+slider span.pointer:after {
+  // content: '';
+  background-color: #808080;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  -webkit-border-radius: 1em/1em;
+  border-radius: 1em/1em;
+}
+
+slider span.pointer:hover:after {
+  background-color: #000;
+}
+
+slider span.pointer.active:after {
+  background-color: #f00;
+}
+
+slider span.bubble {
+  cursor: default;
+  top: -22px;
+  padding: 1px 3px 1px 3px;
+  font-size: 0.7em;
+  font-family: sans-serif;
+}
+
+slider span.bubble.selection {
+  top: 15px;
+}
+
+slider span.bubble.limit {
+  color: #808080;
+  visibility: hidden;
+}
+
+/* close btn styles */
+
+.closeLang {
+  font-size: 35px !important;
+  float: left !important;
+  margin: 15px;
+  margin-left: 60px;
+}
+
+/* Textarea specific*/
+textarea {
+    resize: none;
+}
+
+/* input type textbox color specific only */
+input[type="text"],input[type="number"],select option {
+    color : #333333;
+  }

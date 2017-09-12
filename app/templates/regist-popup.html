@@ -1,0 +1,174 @@
+ <div class="popup-nav " ng-controller="userDetailsCtrl">
+  
+        <div class="modal-header popup-header">
+          <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">
+          &times;
+          </button>
+          <h4 class="modal-title popup-title signup-title">Enter your Details
+        </div>
+        <div class="modal-body popup-body">
+          <div class="row">
+            <form name="userRegistration" class="css-form" novalidate ng-submit="processForm()" autocomplete="off">
+              <div class="row registration-form">
+                <div class=" formAlignment">
+                  <div class="row">
+                    <div class="regist-fields">
+                      <span>Name</span>
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="fname"  name="fname" placeholder="First Name"  required  ng-model="user.first_name" ng-maxlength="35">
+                      <span style="color:red" ng-show="userRegistration.fname.$invalid">
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="mname" placeholder="Middle Name" ng-model="user.middle_name" ng-maxlength="35"> 
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="lname" placeholder="Last Name"  required ng-model="user.last_name" ng-maxlength="35">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Email id</span>
+                    </div>
+                    <div class="label-fields ">
+                      <input type="email" name="email" class="form-control reg-label" id="useremail" placeholder="Enter your Email" ng-model="user.email" required>
+                    </div>
+                    <div class="label-name" >
+                      <p ng-show="userRegistration.email.$valid">
+                      verification mail with link to activate will be sent to this email id
+                      </p>
+                      <p class="input-help text-danger reg-font" ng-bind="emailErrMsg"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" formAlignment">
+                  <div class="row">
+                    
+                    <div class="label-fields">
+                      <input type="email" name="confirmEmail" class="form-control pwd-conform reg-label" checkemail ng-model="user.conformEmail" id="confirmuseremail" placeholder="Confirm Email" required>
+                    </div>
+                    <div class="label-name">
+                      <p class="input-help text-danger reg-font" ng-show="!userRegistration.conformPassword.$pristine && userRegistration.confirmEmail.$invalid">
+                      Email does not match
+                      </p>
+                    </div>
+                  
+                </div>
+
+                <div class=" formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Password</span>
+                    </div>
+                    <div class="label-fields">
+                      <input name="password" type="password" class="form-control reg-label" id="userpassword" placeholder="Enter your Password" ng-model="user.password" ng-minlength="8" required>
+                    </div>
+                    <div class="label-name reg-font">
+                      <p ng-show="userRegistration.password.$valid">
+                      Password Strength
+                      </p>
+                      <p class="input-help text-danger" ng-bind="pwdErrMsg"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="formAlignment">
+                  <div class="row">
+                    <div class="label-fields ">
+                      <input type="password" name="conformPassword" class="form-control pwd-conform reg-label " id="cpassword" checkpassword placeholder="Confirm Password" ng-model="user.password_confirmation" ng-minlength="8" required>
+                    </div>
+                    <div class="">
+                      <p class="input-help text-danger reg-font" ng-show="!userRegistration.conformPassword.$pristine && userRegistration.conformPassword.$invalid">
+                      Password does not match
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+               
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Country</span>
+                    </div>
+                    <div class="label-fields reg-label">
+                      <select class="selectpicker btn-info show-menu-arrow dropdownMenu form-control-new form-control">
+                      <option>India</option>
+                      <option>Singapore</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="label-name">
+                    <span>Mobile No</span>
+                  </div>
+                  <div class="label-fields">
+                   <input name="phoneNumber" type="tel" integer class="form-control reg-label" id="userNumber" placeholder="+91" ng-model="user.phone_number" required>
+                  </div>
+                  <div class="reg-font">
+                    <p ng-show="userRegistration.phoneNumber.$valid">
+                    verification OTP will be sent to this mobile number
+                    </p>
+                    <p class="input-help text-danger" ng-bind="phoneErrMsg">
+
+                    </p>
+                  </div>
+                </div>
+                
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>How do you know about us?</span>
+                    </div>
+                    <div class="label-fields reg-label">
+                      <select class="selectpicker btn-info show-menu-arrow dropdownMenu form-control-new form-control">
+                      <option>Google</option>
+                      <option>Facebook</option>
+                      <option>Twitter</option>
+                      <option>Advertisement</option>
+                      <option>Email/Newsletter</option>
+                      <option>Magazine Article</option>
+                      <option>YouTube</option>
+                      <option>Family or Friend</option>
+                      <option>Newspaper story</option>
+                      <option>TV/Cable News</option>
+                      <option>Website/Search Engine</option>
+                      <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                             
+                <div class="">
+                  <input type="checkbox" class="signup-agreement" ng-model="agreement[$index]" name="signAgreement" value="true" required>
+                  I confirm that I have gone through <a href=‘#’>iCare Life Terms of Use and Policies</a> and by clicking on Join iCare button I Agree with iCare Terms of Use and Policies
+                </div>
+                                
+                
+                <div class="row" >
+                  <div class="reg-bck-btn">
+                    <a href="#" class="btn-back" ng-click="showRegisterPagePopup();">Back</a>
+                    <input type="submit"  name="join" class="btn-login" ng-click="showotppopup()" ng-disabled="userRegistration.$invalid" value="Join iCare">
+                  </div>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer reg-footer">
+        <div>
+        <p> Member? <a href="#" class="open-modal login-footer-text" ng-click="showLoginPagePopup()">Login</a></p>
+        For Business <a href="#" class="login-footer-text">Click Here</a>
+        </div>
+        </div>
+      </div>
+   

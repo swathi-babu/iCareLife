@@ -1,0 +1,32 @@
+[{    
+    "Service Seeker": {
+        "Learn": [
+            "Baby Care",
+            "Child Care",
+            "Elder Care",
+            "Driving"
+        ],
+        "Hire": [
+            "Baby Caregiver",
+            "Child Caregiver",
+            "Elder Caregiver",
+            "Driver"
+        ]
+    },
+    "Service Provider": {
+        "Learn/Get Trained": [
+            "Baby Caregiver",
+            "Child Caregiver",
+            "Elder Caregiver",
+            "Driving",
+            "Food Court Etiquette"
+        ],
+        "Get a Job": [
+            "Baby Caregiver Job",
+            "Child Caregiver Job",
+            "Elder Caregiver Job",
+            "Driving Job",
+            "Food Court Staff"
+        ]
+    }
+}]

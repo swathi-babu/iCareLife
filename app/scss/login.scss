@@ -1,0 +1,296 @@
+/*-------------------------------------------*\
+		#LOGIN OVERLAY
+\*-------------------------------------------*/
+
+/* MODAL CONTAINER */
+
+.modal-container {
+	z-index: 9;
+}	
+
+/* LINK BELOW LOGIN/SIGNUP POPUP */
+
+.corporate-link {
+	width: 100%;
+	height: 70px;
+	border-top: 1px solid #ccc;
+
+	div {
+		color: $color-light-grey;
+		text-align: $align-center;
+		margin: 22.5px 40px 0 40px;
+		font-family: 'LatoMedium', sans-serif;
+
+		a {
+			color: $color-violet;
+			font-weight: bold;
+			word-spacing: -2px;
+			margin-left: 3px;
+		}
+	}
+}
+
+/* USER LOGIN */
+
+.login-container {
+	width: 45%;
+	margin: 20px;
+	margin-bottom: 0;
+
+	.login-heading {
+		margin: 20px 0 0 20px;
+		font-size: 23.5px;
+		color: #463d4b;
+	}
+
+	.login-form {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	.row {
+		margin: 0 20px 0 20px;
+		position: relative;
+	}
+
+	input[type="email"], 
+	input[type="password"],
+	input[type="text"] {
+		font-family: 'LatoLight', sans-serif;
+		font-size: $font-18;
+		padding-left: 45px;
+		z-index: 12;
+	}
+
+	input[type="text"] {
+		padding-left: 10px;
+	}
+
+	input[type="email"] {
+		border-bottom: 0;
+	}
+
+	input[type="password"] {
+		margin-bottom: 19px;
+		border-top: 0.5px solid #ccc;
+	}
+
+	input[type="checkbox"] {
+		width: 15px;
+		height: 11px;
+		margin-left: 6px;
+		cursor: pointer;
+		@include transform-scale(2);
+		box-shadow: none;
+	}
+
+	/* CAPTCHA STYLE */
+
+	.captcha-container {
+		margin-bottom: 15px;
+		@include transition(all, 200ms, linear);
+	}
+
+	div.form-control {
+		border: 0;
+		background-color: #f7f7f8;
+		margin-bottom: 16px;
+	}
+
+	div.form-control:focus {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	.captcha-refresh {
+		width: 17px;
+		height: 17px;
+		margin-top: 12px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+		cursor: pointer;
+	}
+
+	/* FORGOT PWD & REMEMBER ME */
+
+	.remember-container,
+	.forgot-password {
+		color: $color-light-grey;
+		font-family: 'LatoLight', sans-serif;
+		font-weight: 900;
+		font-size: $font-15;
+		word-spacing: -2px;
+	}
+
+	.forgot-password {
+		margin-right: 20px;
+	}
+
+	.btn-login {
+		width: 145px;
+		height: 46px;
+		background: $color-violet;
+		color: $color-white;
+		margin-top: 30px;
+	}
+
+}
+
+/* LINE B/W LOGIN MODAL */
+
+.login-separator {
+	width: 20px;
+	height: 175px;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEXd3d3u346CAAAACklEQVQIHWNgAAAAAgABz8g15QAAAABJRU5ErkJggg==") repeat-y scroll center top rgba(0, 0, 0, 0);
+	text-align: $align-center;
+	vertical-align: middle;
+	margin-top: 140px;
+	white-space: nowrap;
+
+	strong {
+		background: #fff;
+		line-height: 27px;
+		margin: 72px auto;
+		color: #A7A3A3;
+		font-size: 13px;
+		font-family: 'LatoLight', sans-serif;
+	}
+}
+
+/* SOCIAL LOGIN */
+
+.social-container {
+	width: 45%;
+	margin-top: 105px;
+	margin-right: 18px;
+
+	.row {
+		text-align: $align-center;
+		margin-top: 10px;
+	}
+
+	/* SOCIAL LOGIN BUTTONS */
+
+	.btn-fb {
+		background: #48629b;
+		text-indent: 32px;
+	}
+
+	.btn-gplus {
+		background: #dc4b38;
+		text-indent: 21px;
+	}
+
+	.btn-twitter {
+		background: #23b0e6;
+		text-indent: 9px;
+		margin-left: -6px;
+	}
+
+	.btn-fb, 
+	.btn-gplus,
+	.btn-twitter {
+		width: 225px;
+		height: 50px;
+		@include border-radius(4px);
+		font-family: 'LatoLight', sans-serif;
+		font-size: 15.56px;
+	}
+
+	.fb-icon,
+	.gplus-icon,
+	.twitter-icon {
+		position: relative;
+		top: 4px;
+	}
+
+	.fb-icon {
+		width: 11px;
+		height: 20px;
+		background: url('../images/fb-icon.png');
+		left: 35px;
+	}
+
+	.gplus-icon {
+		width: 13px;
+		height: 20px;
+		background: url('../images/gplus-icon.png');
+		left: 36px;
+	}
+
+	.twitter-icon {
+		width: 19px;
+		height: 17px;
+		background: url('../images/twitter-icon.png');
+		left: 34px;
+	}
+}
+
+/* RECAPTCHA */
+
+
+
+/* FORGOT PASSWORD CONTAINER */
+
+.container-forgot {
+	margin: 10px auto;
+
+	.btn-login {
+		width: 150px;
+		height: 45px;
+		background: $color-violet;
+		color: $color-white;
+		margin: 20px 0 30px 40px;
+		font-size: 15.56px;
+		text-align: $align-center;
+		line-height: 3em;
+		cursor: pointer;
+	}
+
+	.content {
+		width: 80%;
+		margin: 35px 0 25px 40px;
+		font-family: 'LatoLight', sans-serif;
+		font-size: $font-18;
+		font-weight: 900;
+		word-spacing: -1.5px;
+		color: $color-light-grey;
+	}
+
+	.heading {
+		margin: 40px;
+		margin-bottom: 0;
+		font-size: $font-25;
+		color: #463d4b;
+	}
+
+	input[type='email'] {
+		width: 440px;
+		height: 58px;
+		font-size: $font-18;
+		font-family: 'LatoLight', sans-serif;
+		// color: $color-light-grey;
+		margin: 20px 0 50px 40px;
+		padding-right: 160px;
+	}
+
+	.btn-forgot-pwd {
+		width: 148px;
+		height: 48px;
+		background: $color-violet;
+		position: relative;
+		left: -158px;
+		top: -1px;
+	}
+}
+
+// LOGIN POP UP INPUT
+
+.form-control-input:focus {
+	box-shadow: none !important;
+}
+
+
+
+
+

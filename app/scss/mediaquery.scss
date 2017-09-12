@@ -1,0 +1,35 @@
+/*-------------------------------------------------
+ MEDIA QURIES :: LAPTOP AND TABLETS
+-------------------------------------------------*/
+@media (min-width: 1024px) and (max-width: 1279px) {
+	header {
+		.logo {
+			@include column(1);
+		}
+		nav {
+			@include column(5);
+
+			li {
+				font-size: em(20);
+			}
+		}
+		.search-container {
+    	@include column(2);
+		}
+		.action-buttons {
+    	@include column(4);
+		}
+	}
+}
+
+/*-------------- Tablets ----------- */
+
+@media (min-width: 768px) and (max-width:1024px) {
+  
+}
+/*-------------- mobiels----------- */
+
+@media (min-width: 320px) and (max-width:768px) {
+  
+  
+}

@@ -1,0 +1,349 @@
+<div class="main-wrapper page-landing landing-module" ng-controller="landingCtrl">
+    <style type="text/css">
+    
+
+</style>
+    <script src="/images/slider_plugins/js/blueimp-gallery.js"></script>
+    <script src="/images/slider_plugins/js/blueimp-gallery-video.js"></script>
+    <script src="/images/slider_plugins/js/jquery.blueimp-gallery.js"></script>
+    <script src="/images/slider_plugins/js/demo.js"></script>
+
+    <!-- Header-->
+    @@include('header.html')
+
+    <div class="container-fluid">
+
+        <div class="row slider-container">
+            <div id="blueimp-video-carousel" class="new-container blueimp-gallery blueimp-gallery-controls blueimp-gallery-carousel">
+                <div class="slides"></div>
+
+                <h3 class="title"></h3>
+                <img class="next"  src="/images/arrow-next.png">
+                <img class="prev" src="/images/arrow-prev.png">
+                <a class="play-pause"></a>
+            </div>
+        </div>
+
+        <!-- Instant Support -->
+        <section class="row instant-support">
+            <div class="new-container">
+                <h1>
+                    Get Instant Support
+                    <span>When you have question we're here to help you 24x7</span>
+                </h1>
+                <a href="#" class="instant-support-btn">8866 944 9494</a>
+            </div>
+        </section>
+
+        <!-- Promotional -->
+        <section class="promotional-text new-container">
+            <h2>At iCare Life, we pride ourselves in moulding our services to suit your needs.</h2>
+            <p>Select one or more of the following which best describes what you're looking for</p>
+        </section>
+
+        <!-- iCare Services -->
+        <section class="icare-services">
+            <!-- <div class="thumbnails">
+                <div class="thumbnail model1">
+                    
+                    <img src="/images/service_seeker.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Service Seeker</h4>
+                        <p>Looking for the right service provider to fulfil your requirement</p>
+                    </div>
+                   <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                    </div>
+                </div>
+          
+                <div class="thumbnail model1">
+                    <img src="/images/service_provide.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Service Provider</h4>
+                        <p>Looking for the right service provider to fulfil your requirement</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="thumbnail model1">
+                    <img src="/images/learning_center.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Learning Center</h4>
+                        <p>Looking for educational content which can enrich your skills</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                     </div>       
+                </div>
+
+                <div class="thumbnail">
+                    <img src="/images/our_community.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Our Community</h4>
+                        <p>Assisting people to develop their potential skill & make a difference</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                     </div> 
+                </div>
+            </div> -->
+            <div class="new-container">
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/learn.png">
+                        </div>
+                        <h5>LEARN</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div> 
+                      <div class=" model1_hover">
+                        <h2>LEARN</h2>
+                    <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                    <div class="content-bottom">
+                           <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                        </div>
+                </div>
+                </div>
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/jobs.png">
+                        </div>
+                        <h5>JOBS $ HIRE</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div>
+                    <div class=" model1_hover">
+                        <h2>JOBS $ HIRE</h2>
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly.</p>
+                        <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/store.png">
+                        </div>
+                        <h5>STORE</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div>
+                    <div class=" model1_hover">
+                        <h2>STORE</h2>
+                    <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                    <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stages -->
+        <!-- <section class="stages-container" ng-switch on="stages">
+            <div class="new-container">
+                <div class="training-method-head">
+                    <h2 class="stages-heading">Our Training Methodology</h2>
+                    <p>The life enhancing training methodology is designed to support the way adults learn in today's society. The life enhancing training methodology comprises of 3 stages.</p>
+                </div>
+
+                <div class="features-stages blk">
+                    <ul class="">
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 1;" ng-class="{'active':1 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':1 == stages}"><span>1</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 2;" ng-class="{'active':2 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':2 == stages}"><span>2</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 3;" ng-class="{'active':3 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':3 == stages}"><span>3</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                    </ul>
+                    <div id="training_method_content">
+                        <h3 class="stages-heading">Practical Session and hands-on training</h3>
+
+                        <div class="stage-one" ng-switch-when="1">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant's pace, it is mandatory that they attend these lessons in iCare's premises.</p>
+                        </div>
+                        <div class="stage-one" ng-switch-when="2">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant's pace, it is mandatory that they attend these lessons in iCare's premises.
+                            </p>
+                        </div>
+                        <div class="stage-three" ng-switch-when="3">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant’s pace, it is mandatory that they attend these lessons in iCare’s premises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Featured Content -->
+        <section class="row featured-content">
+            <div class="new-container">
+                <div class="partition-sections">
+                    <img src="/images/icare-learning.png" class="img-responsive"/>
+                    <div class="content-beside-image">
+                        <h4>iCare Life- The learning path to professional, life style and personal growth</h4>
+                        <p><i>Meera Pratap, 13 August 2014</i></p>
+                    </div>    
+                </div>
+                <div class="partition-sections">
+                    <div class="did-you-know">
+                        <h4>Did you know ?</h4>
+                        <p>
+                            Participants will learn at their own pace
+                            base on their preferred language through
+                            videos and virtual trainings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How we do it -->
+        <section class="row how-we-do-it">
+            <div class="new-container">
+                <h1>How we do it</h1>
+                <p>The life enhancing training methodology is designed to support the way adults learn in todays society. The life enhancing training methodology comprises the 3 stages</p>
+                <section class="row featured-content" style="background:none">
+           
+                <div class="partition-sections">
+                    <p class="how-wedo-text">The life enhancing training methodology is designed to support the way adults learn in todays society. The life enhancing training methodology comprises the 3 stages</p>   
+                </div>
+                <div class="partition-sections">
+                    <div class="did-you-know">
+                        <video  controls>
+                         <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                         </video>
+                    </div>
+                    </div>
+                </div>
+            
+        </section>
+               
+        </section>
+
+        <!-- Discover Courses -->
+        <section class="discover-courses new-container">
+            <h2>Popular Courses</h2>
+            
+            <div role="tabpanel">
+                <!-- Nav tabs -->
+                <div class="list-holder-wrap">
+                    <ul class="nav nav-tabs list-holder" role="tablist" >
+                        <li role="presentation"  ng-repeat="x in data"  ng-class="{'active': x.Default}" >
+                            <a href={{'#'+x.Name}} aria-controls="home122" role="tab" data-toggle="tab" id={{x.id}} ng-click="displayData(x.id)" >{{x.Name}}</a>
+                        </li>
+                    </ul>    
+                </div>
+                <p class="discover-courses-caption">Designed for thos who have a keen interest in becoming a home-based professional in baby care, iCare utilizes a more focused and hands-on environment together</p>
+
+                <div class="thumbnailSlider col-xs-64 col-sm-64 col-xs-64" id="thumbnailSlider">
+                    <div class="flexslider carousel" id="carousel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- iCare Family -->
+        <!-- <section class="icare-family">
+            <div class="row">
+                <div class="col-xs-64 col-sm-64 col-md-offset-12 col-md-40 col-lg-offset-12 col-lg-40 text-center section-pad">
+                    <h2>iCare Family</h2>
+                    <p>iCare Life provides training courses to develop necessary skills</p>
+
+                    <div class="col-xs-16 col-sm-16  col-md-12  col-lg-21 text-center icare-family-data ">
+                        <h1>120</h1>
+                        <h3>Courses</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course. </p>
+                    </div>
+                    <div class="col-xs-16 col-sm-16  col-md-12 col-lg-21 text-center icare-family-data ">
+                        <h1>340</h1>
+                        <h3>Modules</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course.</p>
+                    </div>
+                    <div class="col-xs-16 col-sm-16  col-md-12  col-lg-21 text-center icare-family-data">
+                        <h1>46</h1>
+                        <h3>Certifications</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Join Us -->
+        <section class="row join-us">
+            <div class="new-container">
+                
+                   <div class="social-media-block">
+                        <h3>Join us on</h3>
+                        <a href="#" class="fb-share"> </a>
+                        <a href="#" class="gl-share"> </a>
+                        <a href="#" class="tw-share"> </a>
+                    </div>
+               
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    @@include('footer.html')
+
+
+    <section class="popup-module none">
+        <div class="modal-overlay"></div>
+
+        <div class="none login-module">
+            @@include('login-popup.html')
+        </div>
+
+        <div class="none signup-module">
+            @@include('signin-popup.html')
+        </div>
+
+        <div class="none forgotpwd-module">
+           @@include('forgetpwd-popup.html')
+        </div>
+
+        <div class="none otp-popup-module">
+             @@include('otp-popup.html')
+        </div>  
+
+        <div class="none changepwd-module">
+            @@include('changepwd-popup.html')
+        </div>
+
+    </section>
+    
+   
+
+
+  <!-- DIRTY CODE FOR TIME BEING -->
+  <script>
+    $('#blueimp-video-carousel h3.title').html("<div class='sector'>Child Care</div><div class='hero-text'><h4>Give your child the care he deserves</h4><p>iCare Life strives to provide parents with the ideal day care solutions for your child</p></div>");   
+  </script>
+
+
+  </div>

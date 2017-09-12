@@ -1,0 +1,53 @@
+
+
+/*-------------------------------------------*\
+ 		#ALL PAGE - animations
+\*-------------------------------------------*/
+
+
+/* SLIDER ANIMATION RIGHT TO LEFT IN LANDING PAGE */
+
+.slide.ng-enter, 
+.slide.ng-leave { 
+  -webkit-transition: 0.4s linear all;
+  -moz-transition: 0.4s linear all;
+  -ms-transition: 0.4s linear all;
+  -o-transition: 0.4s linear all;
+  transition: 0.4s linear all;
+}
+ 
+.slide.ng-enter {
+  right: -100%;
+}
+
+.slide.ng-leave {
+  right: 0;
+}
+
+.slide.ng-leave-active {
+  position: fixed;
+  left: -100%;
+  right: 100%;
+}
+.slide.ng-enter-active {
+  right: 0;
+  position:relative;
+}
+
+
+
+
+/*.slide-prev-left .slide-popular.ng-enter {
+  right: 10%;
+}
+
+.slide-prev-left .slide-popular.ng-enter, 
+.slide-prev-left .slide-popular.ng-leave { 
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -ms-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}*/
+
+

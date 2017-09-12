@@ -1,0 +1,87 @@
+[
+
+    {
+        "profile_highlight_container" : [
+        				{"profile_highlight_header" : "Profile Highlight"},
+                        {"profile_highlight_buttonName" : "Change"},
+                        {"profile_highlight_Message" : "I am a service seeker and i want to learn driving"}
+                        ]
+    },
+    {
+    	"centerHeading" : [
+    					{"centerHeadingMain" : "We'd love to get to know you better!"},
+    					{"centerHeadingMainSubText" : "Please Fill the following credentials which will enhance your credentials which will enhance your credibility and chance of being hired quicker"}
+    	]
+    },
+    {
+    	"projectCompletion" : "Project Completion"
+    },
+    {	
+    	"horizontalMenu" : [
+				    	{"AboutMe" 	    : "About Me"},
+				    	{"MySkills"     : "My Skills"},
+				    	{"MyPayment"    : "My Payment"},
+						{"MyReferences" : "My References"},   	
+						{"MyProfile"    : "My Profile"}
+		]
+    },
+    {
+    	"personalDetails" : [
+    						{"personalDetailsHeading" : "Personal Details"},
+    						{"socialMedia" : "Social Media Accounts"},
+    						{"fb" : "Connect Facebook"},
+    						{"google" : "Connect Google"},
+    						{"twitter" : "Connect Twitter"},
+    						{"profilePhoto"  : "Profile Photo"},
+    						{"DOB" : "Date Of Birth"},
+    						{"dbFormat" : "mm/dd/yy"},
+    						{"address" : "Address"},
+    						{"addressPlaceHolder1": "Address 1"},
+    						{"addressPlaceHolder2": "Address 2"},
+    						{"landmark" : "Landmark"},
+    						{"landmarkPlaceHolder" : "Nearest Landmark"},
+    						{"state" : "State"},
+    						{"Country" : "Select Country"},
+    						{"pincode" : "Pincode"},
+    						{"pincodePlaceHolder": "Enter Your Pincode"},
+    						{"gender" : "gender"},
+    						{"male" : "Male"},
+    						{"female" : "Female"},
+    						{"other": "Prefer not to say"},
+    						{"ethnicity" : "Ethnicity"},
+    						{"religion" : "Religion"},
+    						{"bloodGroup" : "Blood Group"},
+    						{"nationality" : "Nationality"},
+    						{"dl" : "Driving License"},
+    						{"dlPlaceHolder" : "Enter License No."},
+    						{"workEligibility" : "Work Eligibility"},
+    						{"workPermit" : "Work Permit"},
+    						{"id" : "ID/Passport"},
+                            {"city" : "City"},
+                            {"state" : "State"},
+                            {"licenseNo" : "LicenseNo"},
+                            {"idNo" : "Enter Id Number"},
+                            {"idType" : "Id Type"}
+		]
+    },
+    {
+    	"common" : [
+    	{"browseButton" : "Browse"},
+    	{"select" : "Select"},
+    	{"skip" : "Skip"},
+    	{"next" : "Next"},
+    	{"addMore" : "Add More"}
+
+    	]
+    },
+    {
+    	"educationalQualification" :[
+    						{"educationalQualificationHeading" : "Educational Qualification"},
+    						{"heq" : "Highest Education Qualification"},
+    						{"coe" : "Country of Education"},
+    						{"language": "Language Known"},
+    						{"proficiency" : "Level of Proficiency"}
+    	]
+    }
+
+]

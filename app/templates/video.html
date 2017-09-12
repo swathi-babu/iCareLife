@@ -1,0 +1,165 @@
+
+<!-- from snap shot to till before footer -->
+
+<section ng-controller="discoverPopCourceCtrl">
+
+		<modal-dialog show='disPopOverlay'>
+		  	<div class="modal-dialog-cource W100">
+			  	<div class="modal-dialog-cource-header clearfix">
+			  		<div class="img-div">
+						<img class="W100 img" src="images/babycare.jpeg">
+					</div>
+					<div class="video-footer W100">
+						<div class="footer-content W100">
+							<p>Elder Care</p>
+							<span>6 Modules,2 certificates</span>
+						</div>
+						<div class="W100">
+							Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.
+						</div>
+					</div>
+			  	</div>
+			  	<div class="modal-dialog-cource-list">
+			  		<ul>
+			  			<li class="float-left">
+			  				<div class="cource-duration">3 months</div>
+			  				<div class="cource-cost"><sup>$</sup>29.99</div>
+			  				<div class="cource-des">Bi-weekly asaignments 10 practice mpdules Certification on completion of offline exam</div>
+			  				<div class="purchase-btn-div"><input type="button" class="btn purchase-btn" value="Purchase" /></div>
+			  			</li>
+			  			<li class="float-left">
+			  				<div class="cource-duration">6 months</div>
+			  				<div class="cource-cost"><sup>$</sup>59.99</div>
+			  				<div class="cource-des">Bi-weekly asaignments 10 practice mpdules Certification on completion of offline exam</div>
+			  				<div class="purchase-btn-div"><input type="button" class="btn purchase-btn" value="Purchase" /></div>
+			  			</li>
+			  			<li class="float-left">
+			  				<div class="cource-duration">Unlimited Access</div>
+			  				<div class="cource-cost"><sup>$</sup>99.99</div>
+			  				<div class="cource-des">On-demand asaignments 10 practice mpdules Certification on completion of offline exam</div>
+			  				<div class="purchase-btn-div"><input type="button" class="btn purchase-btn" value="Purchase" /></div>
+			  			</li>
+			  		</ul>
+			  	</div>
+			 </div>
+		</modal-dialog>
+
+		<div class="video-content pos-rel">
+
+			<div class="clearfix W100 popular-cources">
+
+				<div class="header-content grid W100">
+					<div class="dpc-header font2 W100 txt-algn-center">Discover popular courses</div>
+					<div class="segmented-btn txt-algn-center">
+						<input class="btn" ng-class="{active: selectedBtn == 'Elder Care'}" type="button" value="Elder Care" ng-click="selectSegmentBtn('Elder Care')"/>
+						<input class="btn" ng-class="{active: selectedBtn == 'Baby Care'}" type="button" value="Baby Care" ng-click="selectSegmentBtn('Baby Care')"/>
+						<input class="btn" ng-class="{active: selectedBtn == 'Driver'}" type="button" value="Driver" ng-click="selectSegmentBtn('Driver')"/>
+					</div>
+					<div class="W100 txt-algn-center head-des">Designed for those who have a keen interest in becoming a home-based professional in baby care, iCare utilizes a more focused and hands-on environment together with the relevant skill sets in order to provide you with confidence.</div>
+				</div>
+
+				<div class="grid clearfix">
+					<div class="slide-scroll grid-1244">
+						<!-- next, prev slide buttons -->
+						<a href="" class="slide-prev float-left inl" ng-click="navPrev()"></a>
+						<a href="" class="slide-next float-right inl" ng-click="navNext()"></a>
+					</div>
+					<div class="videos pos-rel W100 slide-prev-left">
+						<ul class="clearfix">
+							<li class="video-field float-left slide-popular" ng-click="showDetailedContent()" ng-repeat='item in selectedList | limitTo: 3'>
+								<div>
+									<img class="W100 img-div" src="{{item.img}}">
+								</div>
+								<div class="video-footer W100">
+									<div class="footer-content W100">
+										<p>{{item.name}}</p>
+										<span>{{item.module_count}} Modules,{{item.certificate_count}} certificates</span>
+									</div>
+									<div class="W100">
+										{{item.description}}
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="snapshot clearfix">
+				<div class="snapshot-content clearfix">
+					<div class="imgdiv">
+						<img class="W100 h100" src="images/blogSpot.jpg">
+					</div>
+					<div class="left-content float-left">
+						<div><span>Care Life- The learning path to professional, life style and personal growth</span></div>
+						<div><label>Meera Parat, 13 August 2014</label></div>
+					</div>
+					<div class="right-content float-right">
+						<div><h>Did you know?</h></div>
+						<div><label>Participants will learn at thier oen pace base on their prefrred language through videos and virtual trainings.</label></div>
+					</div>
+				</div>
+				<!-- <div class="float-right btn-div">
+					<input class="float-right" type="button" text="Read More" name="Read More" value="Read More"></input>
+				</div> -->
+			</div>
+
+			<div class="statistics-relevant">
+				<div class="header">
+					<h2>iCare Life Family</h2>
+					<span>iCare Life provides teaining courses to develop the necessary skillets</span>
+				</div>
+				<div class="statistics clearfix">
+					<ul>
+						<li class="float-left">
+							<div>
+								<h2>200+</h2>
+								<span>Courses</span>
+							</div>
+							<div>
+								Learn a skill from start to finish. Typically 2 to 3
+								hours of video per course, each organized into modules. Buy any course individually, or access
+								them all via subscription.
+							</div>
+						</li>
+						<li class="float-left">
+							<div>
+								<h2>200+</h2>
+								<span>Modules</span>
+							</div>
+							<div>
+								Learn a skill from start to finish. Typically 2 to 3
+								hours of video per course, each organized into modules. Buy any course individually, or access
+								them all via subscription.
+							</div>
+						</li>
+						<li class="float-left">
+							<div>
+								<h2>200+</h2>
+								<span>Certification</span>
+							</div>
+							<div>
+								Learn a skill from start to finish. Typically 2 to 3
+								hours of video per course, each organized into modules. Buy any course individually, or access
+								them all via subscription.
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="join-now W100 clearfix txt-algn-center">
+				<div class="content float-left">
+					<span>Join us on</span>
+					<div class="social inl-blk">f</div>
+					<div class="social inl-blk">g</div>
+					<div class="social inl-blk">t</div>
+				</div>
+				<!-- <div class="float-right btn-div">
+					<input class="float-right" type="button" text="Join Now" name="Join Now" value="Join Now"></input>
+				</div> -->
+			</div>
+
+		</div>
+
+</section>

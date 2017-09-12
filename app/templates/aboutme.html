@@ -1,0 +1,93 @@
+<div class="main-container-color">
+    <header ng-controller="landingCtrl">
+        <div class="new-container">
+            <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <a href="" class="search-icon"></a>
+                </div>
+            </div>
+            <div class="action-buttons" ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>  
+         </div>
+    </header>
+
+    <div class="container main-container-color" ng-controller="boutmeCtrl">
+      
+    <div class="jumbotron profile-highlight-container">
+      <div class="row">
+        <div class="col-xs-64 col-sm-50 col-md-50 col-lg-50">
+          <p class="font-class">{{profile_highlight_header}}</p>
+          <div class="col-xs-64 col-sm-50 col-md-50 col-lg-42 custom-sub-header">{{profile_highlight_Message}}</div>
+        </div>
+        <div class="col-xs-64 col-sm-14 col-md-14 col-lg-14">
+          <input type="button" ng-click="showProfile()" class="btn btn-primary custom-width" value={{profile_highlight_buttonName}} id="profileHighlightButton">
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 head-center">
+          <h2 class="center-header-custom">{{centerHeadingMain}}</h2>
+          <p class="center-subheader-custom">{{centerHeadingMainSubText}}</p>
+        </div>
+      </div>
+            
+      <div class="row project-completion">
+        <div class="col-xs-64 col-sm-10 col-md-10 col-lg-10 hidden-xs"></div>
+        <div class="col-xs-64 col-sm-14 col-md-14 col-lg-14">
+          <p  class="hidden-xs project-alignment-title">{{projectCompletion}}</p>
+          <p  class="visible-xs project-alignment-title">{{projectCompletion}}</p>
+        </div>
+        <div class="col-xs-64 col-sm-30 col-md-30 col-lg-30">
+          <progress max="100" value="50" class="progress-striped active"  type="danger"></progress>
+        </div>
+        <div class="col-xs-64 col-sm-5 col-md-5 col-lg-5 progress-value">50%</div>
+      </div>
+      <ul class="nav nav-tabs tab-container-color menu-bar nav-tabs-responsive">
+            <li class="active"><a data-toggle="tab"  ng-click="selectTab(0)" ng-hide="onlyForServiceProvider">{{AboutMe}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(1)" ng-hide="onlyForServiceProvider">{{MySkills}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(2)" ng-hide="onlyForServiceProvider">{{MyPayment}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(3)" ng-hide="onlyForServiceProvider">{{MyReferences}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(4)" ng-hide="onlyForServiceProvider">{{MyProfile}}</a></li>
+        </ul>
+          <div class="tab-content">
+            <div id="aboutMe" ng-hide="panel0">
+              <!--@@include('personalDetails.html') -->
+              @@include('myPayments.html')   
+            </div>
+            <div id="mySkills" ng-hide="panel1" >
+              @@include('mySkills.html')
+            </div>
+            <div id="myPayments"  ng-hide="panel2">
+              @@include('myPayments.html')
+            </div>
+            <div id="myReference"  ng-hide="panel3">
+              @@include('myReference.html')
+            </div>
+            <div id="myProfile"  ng-hide="panel4">
+              <!--@@include('myProfile.html')-->
+            </div>
+         </div> 
+    </div>
+</div>
+
+    
+    

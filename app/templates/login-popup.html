@@ -1,0 +1,125 @@
+
+<div class="popup-nav login-popup" ng-controller="loginCtrl">
+
+  <!-- LOGIN HEADER -->
+  <div class="modal-header popup-header ">
+    <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">
+              &times;
+          </button>
+
+    <h4 class="modal-title popup-title">Welcome to iCare</h4>
+    <span class="input-help login-err-msg" ng-bind="loginErrorMsg"></span>
+  </div>
+
+  <!-- LOGIN BODY -->
+  <div class="modal-body popup-body">
+    <div class="row">
+      <div class="col-xs-64 col-sm-64 col-md-34 col-lg-34">
+        <form class="login-form" name="loginForm" novalidate autocomplete="off">
+          <div class="row label-icons">
+            <div class="action-buttons">
+              <input type="email" class="form-control form-control-input input-lg login-email" placeholder="Email Address" required="required" ng-model="user.email" id="email">
+              <span class="email-icon"></span>
+            </div>
+          </div>
+
+          <div class="row label-icons">
+            <div class="action-buttons">
+              <input type="password" class="form-control form-control-input input-lg login-pwd" placeholder="Password" required="required" ng-model="user.password" id="password">
+              <span class="password-icon"></span>
+            </div>
+          </div>
+          
+          <!-- GOOGLE RECAPTCHA -->
+          <div class="row captcha-container" ng-show="isCaptcha">
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+            <script>
+              var captchaConfig;
+              var onloadCallback = function() {
+                  captchaConfig = grecaptcha.render('g-recaptcha', {
+                  'sitekey' : '6LdFIAATAAAAALQGlTl2BvQbksMOAoJGV0_HIIy0',
+                  'callback' : verifyCallback,
+                  'theme' : 'light'
+                });
+              };
+
+              //On popup close, reset form
+              $('#myModal').on('click', '.closePopup, .modal-backdrop', function (event) {
+                event.preventDefault();
+                grecaptcha.reset(captchaConfig);
+              });
+
+              //Verify after captcha submit
+              var verifyCallback = function(response) {
+                console.log(grecaptcha.getResponse());
+                $.cookie('captchaStatus', 'success', { path: '/' });
+                $('.login-err-msg').html('');
+                $('.btn-popup-login').removeAttr('disabled');
+              };
+            </script>
+          
+            <!-- GOOGLE CAPTCHA KEY -->
+            
+              <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6LdFIAATAAAAALQGlTl2BvQbksMOAoJGV0_HIIy0"></div>
+           
+          </div>
+        
+          <div class="row login-fotter-text"> 
+            <div class="login-rememberMe" >                                
+            <input type="checkbox"  id="rememberMe" name="rememberMe" ng-model="user.remember_me" ng-default-value="0" ng-true-value="1" ng-false-value="0">
+            <label class="rememberMe" for="rememberMe">Remember me</label>
+            </div>
+            <div class="action-buttons">
+              <div href="" class="forgot-password float-right fgtPassword-modal" ng-click="showforgotpwd()" >Forgot Password ?</div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <input type="submit" class="btn-login btn-popup-login " ng-click="loginFormSubmit();" ng-disabled="loginForm.$invalid" value="Login">
+          </div>
+        </form>
+      </div>
+
+      <div class="visible-sm visible-md visible-lg line-seprarator">
+        <div class="login-separator-new float-left">
+          <strong class="blk">OR</strong>
+        </div>
+      </div>
+        
+      <div class="col-xs-64 visible-xs ">
+        <div class="col-xs-64">
+          <strong>OR Login Using</strong>
+        </div>
+      </div>
+        
+      <!-- SOCIAL -->
+      <div class="action-buttons social-networks" style="text-align: center;">
+        <!-- FB LOGIN -->
+        <button type="button" class="btn btn-fb btn-lg icon-fb-new img-responsive" ng-click="loginFacebook()">
+          <span class="btn-fb-icon"></span>Login with Facebook
+        </button>
+        
+        <!-- G+ LOGIN -->
+        <button type="button" class="btn btn-gm btn-lg icon-google-new img-responsive" ng-click="loginGoogle()">
+          <span class="btn-gm-icon"></span>Login with Google+
+        </button>
+        
+        <!-- TWITTER LOGIN -->
+        <button type="button" class="btn btn-tw btn-lg icon-twit-new img-responsive">
+          <span class="btn-tw-icon"></span>Login with Twitter
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN FOOTER -->
+  <div class="modal-footer popup-footer">
+    <div class="row">
+      <div class="login-reg">
+      New to iCare? <a href="" class="usersignup-modal login-footer-text" ng-click="showRegisterPopup();" >Register Here</a></div>
+      <div class="">
+      For Business&nbsp;<a href="" class="float-right login-footer-text" ng-click="" class="right">Click Here</a></div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,463 @@
+/*-------------------------------------------*\
+  		#Video page 
+\*-------------------------------------------*/
+
+
+
+.W100 { width: 100%; }
+
+.h100{ height: 100%; }
+
+.pos-rel { position: relative; }
+
+
+/*--------------------- common variables used for this page -------------------*/
+$grid-width: 960px;
+
+/*--------------------- Variables which are user for DPC - Discover Popular Cources -------------------*/
+$pop-cource-h: 820px;
+
+/*--------------------- Variables which is used for snapshot module -----------------------*/
+$snapshot-height: 168px;
+$snapshot-img-width: 125px;
+$snapshot-right-content-width: 420px;
+
+
+/* DPC - Discover popular cources LIST */
+
+.popular-cources {
+	height: $pop-cource-h;
+	padding: 64px 0px 64px 0px;
+}
+
+.header-content {
+	padding: 20px;
+
+	.head-des {
+		height: 80px;
+		font-family: 'Lato' , 'sans-serif';
+		font-size: 17.5px;
+		padding: 10px 80px;
+		color: #9F96A4;
+	}
+
+	.dpc-header {
+		margin: 0.67em 0;
+		color: #555;
+		font-family: 'Lato' , 'sans-serif';
+		font-size: $font-31;
+		height: 35px;
+		color: #797276;
+	}
+
+	.segmented-btn {
+		border-bottom: 1px solid #9F96A4;
+		margin: auto 80px;
+		input {
+			width: 140px;
+			height: 50px;
+			/*margin-bottom: 10px;*/
+			background-color: rgba(0, 0, 0, 0);
+			border: 0px;
+			color: #808080;
+			font-weight: $font-weight-regular;
+			font-size: $font-19;
+			color: #9F96A4;
+		}
+
+		input.active {
+			color: #9D6CAD;
+			border-bottom: 4px solid #7C3A93;
+		}
+	}
+}
+
+.videos {
+	display: table;
+	.video-field {
+		width: 300px;
+		border: 1px solid grey;
+		margin: auto 10px;
+		height: 452px;
+	}
+
+	.video-footer {
+		padding: 12px;
+	}
+
+	.img-div {
+		height: 220px;
+	}
+
+	.prev-btn {
+		float: left;
+		width: 40px;
+		height: 65px;
+		margin-top: 172px;
+		border-top-left-radius: 41px;
+		border-bottom-left-radius: 40px;
+		text-align: center;
+		line-height: 58px;
+		color: #FFF;
+		background-color: #736BC0;
+		font-size: 1.3em;
+	}
+
+	.nxt-btn {
+		float: left;
+		width: 40px;
+		height: 65px;
+		margin-top: 172px;
+		border-top-right-radius: 41px;
+		border-bottom-right-radius: 40px;
+		text-align: center;
+		line-height: 58px;
+		color: #FFF;
+		background-color: #736BC0;
+		font-size: 1.3em;
+	}
+
+	.video-footer{
+		color: #9F96A4;
+	}
+	.footer-content { 
+		float: left;
+		margin-bottom: 20px;
+		p {
+			margin: 0px;
+			font-size: $font-19;
+			margin-bottom: 0.2em;
+			color: #797276;
+			font-weight: $font-weight-bold;
+		}
+
+		span { 
+			margin: 0px;
+			font-size: 15.56px;
+			font-weight: $font-weight-regular;
+			color: #797276;
+		}
+	}	
+}
+
+/*------------------------------- Slide scroll -------------------------*/
+.video-content {
+  
+  .slide-scroll {
+    position: absolute;
+    bottom: 62%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .slide-next,
+  .slide-prev {
+    width: 50px;
+    height: 105px;
+    cursor: pointer;
+  }
+
+  .slide-next { 
+    background: url('../images/dpcarrow-right.jpg') no-repeat;
+    /*margin-right: 50px;*/ //TODO CHANGE ALIGNMENT
+  }
+  
+  .slide-prev { 
+    background: url('../images/dpcarrow-left.jpg') no-repeat;
+    margin-left: 30px; //TODO CHANGE ALIGNMENT
+  }
+}
+
+.clearfix {
+   display: block;
+   /*height: 0;*/
+   clear: both;
+}
+
+/*----------------------------  SNAPSHOT BLOG CSS -------------------------------*/
+
+.snapshot {
+	background-color: #463D4B;
+	color: #FFF;
+	text-align: center;
+	height: $snapshot-height;
+	.snapshot-content {
+		margin: 0 auto;
+		width: $grid-width;
+	}
+	.imgdiv {
+		width: $snapshot-img-width;
+		height: 108px;
+		float: left;
+		margin: 30px auto;
+	}
+	.right-content {
+		width: $snapshot-right-content-width;
+		height: 108px;
+		margin: 30px auto;
+		padding: 0px 62px;
+		font-size: 23.33px;
+		font-weight: $font-weight-bold;
+		label {
+			font-weight: $font-weight-regular;
+			font-size: 17.5px;
+			font-family: 'LatoLight';
+		}
+
+	}
+	.left-content {
+		width: calc( #{$grid-width} - (#{$snapshot-img-width} + #{$snapshot-right-content-width}));
+		height: 108px;
+		margin: 30px auto;
+		padding: 0px 48px 0px 18px;
+		font-size: 23.33px;
+		font-weight: $font-weight-bold;
+		box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.7) inset, 1px 0px 0px #615866;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+		label {
+			font-weight: $font-weight-regular;
+			font-size: 17.5px;
+			font-family: 'LatoLightItalic';
+		}
+	}
+}
+
+/*------------------------------------- STATISTICS RELEVENT CSS ---------------------------------*/
+
+.statistics-relevant {
+	margin: 0 auto;
+	width: 960px;
+	height: 472px;
+	.header {
+		text-align: center;
+		height: 135px;
+		padding: 50px;
+		h2 {
+			font-size: 31.5px;
+			font-weight: $font-weight-bold;
+			color: #7A737D;
+		}
+		span {
+			color: #9F96A4;
+			font-size: 17.5px;
+		}
+	}
+	.statistics {
+
+		li {
+			width: 320px;
+			/*padding: 18px;	*/
+			div {
+				font-size: 15.56px;
+				text-align: center;
+				color: #808080;
+				padding: 10px;
+				h2 {
+					font-size: 106.6px;
+					color: #7C3A93;
+					font-family: 'Latolight';
+				}
+				span {
+					font-size: 23.3px;
+					color: #6B646F;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------- join now ----------------------------*/
+
+.join-now {
+	height: 86px;
+	background-color: #463d4b;
+	color: white;
+	
+	div.content {
+		width: 100%;
+		font-size: 1.3em;
+		line-height: 86px;
+	}
+	.social {
+		 width: 50px;
+		 height: 50px;
+		 background: #000;
+		 line-height: 50px;
+		 @include border-radius(50%);
+	 }
+}
+
+/*---------------------------- ng-modal overlay css -------------------------*/
+
+/*------------------------ modal dialog css ---------------------------*/
+.modal-dialog-cource {
+	width: 800px;
+	height: 555px;
+	.modal-dialog-cource-header {
+		height: 200px;
+		margin: 20px;
+		border-bottom: 1px solid #F8F7F4;
+		.img-div {
+			float: left;
+			.img {
+				width: 220px;
+				height: 165px;
+			}
+		}
+		.video-footer {
+			width: calc(100% - 450px);
+			margin: auto 20px;
+			float: left;
+			color: #9F96A4;
+			font-size: 15.56px;
+			.footer-content {
+				margin-bottom: 20px;
+
+				p {
+					margin: 0px;
+					font-size: $font-19;
+					margin-bottom: 0.2em;
+					color: #797276;
+					font-weight: $font-weight-bold;
+				}
+
+				span { 
+					margin: 0px;
+					font-size: 15.56px;
+					font-weight:$font-weight-regular;
+					color: #797276;
+				}
+			}
+		}
+	}
+	.modal-dialog-cource-list {
+		li {
+			width: 260px;
+			height: 286px;
+			border-left: 1px solid #F8F7F4;
+			.cource-duration {
+				width: 140px;
+				height: 40px;
+				margin: auto 50px;
+				text-align: center;
+				line-height: 40px;
+				background-color: #F8F7F4;
+				border-radius: 35px;
+				font-size: 15.56px;
+				font-weight: $font-weight-bold;
+				color: #9F9AA0;
+			}
+			.cource-cost {
+				font-size: 50.56px;
+				font-weight: $font-weight-regular;
+				color: #7C3A93;
+				text-align: center;
+				padding: 20px;	
+				sup {
+					font-size: 27.22px;
+				}
+			}
+			.cource-des {
+				padding: 0px 20px 20px 20px;
+				font-size: 15.56px;
+				font-weight: $font-weight-regular;
+				text-align: center;
+				color: #9F96A4;
+			}
+			.purchase-btn-div {
+				input {
+					font-weight: $font-weight-bold;
+					font-size: 15.56px;
+					color: #FFF;
+					background-color: #7C3A93;
+					margin: auto 60px;
+					width: 130px;
+					height: 38px;
+					bottom: 35px;
+					position: fixed;
+				}
+			}
+		}
+	}
+}
+
+/****************** Animation css *****************/
+/********** left side transition animation ********************/
+/* POPULAR COURSE CONTENT */
+
+.videos {
+  .slide-popular.ng-enter, 
+  .slide-popular.ng-leave { 
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -ms-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+  }
+   
+  .slide-popular.ng-enter {
+    right: -10%;
+  }
+
+  .slide-popular.ng-leave {
+    right: 0;
+  }
+
+  .slide-popular.ng-leave-active {
+    position: fixed;
+    left: -100%;
+    right: 100%;
+  }
+  .slide-popular.ng-enter-active {
+    right: 0;
+    position:relative;
+  }
+}
+
+.popular-divider {
+	width: 45px;
+	height: 1px;
+	background: #9C8F8F;
+	vertical-align: middle;
+	-webkit-box-shadow: 12px 12px 0px 8px rgba(0, 0, 0, 0.7) inset, 0 1px 0px #615866;
+	-moz-box-shadow: 12px 12px 0px 8px rgba(0, 0, 0, 0.7) inset, 0 1px 0px #615866;
+	-o-box-shadow: 12px 12px 0px 8px rgba(0, 0, 0, 0.7) inset, 0 1px 0px #615866;
+	-ms-box-shadow: 12px 12px 0px 8px rgba(0, 0, 0, 0.7) inset, 0 1px 0px #615866;
+	box-shadow: 12px 12px 0px 8px rgba(0, 0, 0, 0.7) inset, 0 1px 0px #615866;
+
+	-ms-transform: rotateY(70deg); /* IE 9 */
+    -webkit-transform: rotateY(7deg); /* Chrome, Safari, Opera */
+    transform: rotateY(70deg);
+}
+
+.slide-prev-left {
+	.slide-popular.ng-enter, 
+  	.slide-popular.ng-leave { 
+    	-webkit-transition: 0.5s linear all;
+    	-moz-transition: 0.5s linear all;
+    	-ms-transition: 0.5s linear all;
+    	-o-transition: 0.5s linear all;
+    	transition: 0.5s linear all;
+  	}
+   
+  .slide-popular.ng-enter {
+    right: 10%;
+  }
+
+  .slide-popular.ng-leave {
+    right: 0;
+  }
+
+  .slide-popular.ng-leave-active {
+    position: fixed;
+    left: -100%;
+    right: 100%;
+  }
+  .slide-popular.ng-enter-active {
+    right: 0;
+    position:relative;
+  }
+}

@@ -1,0 +1,289 @@
+/*--------------------------------------------------------------------------------
+ MEDIA QURIES FOR USER PROFILE PAGES (MOVE TO PROPER SCSS FILE AFTER COMPLETION)
+---------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------
+ MEDIA QURIES :: TABLETS
+-------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .know-better {
+    margin-bottom: 30px;
+  }
+  .project-completetion-wrap .project-completetion h4 {
+  	@include column(4);
+  	text-align: left;
+  	text-indent: 15px;
+  	font-size: em(24);
+  }
+  .profile-tabs ul li a {
+  	padding-left: 10px;
+  	padding-right: 10px;
+  }
+
+} /* Tablet Media query ends  */
+
+/*-------------------------------------------------
+ MEDIA QURIES :: MOBILES
+-------------------------------------------------*/
+@media only screen and (max-width: 767px) { 
+	.profile-highlight-container {
+		padding: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.profile-highlight-container .profile-highlight-text {
+		@include column(12);
+		margin-bottom: 10px;
+	}
+	.profile-highlight-container .profile-highlight-text h6 {
+		margin-bottom: 5px;
+	}
+	.profile-highlight-container .profile-highlight-change-btn {
+		@include clearfix();
+		float: none;
+		margin: 0 auto;
+		.custom-width {
+			width: 160px;
+			height: 37px;
+		}
+	}
+	.know-better h1 {
+		font-size: em(20);
+	}
+	.know-better p {
+		margin-top: 10px;
+		font-size: em(19);
+		line-height: 20px;
+	}
+	.project-completetion-wrap .project-completetion {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	.project-completetion-wrap .project-completetion h4 {
+		@include column(12);
+		text-align: center;
+		font-size: em(18);
+		color: #423a45;
+		margin-bottom: 10px;
+	}
+	.project-completetion-wrap .project-completetion .project-completetion-progress {
+		@include column(10);
+		height: 18px;
+		margin-left: 13px;
+	}
+	.project-completetion-wrap .project-completetion .progress-txt {
+		font-size: em(18);
+	}
+
+	.profile-tabs {
+		width: 100%; 
+	    height: 50px;
+	    overflow-x: scroll;
+	}
+	.profile-tabs ul {
+	    width:700px;
+	}
+	.profile-tabs ul li {
+	    display: inline-block; 
+	    float: left;
+	    /*width: auto;*/
+	}
+	.profile-tabs ul li a {
+		padding-top: 13px;
+		padding-bottom: 13px;
+		font-size: em(16);
+	}
+	.tab-content .panel-heading {
+		padding-top: 10px!important;
+		padding-bottom: 10px!important;
+		height: auto;
+	}
+	.tab-content .panel-heading a {
+		font-size: em(13);
+	}
+	.toggle-icon, .toggle-icon-active {
+		@include scale(0.8);
+		margin-right: -10px;
+	}
+
+	.social-things .social-header-wrap {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.social-things .social-header-wrap p {
+		font-size: em(18);
+	}
+	.social-things .social-stuffs li a {
+		@include scale(0.8);
+		margin-left: -20px;
+		padding-left: 60px;
+	}
+	.social-things .social-stuffs {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	.social-things .social-stuffs li .switch {
+		@include scale(0.8);
+		margin: 18px -5px 0 0;
+	}
+
+	.form-elements {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-left: 10px!important;
+		padding-right: 10px!important;
+		font-size: em(15);
+	}
+
+	.form-container {
+		width: 100%;
+		display: inline-block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.form-left-container {
+		@include column(12);
+	}
+	.form-center-container {
+		@include column(12);
+	}
+	.form-right-container {
+		@include column(12);
+	}
+	.form-right-container .slider-text {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.form-right-container .custom-range {
+		width: 100% !important;
+		margin-top: 20px;
+	}
+	.href-css {
+		font-size: em(20);
+	}
+	.form-center-container-my-skills {
+		@include column(12);
+		.custom-text-box-my-skills {
+			width: 100%;
+		}
+	}
+	.custom-select-field, .custom-text-box {
+		height: 50px;
+	}
+
+
+	#collapsible-myskills-1 .form-elements .form-container:first-child .form-center-container {
+		width: 45%;
+	}
+	#collapsible-myskills-1 .form-elements .form-container:first-child .form-right-container {
+		width: 45%;
+	}
+	.radio, .checkbox {
+		padding-left: 25px;
+	}
+	.radio:before, .checkbox:before {
+		top: 0px;
+		left: 0;
+		position: absolute;
+	}
+	.radio .radio-button-text, .checkbox .radio-button-text {
+		margin-left: 0;	
+	}
+
+	/*About Me*/
+	#aboutMe .radio {
+		width: 45%;
+		margin-right: 0;
+	}
+	.custom-width {
+		height: 45px;
+		span {
+			font-size: em(14s);
+		}
+	}
+	.form-container #uploadFile {
+		margin-top: 10px;
+	}
+		
+	#collapsible-myskills-1 .form-elements .form-container:nth-child(2) .form-left-container {
+		display: none;
+	}
+	#collapsible-myskills-1 .form-elements .form-container:nth-child(2) .form-center-container {
+		width: 45%;
+	}
+	#collapsible-myskills-1 .form-elements .form-container:nth-child(2) .form-right-container {
+		width: 45%;
+	}
+	.container-payment-membership {
+		width: 100%;
+	}
+	.custom-text-box-promo {
+		margin-bottom: 10px;
+	}
+
+
+	/*My Refgerence*/
+	#collapsible-reference-1 .form-elements .form-container:first-child .form-center-container {
+		margin-bottom: 10px;
+	}
+
+	/*My Payment*/
+	.form-container-payments {
+		display: inline-block;
+	}
+	.form-center-container-my-payment {
+		width: 100%;
+		display: inline-block;
+	}
+	.form-container-payments .form-left-container {
+		padding-top: 0;
+	}
+	.form-center-container-my-payment .form-payment-container {
+		width: 100%;
+		display: inline-block;
+	}
+	.form-center-container-my-payment .form-payment-container .custom-text-box-payment {
+		width: 93%;
+	}
+	.form-center-container-my-payment .form-payment-container .payment-info {
+		width: 100%;
+	}
+	.form-center-container-my-payment .form-payment-container .custom-select-field-payment, .form-center-container-my-payment .form-payment-container .custom-text-box-cvv {
+		height: 50px;
+	}
+	.form-center-container-my-payment .form-payment-container .card-number-slot, .form-center-container-my-payment .form-payment-container .payment-info {
+		margin-top: 30px;
+	}
+
+	/*My Profile*/
+	#collapsible-personaldetail-1 .form-elements .form-container:nth-child(2) .form-center-container {
+		margin-bottom: 10px;
+	}
+
+	.panel-bottom {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+} /* Mobile Media query ends  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,181 @@
+<div class="accordion" id="myAccordion-payment" ng-controller="MyPaymentsCtrl">
+	<form name="aboutForm" novalidate autocomplete="off">
+		<div class="panel">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-mypayment-1" data-parent="#myAccordion-payment" ng-click="getSelectedHeader('myPayments1')" id="myPayments1">
+	    	<a class="accordion-toggle custom-header"  >
+	        	<span class="personal-details-heading-image"></span>
+	        	<span>Membership Plans</span>
+	          	<div class="toggle-icon" id="toggleButton"></div>
+	      </a>
+      </div>
+			<div id="collapsible-mypayment-1" class="collapse">
+				<div class="container form-elements">
+					<div class="form-container">
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Basic</span>
+                	<h4 class="membership-subheading">Free</h4>
+                  <h4 class="membership-time-period">Forever</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+              <div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Silver</span>
+                	<h4 class="membership-subheading">$599.0</h4>
+                  <h4 class="membership-time-period">6 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                  <span class="membership-heading">Gold</span>
+                  <h4 class="membership-subheading">$999.0</h4>
+                  <h4 class="membership-time-period">12 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+          </div><div class="form-container">
+            <div class="form-left-container">Promotional Code</div>
+            <div class="form-center-container">
+              <input type="text" name="ifothers" class="custom-text-box-promo">
+            </div>
+            <div class="form-right-container">
+            	<input type="button" name="join" value="Upload" ng-click="getImage(2)" class="button-css"/>
+            </div>
+          </div>
+					<div class="form-container-payments">
+		        <div class="form-left-container">
+		        	<div class="payments-tabs">
+								<ul>
+				          <li class="active" data-toggle="tab" ng-click="selectPaymentMode(10)"><a   >Debit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(11)"><a ng-click="selectPaymentMode(11)">Credit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(12)"><a ng-click="selectPaymentMode(12)">NetBanking</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(13)"><a ng-click="selectPaymentMode(13)">Cash Card</a></li>
+		      			</ul>
+		  				</div>	
+		        </div>
+		        <div class="form-center-container-my-payment">
+		          <div class="tab-content">
+                <div id="debitCard" ng-hide="debitCardpanel">
+                Debit Card
+                </div>
+                <div id="creditCard" ng-hide="creditCardpanel" >
+                <div class="form-payment-container">
+                	<span>Enter your credit card details</span>
+                	<div class="card-number-slot">
+	                	<p>Card number</p>
+	                	<input type="text" name="cardnumber" class="custom-text-box-payment">
+                	</div>
+                	<div class="payment-info">
+	                	<p>Expiry Date</p>
+	                	<select class="custom-select-field-payment">
+	                		<option>1</option>
+	                		<option>2</option>
+	                		<option>3</option>
+	                	</select>
+	                	<select class="custom-select-field-payment">
+	                		<option></option>
+	                		<option></option>
+	                		<option></option>
+	                	</select>
+                	</div>
+                	<div class="payment-info">
+                		<p>CVV Code</p>
+                		<input type="text" name="cvvnumber" class="custom-text-box-cvv">
+                	</div>	
+                </div>
+                </div>
+                <div id="netBanking" ng-hide="NetBankingPanel">
+                Net Banking
+                </div>
+                <div id="cashCard" ng-hide="cashCardPanel" >
+                Cash Card
+                </div>
+              </div> 
+		        </div>
+		      </div>
+          <div class="form-container">
+            <div class="form-left-container">
+                Address
+            </div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line1" name="cc-address1" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line2" name="cc-address2" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line3" name="cc-address3" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{Country}}</div>
+            <div class="form-center-container">
+              <select name="ss.country" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{state}}</div>
+            <div class="form-center-container">
+              <select name="ss.state" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+           <div class="form-container">
+            <div class="form-left-container">city</div>
+            <div class="form-center-container">
+              <input type="text" class="custom-text-box" placeholder="city" ng-model="ss.city" name="city" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{landmark}}</div>
+            <div class="form-center-container">
+              <select name="ss-landmark" class="custom-select-field">
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+        </div>
+		 	</div>
+		</div>
+	</form>
+</div>

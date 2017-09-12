@@ -1,0 +1,56 @@
+<div class="main-wrapper content-learn-module" ng-controller="contentlibraryctrl">
+  @@include('header.html')
+  <select class="selectpicker show-menu-arrow ">
+        <option>ALL</option>
+        <option>Learn</option>
+        </select>
+        <div class="container-dropdowns">
+          <select class="selectpicker ">
+          <option ng-repeat="row in filter[&quot;'filter'&quot;]" value="{{row}}">{{row}}</option>
+          </select>
+          <span>sort by</span>
+          <select class="selectpicker">
+          <option>Relevance</option>
+          <option>Default</option>
+
+          </select>
+          <span>view</span>
+          <img Src="/images/content-grid.png" class="views" ng-click="showgridview();">
+          <img Src="/images/content-list.png" class="views" ng-click="showlistview();">
+        </div>
+      <div class="new-container">
+
+        <div class="profile-contents">
+         <div class="profile-tabs content-tabs">
+                <ul>
+                    <li class="active"><a data-toggle="tab"  ng-click="showgridview()" >Browse</a></li>
+                    <li><a data-toggle="tab"  ng-click="showlistview()" >Recomended</a></li>
+                    
+                </ul>
+            </div>
+
+            <form name="userDetails">
+                <div class="tab-content">
+                    <div id="Browse" ng-hide="panel0" class="gridview">
+                      @@include('content-browse-learn.html')    
+                    </div>
+                    <div id="Recomended" ng-hide="panel1" class="listview">
+                       @@include('content-recommend-learn.html')
+                    </div> 
+                </div>    
+            </form>
+      </div>
+  </div>
+</div>
+
+<section class="row join-us">
+  <div class="new-container">   
+   <div class="social-media-block">
+        <h3>Join us on</h3>
+        <a href="#" class="fb-share"> </a>
+        <a href="#" class="gl-share"> </a>
+        <a href="#" class="tw-share"> </a>
+    </div>
+  </div>
+</section>
+        @@include('footer.html')

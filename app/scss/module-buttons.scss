@@ -1,0 +1,47 @@
+/*-------------------------------------------------
+MODULE :: BUTTON
+-------------------------------------------------*/
+
+.btn-purple-medium {
+	@include borderRadius(2px);
+	background: #7c3a93;
+	display: inline-block;
+	color: #fff;
+	font-size: em(18);
+	padding: 12px 20px;
+	font-family: 'LatoBold', sans-serif;
+
+	&:hover {
+		background: #6a327e;
+		color: #fff;
+	}
+}
+
+.btn-grey-medium {
+	@include borderRadius(2px);
+	background: #b5b5b5;
+	display: inline-block;
+	color: #fff;
+	font-size: em(18);
+	padding: 12px 20px;
+	font-family: 'LatoBold', sans-serif;
+
+	&:hover {
+		background: #989797;
+		color: #fff;
+	}
+}
+.btn-grey-small {
+	@include borderRadius(2px);
+	background: #b5b5b5;
+	display: inline-block;
+	color: #fff;
+	font-size: em(14);
+	padding: 4px 8px;
+	font-family: 'LatoBold', sans-serif;
+
+	&:hover {
+		background: #989797;
+		color: #fff;
+	}
+}

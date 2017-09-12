@@ -1,0 +1,755 @@
+.main-container-color {
+	background: #f8f7f5;
+}
+
+.profile-highlight-container {
+	@include clearfix();
+	margin: 28px 0; 
+	@include box-shadow(0, 0, 4px, 1px, 0, 0, 0, 0.07);
+	padding: 30px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+
+	.profile-highlight-text {
+		@include column(8);
+		margin-left: 0;
+		h6 {
+			font-family: 'LatoBOLD';
+			font-size: em(21);
+			color: #79727c;
+			margin: 0 0 13px 0;
+		}
+		span {
+			color: #9f96a4;
+			font-size: em(20);
+		}
+	}
+	.profile-highlight-change-btn {
+		float: right;
+	}
+}
+.custom-width {
+	width: 147px;
+	height: 47px;
+}
+.know-better {
+	@include clearfix();
+	text-align: center;
+	margin-bottom: 40px;
+	h1 {
+		font-family: 'LatoBOLD';
+		font-size: em(31);
+		color: #6b646f;
+	}
+	p {
+		margin-top: 20px;
+		color: #9f96a4;
+		font-size: em(20);
+	}
+}
+
+.project-completetion-wrap {
+	@include clearfix();
+	.project-completetion {
+		@include clearfix();
+
+		display: block;
+		margin: 0 16px;
+		background-color: #efe9f2;
+		padding: 24px 0 18px 0;
+
+		-webkit-border-radius:10px 10px 0 0;
+		-moz-border-radius:10px 10px 0 0;
+		border-radius:10px 10px 0 0;
+
+		@include box-shadow(0, 0, 4px, 1px, 0, 0, 0, 0.01);
+
+		h4 {
+			@include column(3);
+			text-align: right;
+			font-size: em(22);
+			color: #78707d;
+		}
+		.project-completetion-progress {
+			@include column(7);
+			@include borderRadius(25px);
+			border: 5px solid #e8e2eb;
+			background-color: #ddd6e1;
+			height: 22px;
+
+			.project-completetion-progress-bar {
+				background-color: #7c3a93;
+				height: 100%;
+				@include borderRadius(25px);
+			}
+		}
+		.progress-txt {
+			font-family: 'LatoBOLD';
+			font-size: em(22);
+			color: #78707d;
+			float: left;
+			margin-top: -4px;
+		}
+	}
+}
+
+.profile-contents {
+	/*background : #fff;
+	@include box-shadow(0, 0, 2px, 1px, 0, 0, 0, 0.06);*/
+}
+.profile-tabs {
+	@include clearfix();
+	background : #fff;
+	@include box-shadow(0, 0, 2px, 1px, 0, 0, 0, 0.06);
+	ul {
+		width: 100%;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		float: left;
+		li {
+			float: left;
+			width: 20%;
+			text-align: center;
+			a {
+				font-family: 'LatoBOLD';
+				font-size: em(20);
+				color: #9f96a4;
+				display: inline-block;
+				cursor: pointer;
+				padding: 22px 15px;
+				&:hover {
+					color: #6b646f;
+				}
+			}
+		}
+	}
+}
+.profile-tabs ul li.active a {
+	color: #6b646f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-css {
+	background: $buttonBackground;
+	background-image: transparent;
+	border: none;
+	color: white;
+	font-family: lato;
+	border-radius: 5px;
+	height: 47px;
+	width: em(147);
+}
+.href-css{
+	font-family : LatoMedium;
+	color : $hrefColor;	
+	float : left;
+
+}
+
+
+.personal-details-heading-image {
+	background: url("../images/aboutme-icons.png") 1px 33px;
+	height: 23px;
+	width: 32px;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.education-qualification-heading-image {
+	background: url("../images/aboutme-icons.png") 0px -91px;
+	height: 23px;
+	width: 32px;
+	display: inline-block;	
+	margin-right: 7px;
+}
+
+.education-qualification-heading-image-active {
+	background: url("../images/aboutme-icons.png") 131px 489px;
+	height: 23px;
+	width: 32px;
+	display: inline-block;	
+}
+
+.family-information-header-icon {
+	background: url("../images/aboutme-icons.png") 131px 491px;
+	height: 23px;
+	width: 28px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.active-header .education-qualification-heading-image {
+	background-position: 0 -545px;
+}
+.active-header .personal-details-heading-image {
+	background-position: 0 0;
+}
+.active-header .family-information-header-icon {
+	background-position: 0 -503px;
+}
+
+.panel-default {
+	.panel-heading {
+	border-color: $unSelectedTabHeadingColor !important;
+	background : $unSelectedTabHeadingColor !important;
+	background-image: -webkit-linear-gradient(top,$unSelectedTabHeadingColor 0%, $unSelectedTabHeadingColor 100%) !important;
+	height: 68px;
+	color : $personalDetailsHeaderColor !important;
+	font-size: em($font-23);
+	padding: 18px 15px !important;
+	}
+	.active-header{
+	background-color: $tabHeadingColor;
+	border-color: $tabHeadingColor;
+	background-image: -webkit-linear-gradient(top, $tabHeadingColor 0%, $tabHeadingColor 100%) !important;
+	
+	a{
+		color : $tabHeaderColor;
+	}
+}
+}
+.panel-heading {
+	border-color: $unSelectedTabHeadingColor;
+	background : $unSelectedTabHeadingColor;
+	background-image: -webkit-linear-gradient(top,$unSelectedTabHeadingColor 0%, $unSelectedTabHeadingColor 100%);
+	height: 68px;
+	color : $personalDetailsHeaderColor !important;
+	font-size: em($font-23);
+	padding: 18px 15px !important;
+}
+.active-header{
+	background-color: $tabHeadingColor;
+	border-color: $tabHeadingColor;
+	background-image: -webkit-linear-gradient(top, $tabHeadingColor 0%, $tabHeadingColor 100%) !important;
+	
+	a{
+		color : $tabHeaderColor;
+	}
+}
+
+/* accordion icon */
+.toggle-icon {
+	background: url("../images/aboutme-icons.png") 139px 167px;
+	height: 33px;
+	width: 47px;
+	display: inline-block;
+	float: right;
+}
+.toggle-icon-active {
+	background: url("../images/aboutme-icons.png") 139px 216px;
+	height: 33px;
+	width: 47px;
+	display: inline-block;
+	float: right;
+
+}
+
+
+.collapse.in {
+	overflow: hidden;
+}
+.tab-content {
+	.panel-heading {
+		cursor: pointer;
+
+		a {
+			font-family: 'LatoBOLD';
+			font-size: em(18);
+			color: #9f96a4;
+		}
+	}
+	.active-header a {
+		color: #f2f0ea;
+	}
+	.panel {
+		margin-bottom: 0;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+
+		border:0;
+		border-bottom: 1px solid #ebeaeb;
+		@include box-shadow(0, 0, 2px, 1px, 0, 0, 0, 0.06);
+		@include borderRadius(0);
+	}
+	.panel-heading {
+		@include borderRadius(0);
+		@include box-shadow(0, 0, 2px, 1px, 0, 0, 0, 0.06);
+	}
+	
+}
+
+
+
+/*===========================
+	ABOUT ME CONTENTS
+============================*/
+.social-things {
+	.social-header-wrap {
+		background: #fafafa;
+		padding: 25px 24px;
+		p {
+			margin: 0;
+			font-size: em(23);
+			color: #463d4b;
+		}
+	}
+	.social-stuffs{
+		@include clearfix();
+		margin: 0;
+		padding: 16px 24px;
+
+		li {
+			display: inline-block;
+			margin: 2px 0;
+			width: 100%;
+			a {
+				font-size: em(21);
+				color: #463d4b;
+				padding-left: 65px;
+				height: 42px;
+				line-height: 42px;
+				float: left;
+				background: url("../images/aboutme-icons.png") left center no-repeat;
+				&.fb {
+					background-position: 0 -172px;
+				}
+				&.gplus {
+					background-position: 0 -235px;
+				}
+				&.twtr {
+					background-position: 0 -296px;
+				}
+			}
+			.switch {
+				float: right;
+			}
+		}
+	}
+}
+
+/*Social Network Switches*/
+.switch_toggle {
+  /*margin: 50px auto;*/
+  width: 280px;
+  text-align: -webkit-right;
+}
+.switch_toggle > .switch {
+  display: block;
+  /*margin: 12px auto;
+  margin-left :2px;*/
+  margin-right : 32px;
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 69px;
+  height: 13px;
+ /* padding: 3px;*/
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #eeeeee, white 25px);
+  background-image: -moz-linear-gradient(top, #eeeeee, white 25px);
+  background-image: -o-linear-gradient(top, #eeeeee, white 25px);
+  background-image: linear-gradient(to bottom, #eeeeee, white 25px);
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: em(10);
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+  background: #9D47D8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-handle {
+  position: absolute;
+  top: -11px;
+  left: -1px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 26px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.switch-input:checked ~ .switch-handle {
+  left: 40px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-green > .switch-input:checked ~ .switch-label {
+  background: #4fb845;
+}
+
+
+
+.panel-bottom {
+	@include clearfix();
+	margin: 45px 0;
+	input[type="checkbox"] {
+		float: left;
+		margin-left: 7px
+	}
+	.custom-checkbox {
+		float : left;
+		@include scale(1.6);
+		padding: 10px;
+	    position : absolute;
+	}
+	.confirm-checkbox {
+		font-family: 'Lato';
+		padding-left: 40px;
+		font-size: em(18);
+		color: #463d4b;
+		margin-left: 0;
+		font-weight: normal;
+	}
+	.profile-form-submit {
+		@include clearfix();
+		input {
+			float: right;
+		}
+	}
+}
+
+.skip-next {
+	input, a {
+		float: right;
+	}
+	a {
+		margin: 9px 15px 0 0;
+	}
+}
+
+.form-elements {
+	font-family: 'Lato';
+	font-size: em(19);
+	margin: 40px 0;
+	.form-container {
+		button, input, optgroup, select, textarea {
+			/*color: #423e4c;*/
+		}
+	}
+}
+
+
+/*===========================
+	MY SKILLS CONTENTS
+============================*/
+
+.subtext {
+	color :$greysubtextColor;
+}
+
+.slider-text {
+	width: 24%;
+	color: $formFieldColor;
+  	font-family:  LatoMedium;
+  	font-size: em($font-19);
+}
+
+.custom-range {
+	width: 71% !important;
+	float: right;
+}
+
+.button-position {
+	text-align: right;
+}
+
+.href-css-myskills {
+	float: none;
+	margin-right: 10px;
+}
+
+.form-center-container-my-skills {
+	@include column(8);
+	color: $placeholderColor;
+}
+
+.form-right-container-my-skills {
+  margin-right: 49px;
+  color: $placeholderColor;
+  @include column(4);
+}
+
+.custom-text-box-my-skills {
+  height: 60px;
+  width: 54%;
+}
+
+.upload-thump {
+	width: 100px;
+	height: 100px;
+	float: right;
+	margin-top: -105px;
+	margin-right: 40px;
+}
+
+
+.form-center-container-myskills {
+  @include column(12);
+  color: $formFieldColor;
+  font-family:  LatoMedium;
+  font-size: em($font-19);
+}
+
+.form-column-1 {
+  @include column(3);
+  margin-left: 49px;
+  color: $formFieldColor;
+  font-family:  LatoMedium;
+  font-size: em($font-19);
+  height: inherit;
+  padding: 12px 0px;
+}
+
+.form-column-2 {
+	@include column(3);
+  color: $placeholderColor;
+}
+
+.form-column-3 {
+ @include column(3);
+  margin-left: 49px;
+  color: $formFieldColor;
+  font-family:  LatoMedium;
+  font-size: em($font-19);
+  height: inherit;
+  padding: 12px 0px;
+}
+
+.form-column-4 {
+	@include column(3);
+  color: $placeholderColor;
+}
+
+.form-column-table-1 {
+  @include column(2);
+  margin-left: 49px;
+  color: $formFieldColor;
+  font-family:  LatoMedium;
+  font-size: em($font-19);
+  height: inherit;
+  padding: 12px 0px;
+}
+
+
+/*===========================
+	MY PAYMENTS CONTENTS
+============================*/
+
+
+.payments-tabs {
+	@include clearfix();
+	background : #fff;
+	@include box-shadow(0, 0, 2px, 1px, 0, 0, 0, 0.06);
+	ul {
+		width: 100%;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		float: left;
+		/*background-color: $paymentContainerColor;*/
+		li {
+			width: 100%;
+			height: 88px;
+			background-color: $paymentUnselectedTabColor;
+			border-bottom: 1px solid black;
+			a {
+				font-family: 'LatoRegular';
+				font-size: 19px;
+				color: #9f96a4;
+				display: inline-block;
+				cursor: pointer;
+				padding: 26px 15px;
+				&:hover {
+					color: #6b646f;
+				}
+			}
+			&.active {
+				background-color: $paymentContainerColor;
+				/*color : #48444b;*/
+				color: #800000;
+			}
+		}
+
+	}
+}
+.payments-tabs ul li.active  {
+	color: #6b646f;
+}
+
+.form-container-payments {
+  @include column(12);
+  display: inline-flex;
+  margin: 12px 0px;
+  background-color: $paymentContainerColor;
+}
+
+.form-center-container-my-payment {
+	@include column(8);
+}
+
+/* Payment Module */
+
+.form-payment-container{
+  @include column(12);
+  margin: 28px 1.04167%;
+
+  .card-number-slot {
+	width: 100%;
+	margin-top: em(58);
+	}
+
+  .payment-info {
+	float: left;
+	width: 45%;
+	margin-top: 46px;
+	}
+
+}
+
+.custom-select-field-payment {
+  height: 60px;
+  width: 46%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $color-white;
+}
+
+.custom-text-box-payment {
+	height: 41px;
+  	width: 50%;
+}
+.custom-text-box-cvv {
+	height: 60px;
+  	width: 46%;
+}
+
+
+
+
+.custom-text-box-promo {
+	height: 48px;
+  	width: 100%;
+}
+
+
+/* My Payments ADD module */
+.container-payment-membership {
+    margin-left: 49px;
+    color: $formFieldColor;
+    font-family:  LatoMedium;
+    font-size: em($font-19);
+    @include column(4);
+    height: inherit;
+
+    .membership-heading {
+    	font-family: 'LatoBOLD';
+		font-size: em($font-23);
+		color: $paymentHeading;
+    }
+    .membership-subheading {
+    	color : $color-violet;
+    	font-size: em($font-36);
+    	font-family: 'LatoLight';
+    }
+    
+    .membership-time-period {
+    	color: $paymentTimePeriod;
+    	font-family: 'LatoRegular';
+    	font-size: em($font-24);
+    }
+
+    .course-info {
+    	font-family: 'LatoRegular';
+    	font-size: em($font-19);
+    	color: $paymentMessage;	
+    }
+
+    .purchase-button {
+    	padding-top: 37px;
+    	text-align: center;
+		padding-bottom: 23px;
+    }
+}

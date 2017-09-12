@@ -1,0 +1,64 @@
+[
+    {
+        "Name": "recomended courses",
+        "Default": true,
+        "id": 101,
+        "content" : {
+        				"Heading": "Designed for those who have a keen interest in becoming a home-based professional in baby care, iCare utilizes a more focused and hands-on environment together with the relevant skill sets in order to provide you with confidence.",
+         				"items": [
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			      {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/cntnt-driving.png", "header": "Elder care", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."}
+							      ]
+    				}
+    },
+    {
+        
+        "Name": "Things to Learn",
+        "Default": true,
+        "id": 102,
+        "content" : {
+				        "Heading": "1",
+				         "items": [
+			        {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			        {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+			        {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."}
+							     ]
+    				}
+    },
+    {
+        "Name": "Next in your course",
+        "Default": true,
+        "id": 103,
+        "content" : {
+				        "Heading": "2",
+				         "items": [
+							      {"imgSrc" : "../images/3.png", "header": "Chauffeurs", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+							      {"imgSrc" : "../images/2.png", "header": "Chauffeurs", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+							      {"imgSrc" : "../images/3.png", "header": "Chauffeurs", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."},
+                    {"imgSrc" : "../images/1.png", "header": "childcare", "subheader": "6moduels,2certifications", "descritpion" : "Through interactive training methods, individuals will learn salient points and practical knowledge which relate to taking care of babies and managing the expectations."}
+				    			  ]
+        }
+    },
+    
+]
+

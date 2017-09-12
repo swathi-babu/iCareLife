@@ -1,0 +1,72 @@
+/*======================================================================
+=            Import all your .scss files, order is very important
+
+  (The file which is not imported will not be include in final build )
+
+  CSS - All the css files will be loaded in the order they appear 
+    in the app/css directory
+========================================================================*/
+
+/*-------------------------------------------------
+APP :: GENERAL STYLE REDEFINITION
+-------------------------------------------------*/
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    overflow: auto;
+}
+
+ol,ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*-------------------------------------------------
+APP :: IMPORTING STYLES
+-------------------------------------------------*/
+
+@import "lib/grid";
+
+/* DEPENDENCIES */
+@import "variables";
+@import "mixins";
+@import "form";
+@import "mediaquery";
+@import "animation";
+
+/* THIRD PARTY LIBRARIES */
+@import "lib/normalize";
+@import "video";
+@import "selectmenu";
+
+@import "layout";
+@import "module";
+@import "module-notification";
+@import "module-popup";
+@import "module-buttons";
+
+/* PAGES */
+@import "page-landing";
+@import "page-signup";
+@import "page-about-me";
+@import "about-me/page-my-profile";
+@import "about-me/page-aboutme-responsive";
+/*@import "content-library";*/
+
+
+

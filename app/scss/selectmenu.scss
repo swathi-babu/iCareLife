@@ -1,0 +1,87 @@
+/*-------------------------------------------*\
+    #DropDown CSS
+\*-------------------------------------------*/
+
+
+/*********************** Drop down css *********************/
+
+.customSelect {
+	display: inline-block;
+	position: relative;
+}
+
+.arrowWrapper {
+	height: 62px;
+	width: 318px;
+	line-height: 45px;
+	color: #A5A5A5;
+	text-align: left;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+	padding: 0px;
+	border: none;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.noSelect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.arrowSection {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 100%;
+	z-index: 5;
+}
+
+.arrow {
+	background-image: url('../images/dropdown-arrow.jpg');
+	width: 22px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-size: 23px;
+	margin-top: 24px;
+	position: absolute;
+	right: 10px;
+	z-index: 2;
+}
+
+.ddmenu {
+	min-width: 104px;
+	background: rgba(0, 65, 148, 0.9);
+	display: none;
+	position: absolute;
+} 
+
+
+/*---------------------- ul list css ------------------------*/
+.customSelectMenu {
+	width: 318px;
+	left: 0;
+	top: 62px;
+	height: 122px;
+	overflow: scroll;
+	background: rgba(101, 101, 102, 0.95);
+	color: #FFF;
+	z-index: 5;
+	-moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+	li {
+		text-align: left;
+		padding: 5px 9px;
+		word-break: break-all;
+		line-height: 16px;
+		height: 40px;
+	}
+}
