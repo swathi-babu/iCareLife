@@ -1,0 +1,172 @@
+<div class="accordion" id="myAccordionReferene" ng-controller="myReferenceCtrl">
+  <div class="panel">
+    <div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-reference-1" data-parent="#myAccordionReferene" ng-click="getSelectedHeader('myRef1')" id="myRef1">
+      <a class="accordion-toggle custom-header"  >
+        <span class="personal-details-heading-image"></span>
+        <span>Reference Check</span>
+        <div class="toggle-icon" id="toggleButton"></div>
+      </a>
+    </div>
+    <div id="collapsible-reference-1" class="collapse">
+      <div class="container form-elements">
+        <form name="referenceForm" novalidate autocomplete="off">
+          <div class="form-container checkbox-radio-specific" ng-hide="sschildCareContent">
+            <div class="form-left-container">I wish to get job notification by</div>
+            <div class="form-center-container">
+              <input id="checkbox-job-phone" name="checkbox-job1" type="checkbox" >
+              <label class="checkbox"  for="checkbox-job-phone"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="checkbox-email" name="checkbox-job2" type="checkbox" >
+              <label class="checkbox" for="checkbox-email"><span class="radio-button-text">Email</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="sselderCareContent">
+            <div class="form-left-container">I wish to get job notification by</div>
+            <div class="form-center-container">
+              <input id="checkbox-job-phone" name="checkbox-job1" type="checkbox" >
+              <label class="checkbox"  for="checkbox-job-phone"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="checkbox-email" name="checkbox-job2" type="checkbox" >
+              <label class="checkbox" for="checkbox-email"><span class="radio-button-text">Email</span></label>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Name</div>
+            <div class="form-center-container">
+              <input type="text" name="firstName" class="custom-text-box" placeholder="First Name" ng-model="firstName" required> 
+            </div>
+            <div class="form-right-container">
+              <input type="text" name="lastName" class="custom-text-box" placeholder="Last Name" ng-model="lastName" required>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Email</div>
+            <div class="form-center-container">
+              <input type="email" name="emailId" class="custom-text-box" placeholder="Enter Your Email" ng-model="emailId" required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Relationship</div>
+            <div class="form-center-container">
+	      <select name="relationship" class="custom-select-field" ng-model="selectedRelationship" ng-options="relationship.name for relationship in relationships track by relationship.id">
+		<option value="" selected>Relationship</option>
+	      </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">No of years known</div>
+            <div class="form-center-container">
+              <input type="number" name="knowDuration" class="custom-text-box" placeholder="No of years known" min="0" ng-model="knowDuration" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Mobile no</div>
+            <div class="form-center-container">
+              <input type="number" name="mobileNo" class="custom-text-box" placeholder="Mobile number" min="3" ng-model="mobileNo" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">iCare membership id</div>
+            <div class="form-center-container">
+              <input type="text" name="membershipId" class="custom-text-box" placeholder="iCare membership id" ng-model="membershipId" required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="referenceForm.$invalid" ng-click="submitRefCheck();" class="btn btn-primary btn-lg custom-width">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 
+       /*************************************************************************************************
+       Background Check Accordian Menu
+       *************************************************************************************************/
+    -->
+  <form name="aboutForm" novalidate autocomplete="off">
+    <div class="panel">
+      <div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-reference-2" data-parent="#myAccordionReferene" ng-click="getSelectedHeader('myRef2'); " id="myRef2" ng-hide="onlyForServiceProvider">
+        <a class="accordion-toggle custom-header"  ><span class="personal-details-heading-image"></span><span>Background Check</span><div class="toggle-icon" id="toggleButton"></div></a>
+      </div>
+      <div id="collapsible-reference-2" class="collapse">
+        <div class="container form-elements">
+          <div class="form-container" ng-hide="driverCotentMyReference">
+            <div class="flexslider carousel" id='carousel'>
+              <ul class="slides">
+                <li class="slider-css" ng-repeat="list in verificationType">
+                  <div class="thumbnail bgSelection">
+                    <div class="caption">
+                      <h3>{{list.plan_name}}</h3>
+                      <h4>{{list.price}}</h4>
+                      <ul class="listOfBg">
+                        <li ng-repeat="type in list" class="list-dot txt-left" ng-value="{{list.id}}">
+                          {{type.name}}
+                        </li>
+                      </ul>
+                      <input type="radio" class="hide" name="bgSelection" ng-model="backgroundSelction" required>
+                      <input type="button" name="join" value="Select" ng-click="selectBackgroudCheck($event);" class="btn btn-primary btn-lg custom-width">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="aboutBgForm.$invalid" ng-click="submitBgCheck();" class="btn btn-primary btn-lg custom-width">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+
+	  <div class="form-container">
+	    <div class="form-center-container-myskills">I wish to add Background check tag to my profile</div>
+	  </div>
+	  <div class="form-container">
+	    <div class="form-column-table-1">Parameters</div>
+	    <div class="form-column-table-1" ng-repeat="plans in planName">{{plans}}</div>
+	  </div>
+	  <div class="form-container">
+	    <div class="form-column-table-1">Price</div>
+	    <div class="form-column-table-1" ng-repeat="price in price">{{price}}</div>
+	  </div>
+
+	  <div class="form-container checkbox-radio-specific" ng-repeat="(key,values) in hash_map">
+	    <div class="form-column-table-1"> {{key | humanize}} </div>
+	    <div class="form-column-table-1 checkbox-radio-specific" ng-repeat="v in values track by $index">
+	      <input id="{{key}}-{{$index}}" name="radio-Verification-high" type="checkbox" ng-disabled="true" ng-checked="{{v}}" ng-false-value="0" ng-true-value="1">
+	      <label class="checkbox" for="radio-Verification-high">
+		<span class="radio-button-text"></span></label>
+	    </div>
+	  </div>
+
+	  <div class="profile-form-submit form-container">
+	    <div class="form-column-table-1"></div>
+	    <div class="form-column-table-1"  ng-repeat="type in verificationType">
+              <input type="button" name="button" value="Purchase" class="btn btn-primary btn-login btn-lg custom-width" ng-click="submitRefCheckForChildPart3();">
+	    </div>
+	  </div>
+	  
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,423 @@
+<div class="main-wrapper" ng-controller="contentlibraryctrl">
+  <script src="/images/slider_plugins/js/blueimp-gallery.js"></script>
+  <script src="/images/slider_plugins/js/blueimp-gallery-video.js"></script>
+  <script src="/images/slider_plugins/js/jquery.blueimp-gallery.js"></script>
+  <script src="/images/slider_plugins/js/demo.js"></script>
+  <!-- HEADER -->
+<header ng-controller="headerCtrl">
+    <div class="new-container">
+        <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+        <nav>
+            <li ng-click="showcontent()"><a href="">Learn</a></li>
+            <li><a href="">Hire</a></li>
+            <li><a href="">Job</a></li>
+            <li><a href="">More</a></li>
+        </nav>
+        <span class="mobile-menu-icon" ng-click="mobileMenu()"></span>
+        
+        <div class="mobile-menu-container">
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="action-buttons-mobile">
+                <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+                <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+                <div ng-show="isLoginIn">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="user-details">
+                        <div class="username">John Paul</div>
+                        <div class="member-type gold">Gold</div>
+                    </div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <a href="" class="search-icon"></a>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            
+            <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+            <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+            
+            <div class="country" ng-hide="isLoginIn">
+              <a href=""><img src="/images/icon-country.png" alt=""></a>
+            </div>
+
+            <div ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+  
+  <div class="container-fluid content-background">
+    <div class="row slider-container">
+            <div id="blueimp-video-carousel" class="new-container blueimp-gallery blueimp-gallery-controls blueimp-gallery-carousel">
+                <div class="slides"></div>
+
+                <h3 class="title"></h3>
+                <img class="next"  src="/images/arrow-next.png">
+                <img class="prev" src="/images/arrow-prev.png">
+                <a class="play-pause"></a>
+            </div>
+        </div>
+
+        <select class="selectpicker show-menu-arrow">
+        <option>Driving</option>
+        <option>Childcare</option>
+        </select>
+        <div class="container-dropdowns">
+          <select class="selectpicker ">
+          <option>Filter</option>
+          <option>all</option>
+          </select>
+          <span>sort by</span>
+          <select class="selectpicker show-menu-arrow">
+          <option>Default</option>
+          <option>popularity</option>
+          <option>Newest</option>
+          <option>Price:low to high</option>
+          <option>Price:high to low</option>
+          </select>
+          <span>view</span>
+          
+          <img Src="/images/content-grid.png">
+          <img Src="/images/content-list.png">
+        </div>
+      <div class="new-container">
+         <div class="container-heading"    ng-click="browsecontent('learn'); " id="learn">
+          <a class=" content-heder">
+             <span>Relevant</span>
+             <span>Recomended</span>
+             <span>popular</span>
+            </a>
+          </div>
+        
+    
+        <div class="new-container">
+      <div class="container-fluid content-background">
+        <div class="container form-elements container-learn">
+          <div class="form-container ">
+            <div class="flexslider carousel" id='carousel'>
+              <h3>Compentency courses</h3>
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/cntnt-driving.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Search</button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li class="slider-css">
+                  <div class="browse1">
+                    <div class="thumbnail ">
+                      <img Src="/images/cntnt-browse-driver.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class="content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div></div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/cntnt-safedrving.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class="content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/cntnt-browse-roads.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class="content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/cntnt-safedrving.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class="content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="container form-elements container-learn">
+        <div class="form-container">
+          <div class="flexslider carousel" id='carousel'>
+            <h3>Nano courses</h3>
+              <ul class="slides">
+              <li class="slider-css">
+                  <div class="thumbnail browse1">
+                    <img Src="/images/cntnt-learn.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class="content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail browse1">
+                    <img Src="/images/cntnt-paralleparking.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail browse1">
+                    <img Src="/images/cntn-safedriving.png">
+                      <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail browse1">
+                    <img Src="/images/cntnt-eldercare.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail browse1">
+                    <img Src="/images/2.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+       <div class="container form-elements container-learn">
+          <div class="form-container">
+            <div class="flexslider carousel" id='carousel'>
+              <h3>Next in your course</h3>
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/nxt-course.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/nxt-course-driving.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/nxt-course-safedriving.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/nxt-cource-learning.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail browse1">
+                      <img Src="/images/nxt-course.png">
+                         <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                        <div class=" content_hover">
+                          <p class="content">Our priority is to equip individuals with adequate skills and knowledge</p>
+                          <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium">Take This course</button>    
+                          </div>
+                       </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="row join-us">
+  <div class="new-container">   
+   <div class="social-media-block">
+        <h3>Join us on</h3>
+        <a href="#" class="fb-share"> </a>
+        <a href="#" class="gl-share"> </a>
+        <a href="#" class="tw-share"> </a>
+    </div>
+  </div>
+</section>
+            <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="list-inline">
+            <li><a href="#"> About </a></li>
+            |
+            <li><a href="#"> Help </a></li>
+            |
+            <li><a href="#"> Career </a></li>
+            |
+            <li><a href="#"> Blog </a></li>
+            |
+            <li><a href="#"> Terms of Use </a></li>
+            |
+            <li><a href="#"> Policies </a></li>
+        </ul>
+    </footer>

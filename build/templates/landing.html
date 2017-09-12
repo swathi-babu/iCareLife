@@ -1,0 +1,954 @@
+<div class="main-wrapper page-landing landing-module" ng-controller="landingCtrl">
+    <style type="text/css">
+    
+
+</style>
+    <script src="/images/slider_plugins/js/blueimp-gallery.js"></script>
+    <script src="/images/slider_plugins/js/blueimp-gallery-video.js"></script>
+    <script src="/images/slider_plugins/js/jquery.blueimp-gallery.js"></script>
+    <script src="/images/slider_plugins/js/demo.js"></script>
+
+    <!-- Header-->
+    <!-- HEADER -->
+<header ng-controller="headerCtrl">
+    <div class="new-container">
+        <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+        <nav>
+            <li ng-click="showcontent()"><a href="">Learn</a></li>
+            <li><a href="">Hire</a></li>
+            <li><a href="">Job</a></li>
+            <li><a href="">More</a></li>
+        </nav>
+        <span class="mobile-menu-icon" ng-click="mobileMenu()"></span>
+        
+        <div class="mobile-menu-container">
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="action-buttons-mobile">
+                <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+                <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+                <div ng-show="isLoginIn">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="user-details">
+                        <div class="username">John Paul</div>
+                        <div class="member-type gold">Gold</div>
+                    </div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <a href="" class="search-icon"></a>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            
+            <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+            <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+            
+            <div class="country" ng-hide="isLoginIn">
+              <a href=""><img src="/images/icon-country.png" alt=""></a>
+            </div>
+
+            <div ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="container-fluid">
+
+        <div class="row slider-container">
+            <div id="blueimp-video-carousel" class="new-container blueimp-gallery blueimp-gallery-controls blueimp-gallery-carousel">
+                <div class="slides"></div>
+
+                <h3 class="title"></h3>
+                <img class="next"  src="/images/arrow-next.png">
+                <img class="prev" src="/images/arrow-prev.png">
+                <a class="play-pause"></a>
+            </div>
+        </div>
+
+        <!-- Instant Support -->
+        <section class="row instant-support">
+            <div class="new-container">
+                <h1>
+                    Get Instant Support
+                    <span>When you have question we're here to help you 24x7</span>
+                </h1>
+                <a href="#" class="instant-support-btn">8866 944 9494</a>
+            </div>
+        </section>
+
+        <!-- Promotional -->
+        <section class="promotional-text new-container">
+            <h2>At iCare Life, we pride ourselves in moulding our services to suit your needs.</h2>
+            <p>Select one or more of the following which best describes what you're looking for</p>
+        </section>
+
+        <!-- iCare Services -->
+        <section class="icare-services">
+            <!-- <div class="thumbnails">
+                <div class="thumbnail model1">
+                    
+                    <img src="/images/service_seeker.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Service Seeker</h4>
+                        <p>Looking for the right service provider to fulfil your requirement</p>
+                    </div>
+                   <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                    </div>
+                </div>
+          
+                <div class="thumbnail model1">
+                    <img src="/images/service_provide.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Service Provider</h4>
+                        <p>Looking for the right service provider to fulfil your requirement</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="thumbnail model1">
+                    <img src="/images/learning_center.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Learning Center</h4>
+                        <p>Looking for educational content which can enrich your skills</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                     </div>       
+                </div>
+
+                <div class="thumbnail">
+                    <img src="/images/our_community.png" alt="Sample Image">
+                    <div class="caption text-center module-caption">
+                        <h4 class="fonts_color">Our Community</h4>
+                        <p>Assisting people to develop their potential skill & make a difference</p>
+                    </div>
+                    <div class="thumbnail model1_hover">
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                        <div class="content-bottom">
+                                <button type="button" class="btn btn-search">Search</button>
+                                <button type="button" class="btn btn-register">Register</button>
+                            </div>
+                     </div> 
+                </div>
+            </div> -->
+            <div class="new-container">
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/learn.png">
+                        </div>
+                        <h5>LEARN</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div> 
+                      <div class=" model1_hover">
+                        <h2>LEARN</h2>
+                    <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                    <div class="content-bottom">
+                           <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                        </div>
+                </div>
+                </div>
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/jobs.png">
+                        </div>
+                        <h5>JOBS $ HIRE</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div>
+                    <div class=" model1_hover">
+                        <h2>JOBS $ HIRE</h2>
+                        <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly.</p>
+                        <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="service-thumbnail model1">
+                    <div class="service-thumbnail-content">
+                       <div class="thumb-img">
+                            <img src="/images/store.png">
+                        </div>
+                        <h5>STORE</h5>
+                        <p>Looking for the right service provider to fullfill your requirements</p> 
+                    </div>
+                    <div class=" model1_hover">
+                        <h2>STORE</h2>
+                    <p class="content">Our priority is to equip individuals with adequate skills and knowledge that will aid them in providing the best servic professional home-care for the elderly, babies & toddlers as well as in other selected service trades such as professional Service provider.</p>
+                    <div class="content-bottom">
+                            <button type="button" class="btn btn-purple-medium" ng-click="showLoginPopup()">Login</button>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stages -->
+        <!-- <section class="stages-container" ng-switch on="stages">
+            <div class="new-container">
+                <div class="training-method-head">
+                    <h2 class="stages-heading">Our Training Methodology</h2>
+                    <p>The life enhancing training methodology is designed to support the way adults learn in today's society. The life enhancing training methodology comprises of 3 stages.</p>
+                </div>
+
+                <div class="features-stages blk">
+                    <ul class="">
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 1;" ng-class="{'active':1 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':1 == stages}"><span>1</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 2;" ng-class="{'active':2 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':2 == stages}"><span>2</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                        <li class="stage-circle inl-blk" ng-click="stages = 3;" ng-class="{'active':3 == stages}">
+                            <span class="stages inl-blk" ng-class="{'active':3 == stages}"><span>3</span></span>
+                        </li>
+                        <span class="line-left inl-blk"></span>
+                    </ul>
+                    <div id="training_method_content">
+                        <h3 class="stages-heading">Practical Session and hands-on training</h3>
+
+                        <div class="stage-one" ng-switch-when="1">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant's pace, it is mandatory that they attend these lessons in iCare's premises.</p>
+                        </div>
+                        <div class="stage-one" ng-switch-when="2">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant's pace, it is mandatory that they attend these lessons in iCare's premises.
+                            </p>
+                        </div>
+                        <div class="stage-three" ng-switch-when="3">
+                            <p>Participants will learn at their own pace base on their preferred language through videos and virtual trainings. Though these classes are conducted base on each participant’s pace, it is mandatory that they attend these lessons in iCare’s premises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Featured Content -->
+        <section class="row featured-content">
+            <div class="new-container">
+                <div class="partition-sections">
+                    <img src="/images/icare-learning.png" class="img-responsive"/>
+                    <div class="content-beside-image">
+                        <h4>iCare Life- The learning path to professional, life style and personal growth</h4>
+                        <p><i>Meera Pratap, 13 August 2014</i></p>
+                    </div>    
+                </div>
+                <div class="partition-sections">
+                    <div class="did-you-know">
+                        <h4>Did you know ?</h4>
+                        <p>
+                            Participants will learn at their own pace
+                            base on their preferred language through
+                            videos and virtual trainings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How we do it -->
+        <section class="row how-we-do-it">
+            <div class="new-container">
+                <h1>How we do it</h1>
+                <p>The life enhancing training methodology is designed to support the way adults learn in todays society. The life enhancing training methodology comprises the 3 stages</p>
+                <section class="row featured-content" style="background:none">
+           
+                <div class="partition-sections">
+                    <p class="how-wedo-text">The life enhancing training methodology is designed to support the way adults learn in todays society. The life enhancing training methodology comprises the 3 stages</p>   
+                </div>
+                <div class="partition-sections">
+                    <div class="did-you-know">
+                        <video  controls>
+                         <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                         </video>
+                    </div>
+                    </div>
+                </div>
+            
+        </section>
+               
+        </section>
+
+        <!-- Discover Courses -->
+        <section class="discover-courses new-container">
+            <h2>Popular Courses</h2>
+            
+            <div role="tabpanel">
+                <!-- Nav tabs -->
+                <div class="list-holder-wrap">
+                    <ul class="nav nav-tabs list-holder" role="tablist" >
+                        <li role="presentation"  ng-repeat="x in data"  ng-class="{'active': x.Default}" >
+                            <a href={{'#'+x.Name}} aria-controls="home122" role="tab" data-toggle="tab" id={{x.id}} ng-click="displayData(x.id)" >{{x.Name}}</a>
+                        </li>
+                    </ul>    
+                </div>
+                <p class="discover-courses-caption">Designed for thos who have a keen interest in becoming a home-based professional in baby care, iCare utilizes a more focused and hands-on environment together</p>
+
+                <div class="thumbnailSlider col-xs-64 col-sm-64 col-xs-64" id="thumbnailSlider">
+                    <div class="flexslider carousel" id="carousel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- iCare Family -->
+        <!-- <section class="icare-family">
+            <div class="row">
+                <div class="col-xs-64 col-sm-64 col-md-offset-12 col-md-40 col-lg-offset-12 col-lg-40 text-center section-pad">
+                    <h2>iCare Family</h2>
+                    <p>iCare Life provides training courses to develop necessary skills</p>
+
+                    <div class="col-xs-16 col-sm-16  col-md-12  col-lg-21 text-center icare-family-data ">
+                        <h1>120</h1>
+                        <h3>Courses</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course. </p>
+                    </div>
+                    <div class="col-xs-16 col-sm-16  col-md-12 col-lg-21 text-center icare-family-data ">
+                        <h1>340</h1>
+                        <h3>Modules</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course.</p>
+                    </div>
+                    <div class="col-xs-16 col-sm-16  col-md-12  col-lg-21 text-center icare-family-data">
+                        <h1>46</h1>
+                        <h3>Certifications</h3>
+                        <p>Learn skills from start to finish. <br/>Typically 2 to 3 hours of video per course.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Join Us -->
+        <section class="row join-us">
+            <div class="new-container">
+                
+                   <div class="social-media-block">
+                        <h3>Join us on</h3>
+                        <a href="#" class="fb-share"> </a>
+                        <a href="#" class="gl-share"> </a>
+                        <a href="#" class="tw-share"> </a>
+                    </div>
+               
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+        <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="list-inline">
+            <li><a href="#"> About </a></li>
+            |
+            <li><a href="#"> Help </a></li>
+            |
+            <li><a href="#"> Career </a></li>
+            |
+            <li><a href="#"> Blog </a></li>
+            |
+            <li><a href="#"> Terms of Use </a></li>
+            |
+            <li><a href="#"> Policies </a></li>
+        </ul>
+    </footer>
+
+
+    <section class="popup-module none">
+        <div class="modal-overlay"></div>
+
+        <div class="none login-module">
+            
+<div class="popup-nav login-popup" ng-controller="loginCtrl">
+
+  <!-- LOGIN HEADER -->
+  <div class="modal-header popup-header ">
+    <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">
+              &times;
+          </button>
+
+    <h4 class="modal-title popup-title">Welcome to iCare</h4>
+    <span class="input-help login-err-msg" ng-bind="loginErrorMsg"></span>
+  </div>
+
+  <!-- LOGIN BODY -->
+  <div class="modal-body popup-body">
+    <div class="row">
+      <div class="col-xs-64 col-sm-64 col-md-34 col-lg-34">
+        <form class="login-form" name="loginForm" novalidate autocomplete="off">
+          <div class="row label-icons">
+            <div class="action-buttons">
+              <input type="email" class="form-control form-control-input input-lg login-email" placeholder="Email Address" required="required" ng-model="user.email" id="email">
+              <span class="email-icon"></span>
+            </div>
+          </div>
+
+          <div class="row label-icons">
+            <div class="action-buttons">
+              <input type="password" class="form-control form-control-input input-lg login-pwd" placeholder="Password" required="required" ng-model="user.password" id="password">
+              <span class="password-icon"></span>
+            </div>
+          </div>
+          
+          <!-- GOOGLE RECAPTCHA -->
+          <div class="row captcha-container" ng-show="isCaptcha">
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+            <script>
+              var captchaConfig;
+              var onloadCallback = function() {
+                  captchaConfig = grecaptcha.render('g-recaptcha', {
+                  'sitekey' : '6LdFIAATAAAAALQGlTl2BvQbksMOAoJGV0_HIIy0',
+                  'callback' : verifyCallback,
+                  'theme' : 'light'
+                });
+              };
+
+              //On popup close, reset form
+              $('#myModal').on('click', '.closePopup, .modal-backdrop', function (event) {
+                event.preventDefault();
+                grecaptcha.reset(captchaConfig);
+              });
+
+              //Verify after captcha submit
+              var verifyCallback = function(response) {
+                console.log(grecaptcha.getResponse());
+                $.cookie('captchaStatus', 'success', { path: '/' });
+                $('.login-err-msg').html('');
+                $('.btn-popup-login').removeAttr('disabled');
+              };
+            </script>
+          
+            <!-- GOOGLE CAPTCHA KEY -->
+            
+              <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6LdFIAATAAAAALQGlTl2BvQbksMOAoJGV0_HIIy0"></div>
+           
+          </div>
+        
+          <div class="row login-fotter-text"> 
+            <div class="login-rememberMe" >                                
+            <input type="checkbox"  id="rememberMe" name="rememberMe" ng-model="user.remember_me" ng-default-value="0" ng-true-value="1" ng-false-value="0">
+            <label class="rememberMe" for="rememberMe">Remember me</label>
+            </div>
+            <div class="action-buttons">
+              <div href="" class="forgot-password float-right fgtPassword-modal" ng-click="showforgotpwd()" >Forgot Password ?</div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <input type="submit" class="btn-login btn-popup-login " ng-click="loginFormSubmit();" ng-disabled="loginForm.$invalid" value="Login">
+          </div>
+        </form>
+      </div>
+
+      <div class="visible-sm visible-md visible-lg line-seprarator">
+        <div class="login-separator-new float-left">
+          <strong class="blk">OR</strong>
+        </div>
+      </div>
+        
+      <div class="col-xs-64 visible-xs ">
+        <div class="col-xs-64">
+          <strong>OR Login Using</strong>
+        </div>
+      </div>
+        
+      <!-- SOCIAL -->
+      <div class="action-buttons social-networks" style="text-align: center;">
+        <!-- FB LOGIN -->
+        <button type="button" class="btn btn-fb btn-lg icon-fb-new img-responsive" ng-click="loginFacebook()">
+          <span class="btn-fb-icon"></span>Login with Facebook
+        </button>
+        
+        <!-- G+ LOGIN -->
+        <button type="button" class="btn btn-gm btn-lg icon-google-new img-responsive" ng-click="loginGoogle()">
+          <span class="btn-gm-icon"></span>Login with Google+
+        </button>
+        
+        <!-- TWITTER LOGIN -->
+        <button type="button" class="btn btn-tw btn-lg icon-twit-new img-responsive">
+          <span class="btn-tw-icon"></span>Login with Twitter
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN FOOTER -->
+  <div class="modal-footer popup-footer">
+    <div class="row">
+      <div class="login-reg">
+      New to iCare? <a href="" class="usersignup-modal login-footer-text" ng-click="showRegisterPopup();" >Register Here</a></div>
+      <div class="">
+      For Business&nbsp;<a href="" class="float-right login-footer-text" ng-click="" class="right">Click Here</a></div>
+    </div>
+  </div>
+
+</div>
+        </div>
+
+        <div class="none signup-module">
+            <section ng-controller="signupCtrl">
+  <div class="popup-nav setup-account">
+    <div class="modal-header popup-header">
+      <button type="button" class="close closePopup" data-dismiss="modal" ng-click="closePopup()" aria-hidden="true">
+      &times;
+      </button>
+      <h4 class="modal-title popup-title signup-header-title">Set up your account</h4>  
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="signup-header">
+          <form name="userSignup" class="css-form" novalidate ng-submit="">
+            <div class="row signup-header-text" >
+            <div class="signup-steps firstDiv" id="firstDiv" >
+            <h4>Step 1 I am a</h4>
+            </div>
+            <div class="signup-steps secondDiv" id="secondDiv" ng-hide="secondList" >
+            <h4>Step 2 I want to</h4>
+            </div>
+            <div class="signup-steps thirdDiv" id="thirdDiv"  ng-hide="thirdList">
+            <h4>Step 3 I am looking for</h4>
+            </div>
+            </div>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="signup-steps"  ng-click="" >          
+            <ul class="list-group signup-list"  id="list1" >
+            <li ng-repeat="item in keyValues" class="list-group-item listStyling " ng-click="selectUserType(item)"       required>
+            <img src="images/uncheck-box.png" class="imagePageNation signup-select" id='{{item}}image' >  {{item}}
+            </li>    
+            </ul>
+          </div>
+          <div class="signup-steps" id="list2" ng-click="" >
+            <ul class="list-group  signup-list" id="listOfWantedCourse" >
+            <li ng-repeat="item in wantedCourseList" class="list-group-item listStyling" ng-click="courseName(item)" required>
+            <img src="images/uncheck-box.png" class="imagePageNation">  {{item}}
+            </li>    
+            </ul>
+          </div>  
+          <div class="signup-steps" id="list3" ng-click="" >
+            <ul class="list-group  signup-list"  id="listOfLookingFor" >
+            <li ng-repeat="item in courseList" class="list-group-item listStyling"  ng-click="getcourseContent(item)" required>
+            <img src="images/uncheck-box.png" class="imagePageNation">  {{item}}
+            </li>  
+            </ul>
+          </div>
+        </div>     
+        <div class="row">
+          <div class="signup-steps exploring" id="exploring" >
+            <ul class="list-group signup-list" id="listOfLookingFor">
+            <li class="list-group-item listStyling" id="exploring" ng-click="selectJustExploring()">
+            <img src="images/uncheck-box.png" class="imagePageNation" id="exploringTab">I am just exploring
+            </li>
+            </ul>
+          </div>
+          <div class="signin-submit" id="" >
+            <input id="submit_id" type="submit" class="btn btn-purple-medium userDetails-modal" ng-click="showRegistrationPopup()"  value="Submit"  disabled="true">
+          </div>
+        </div>               
+      </form>
+      <div class="modal-footer">
+        <div>
+          <div class="reg-footer">
+            <p> Member?  <a class="open-modal login-footer-text" ng-click="showloginpage()">Login</a></p>
+            For Business? <a href="#" class="login-footer-text">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+      <div class="none register-module">
+         <div class="popup-nav " ng-controller="userDetailsCtrl">
+  
+        <div class="modal-header popup-header">
+          <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">
+          &times;
+          </button>
+          <h4 class="modal-title popup-title signup-title">Enter your Details
+        </div>
+        <div class="modal-body popup-body">
+          <div class="row">
+            <form name="userRegistration" class="css-form" novalidate ng-submit="processForm()" autocomplete="off">
+              <div class="row registration-form">
+                <div class=" formAlignment">
+                  <div class="row">
+                    <div class="regist-fields">
+                      <span>Name</span>
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="fname"  name="fname" placeholder="First Name"  required  ng-model="user.first_name" ng-maxlength="35">
+                      <span style="color:red" ng-show="userRegistration.fname.$invalid">
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="mname" placeholder="Middle Name" ng-model="user.middle_name" ng-maxlength="35"> 
+                    </div>
+                    <div class="regist-fields">
+                      <input type="text" class="form-control reg-label" id="lname" placeholder="Last Name"  required ng-model="user.last_name" ng-maxlength="35">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Email id</span>
+                    </div>
+                    <div class="label-fields ">
+                      <input type="email" name="email" class="form-control reg-label" id="useremail" placeholder="Enter your Email" ng-model="user.email" required>
+                    </div>
+                    <div class="label-name" >
+                      <p ng-show="userRegistration.email.$valid">
+                      verification mail with link to activate will be sent to this email id
+                      </p>
+                      <p class="input-help text-danger reg-font" ng-bind="emailErrMsg"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" formAlignment">
+                  <div class="row">
+                    
+                    <div class="label-fields">
+                      <input type="email" name="confirmEmail" class="form-control pwd-conform reg-label" checkemail ng-model="user.conformEmail" id="confirmuseremail" placeholder="Confirm Email" required>
+                    </div>
+                    <div class="label-name">
+                      <p class="input-help text-danger reg-font" ng-show="!userRegistration.conformPassword.$pristine && userRegistration.confirmEmail.$invalid">
+                      Email does not match
+                      </p>
+                    </div>
+                  
+                </div>
+
+                <div class=" formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Password</span>
+                    </div>
+                    <div class="label-fields">
+                      <input name="password" type="password" class="form-control reg-label" id="userpassword" placeholder="Enter your Password" ng-model="user.password" ng-minlength="8" required>
+                    </div>
+                    <div class="label-name reg-font">
+                      <p ng-show="userRegistration.password.$valid">
+                      Password Strength
+                      </p>
+                      <p class="input-help text-danger" ng-bind="pwdErrMsg"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="formAlignment">
+                  <div class="row">
+                    <div class="label-fields ">
+                      <input type="password" name="conformPassword" class="form-control pwd-conform reg-label " id="cpassword" checkpassword placeholder="Confirm Password" ng-model="user.password_confirmation" ng-minlength="8" required>
+                    </div>
+                    <div class="">
+                      <p class="input-help text-danger reg-font" ng-show="!userRegistration.conformPassword.$pristine && userRegistration.conformPassword.$invalid">
+                      Password does not match
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+               
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>Country</span>
+                    </div>
+                    <div class="label-fields reg-label">
+                      <select class="selectpicker btn-info show-menu-arrow dropdownMenu form-control-new form-control">
+                      <option>India</option>
+                      <option>Singapore</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="label-name">
+                    <span>Mobile No</span>
+                  </div>
+                  <div class="label-fields">
+                   <input name="phoneNumber" type="tel" integer class="form-control reg-label" id="userNumber" placeholder="+91" ng-model="user.phone_number" required>
+                  </div>
+                  <div class="reg-font">
+                    <p ng-show="userRegistration.phoneNumber.$valid">
+                    verification OTP will be sent to this mobile number
+                    </p>
+                    <p class="input-help text-danger" ng-bind="phoneErrMsg">
+
+                    </p>
+                  </div>
+                </div>
+                
+
+                <div class="formAlignment reg-margin">
+                  <div class="row">
+                    <div class="label-name">
+                      <span>How do you know about us?</span>
+                    </div>
+                    <div class="label-fields reg-label">
+                      <select class="selectpicker btn-info show-menu-arrow dropdownMenu form-control-new form-control">
+                      <option>Google</option>
+                      <option>Facebook</option>
+                      <option>Twitter</option>
+                      <option>Advertisement</option>
+                      <option>Email/Newsletter</option>
+                      <option>Magazine Article</option>
+                      <option>YouTube</option>
+                      <option>Family or Friend</option>
+                      <option>Newspaper story</option>
+                      <option>TV/Cable News</option>
+                      <option>Website/Search Engine</option>
+                      <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                             
+                <div class="">
+                  <input type="checkbox" class="signup-agreement" ng-model="agreement[$index]" name="signAgreement" value="true" required>
+                  I confirm that I have gone through <a href=‘#’>iCare Life Terms of Use and Policies</a> and by clicking on Join iCare button I Agree with iCare Terms of Use and Policies
+                </div>
+                                
+                
+                <div class="row" >
+                  <div class="reg-bck-btn">
+                    <a href="#" class="btn-back" ng-click="showRegisterPagePopup();">Back</a>
+                    <input type="submit"  name="join" class="btn-login" ng-click="showotppopup()" ng-disabled="userRegistration.$invalid" value="Join iCare">
+                  </div>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer reg-footer">
+        <div>
+        <p> Member? <a href="#" class="open-modal login-footer-text" ng-click="showLoginPagePopup()">Login</a></p>
+        For Business <a href="#" class="login-footer-text">Click Here</a>
+        </div>
+        </div>
+      </div>
+   
+      </div>
+
+
+</section>
+
+      
+
+        </div>
+
+        <div class="none forgotpwd-module">
+           <div class="container" ng-controller="loginCtrl">
+  <div id="fwspasswordModel" class="modal">
+      <div class="modal-content popup-nav  border forgotpwd-module margin-popup">
+        <div class="modal-header popup-header">
+          <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">
+          &times;
+          </button>
+          <h4 class="modal-title popup-title">
+          <h2 class="forgt-text">Forgot Your Password?</h2>
+          </h4>
+          <p class="input-help forgotPwd-msg" ng-bind="forgotErrorMsg"></p>
+          <p class="input-help forgotPwd-msg text-success" ng-bind="forgotSuccessMsg"></p>
+        </div>
+        <div class="modal-body">
+          <div class="row forgotpassword-module">
+            
+              <form class="login-form" name="forgotEmailForm" novalidate autocomplete="off" class="form-inline">
+                <div class="row">
+                  <div class="">
+                    <p class="otp-text">Enter your registered email address and we will get back to you with information on how to reset your password</p>
+                  </div>
+                  
+                    <div class="row otp-form forgot-pwd-form">
+                      <div class="" >
+                        <input type="email" ng-model="userEmailId" class="form-control input-lg otp-input" id="emailaddress" placeholder="Registered email address" required>
+                      </div>
+                      <div class="" >
+                       <input type="submit" class="btn btn-login btn-lg otp-subbtn" ng-click="forgotPwdEmail()" ng-disabled="forgotEmailForm.$invalid" value="Send Mail">
+                      </div>
+                    </div>
+                
+                </div>
+              </form>
+           
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="none otp-popup-module">
+             <div class="container" ng-controller="OtpCtrl">
+ 
+  <div id="otpModel" class="modal">
+    
+      <div class="modal-content popup-nav  margin-popup">
+        <!-- OTP HEADER -->
+        <div class="modal-header otp-modal-title popup-header">
+          <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-title">
+            <h2>Thank you</h2>
+            
+              <p class="input-help otp-msg" ng-bind="otpErrorMsg"></p>
+              <p class="input-help text-success" ng-bind="otpSuccessMsg"></p>
+              <p class="otp-text">Please enter the one time password sent via SMS to your phone number to activate your account and it will be valid only for 5 minutes.</p>
+          
+          </div>
+        </div>
+
+        <!-- OTP BODY -->
+        <div class="modal-body">
+          <div class="row otp-module">
+            
+              <form class="login-form" name="otpForm" novalidate autocomplete="off" class="form-inline">
+                <div class="row">
+                  <div class="">
+                    <div class="row otp-form forgot-pwd-form">
+                      <div class="">
+                        <input type="number" class="form-control input-lg otp-input" ng-model="otpCode" id="inputOTP" name="otpCode" ng-minlength="6" ng-maxlength="6" placeholder="One time password" required integer>
+                      </div>
+                      <div class="">
+                        <input type="button" class="btn btn-login btn-lg otp-subbtn" id="otpSubmit"  ng-disabled="otpForm.$invalid" ng-click="twoFactorAuth()" value="Submit">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          
+          </div>
+        </div>
+
+        <!-- OTP FOOTER -->
+        <div class="modal-footer">
+          <p class="otp-text">A confirmation email has been sent to {{emailId}} Click on the confirmation link in the email to activate your account</p>
+          <div class="otp-link">
+            <a href="" class="forgot-password" ng-click="resendEmail()">Resend Email</a>  |
+            <a href="" class="forgot-password" ng-click="resendOTP()">Resend OTP</a>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+        </div>  
+
+        <div class="none changepwd-module">
+            <div class="container" ng-controller="landingCtrl">
+  <div id="changePwdModel" class="modal fade">
+    <div class="modal-dialog ">
+    <div class="modal-content popup-nav">
+      <div class="modal-header popup-header">
+        <button type="button" class="close closePopup" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title popup-title">
+          <h2 class="forgt-text">Reset your password</h2>
+          <p class="input-help forgotPwd-msg text-success" ng-bind="changeSuccessMsg"></p>
+          <p class="input-help forgotPwd-msg text-danger" ng-bind="changeFailedMsg"></p>
+        </h4>
+      </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 ">
+              <form class="changePwdForm" name="changePwdForm" novalidate autocomplete="off" class="form-inline">
+                <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 formAlignment reg-margin">
+                  <div class="row">
+                    <div class="col-xs-64 col-sm-64 col-md-10 col-lg-10 ">
+                      <span>New Password</span>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-30 col-lg-30 ">
+                      <input type="password" name="newPassword" class="form-control input-lg reg-label" ng-minlength="8" placeholder="Enter your new password" ng-model="newPassword" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 formAlignment">
+                  <div class="row">
+                    <div class="col-xs-64 col-sm-64 col-md-10 col-lg-10">
+                      <span>Confirm Password</span>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-30 col-lg-30">
+                      <input type="password" name="confirmPassword" changepassword class="form-control input-lg reg-label" ng-minlength="8" ng-model="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-24 col-lg-24">
+                      <p class="input-help text-danger" ng-show="!changePwdForm.confirmPassword.$pristine && changePwdForm.confirmPassword.$invalid">Password does not match.</p>
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-xs-64 col-sm-64 col-md-offset-28 col-md-33 col-lg-offset-28 col-lg-33">
+                    <input type="submit" class="btn-login btn-popup-login col-xs-64 col-sm-45 col-md-25 col-lg-25" ng-click="changePassword();" ng-disabled="changePwdForm.$invalid" value="Change">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+
+    </section>
+    
+   
+
+
+  <!-- DIRTY CODE FOR TIME BEING -->
+  <script>
+    $('#blueimp-video-carousel h3.title').html("<div class='sector'>Child Care</div><div class='hero-text'><h4>Give your child the care he deserves</h4><p>iCare Life strives to provide parents with the ideal day care solutions for your child</p></div>");   
+  </script>
+
+
+  </div>

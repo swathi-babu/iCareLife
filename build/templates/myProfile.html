@@ -1,0 +1,260 @@
+<div class="accordion" id="myProfile" ng-controller="myProfileCtrl">
+  <div class="panel">
+      <div class="panel-heading"  data-toggle="collapse" data-target="#collapsiblepersonaldetail1" data-parent="#myProfile" ng-click="getSelectedHeader('persoanlDetail1')" id="persoanlDetail1">
+        <a class="accordion-toggle custom-header"  >
+            <span class="personal-details-heading-image"></span>
+            <span>My Profile</span>
+              <div class="toggle-icon" id="toggleButton"></div>
+          </a>
+        </div>
+    <div id="collapsiblepersonaldetail1" class="collapse">
+      <div class="container form-elements">
+        <form name="aboutForm" novalidate autocomplete="off">
+          <div class="form-container">
+            <div class="form-left-container">I am eligible to work in</div>
+            <div class="form-center-container">
+              <select name="country" class="custom-select-field test" size="3"  ng-options="list.name for list in countries track by list.id" ng-model="selectedCountry"  multiple ng-change="getSelectedCountriesName()" required>
+                  <option value="" selected>Select country</option>
+                </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">I am ready to relocate</div>
+            <div class="form-center-container">
+              <select name="country" class="custom-select-field test1" size="3"  ng-options="list.name for list in countries track by list.id" ng-model="relocateCountry">
+                  <option value="" selected>Select country</option>
+                </select>
+            </div>
+            <div class="form-right-container">
+              <select name="selectCountry" class="custom-select-field" ng-model="selectState"> 
+                <option value="karnataka">karnataka</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container">I am ready for volunteer opportunities for society care services</div>
+            <div class="form-center-container">
+              <input id="radio-Yes" name="radio-opp" type="radio"  ng-model="volunteerservice" value="1"> 
+              <label class="radio"  for="radio-Yes"><span class="radio-button-text" >Yes</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-No" name="radio-opp" type="radio" ng-model="volunteerservice" value="0"> 
+              <label class="radio" for="radio-No"><span class="radio-button-text" >No</span></label>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Exp Salary Per Day</div>
+            <div class="form-center-container">
+               <input type="number" name="knowDuration" class="custom-text-box" placeholder="Salary Per Day" min="0" ng-model="salaryperday" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Exp Salary Per Month</div>
+            <div class="form-center-container">
+               <input type="number" name="knowDuration" class="custom-text-box" placeholder="Salary Per Month" min="0" ng-model="salarypermonth" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container">My other benefits expectation include</div>
+            <div class="form-center-container">
+              <input id="radio-health" name="radio-benefit1" type="checkbox" ng-model="others" ng-true-value="true" ng-false-value="false">
+              <label class="checkbox"  for="radio-health"><span class="radio-button-text">Health Insurance</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-bonus" name="radio-benefit2" type="checkbox"  ng-model="bouns" ng-checked="bonus" ng-true-value="true" ng-false-value="false">
+              <label class="checkbox" for="radio-bonus"><span class="radio-button-text">Bonus</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-phone" name="radio-benefit3" type="checkbox"  ng-model="phone" ng-checked="phone" ng-true-value="true" ng-false-value="false"> 
+              <label class="checkbox"  for="radio-phone"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-food" name="radio-benefit4" type="checkbox"  ng-model="food" ng-checked="food" ng-true-value="true" ng-false-value="false">
+              <label class="checkbox" for="radio-food"><span class="radio-button-text">Food</span></label>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">If Others</div>
+            <div class="form-center-container">
+              <input type="text" name="ifothers" class="custom-text-box" ng-model="otherService">
+            </div>
+            <div class="form-right-container">
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container">I am willing to give medical test, if required by employer at his expense</div>
+            <div class="form-center-container checkbox-radio-specific">
+              <input id="radios-medical-yes" name="radio-medical" type="radio" value="1" ng-model="medicalTest">
+              <label class="radio"  for="radios-medical-yes"><span class="radio-button-text">Yes</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radios-medical-no" name="radio-medical" type="radio" value="0" ng-model="medicalTest">
+              <label class="radio" for="radios-medical-no"><span class="radio-button-text">No</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container">I am open for a trial period of 3 days to allow service seeker to decide on hiring</div>
+            <div class="form-center-container">
+              <input id="radio-free" name="radio-trial" type="radio"  value=1 ng-model="trialPeriod">
+              <label class="radio"  for="radio-free"><span class="radio-button-text">Free</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-daily" name="radio-trial" type="radio" value=2 ng-model="trialPeriod">
+              <label class="radio" for="radio-daily"><span class="radio-button-text">Daily Rate</span></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="aboutForm.$invalid" ng-click="submitRefCheckForDriver();" class="btn btn-primary btn-lg custom-width" ng-hide="spDriverCotentMyProfile">
+                <input type="button" name="Next" value="next"  ng-click="submitRefCheckForElder();" class="btn btn-primary btn-lg custom-width" ng-hide="spElderCareContentMyProfile">
+                
+                <input type="button" name="Next" value="next" ng-disabled="aboutForm.$invalid" ng-click="submitRefCheckForChild();" class="btn btn-primary btn-lg custom-width" ng-hide="spChildCareContentMyProfile">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 
+    /*************************************************************************************************
+                                                          Job Alert Accordian Menu
+    *************************************************************************************************/
+  -->
+  <div class="panel">
+      <div class="panel-heading"  data-toggle="collapse" data-target="#collapsiblepersonaldetail2" data-parent="#myProfile" ng-click="getSelectedHeader('persoanlDetail2')" id="personalDetail2">
+        <a class="accordion-toggle custom-header"  >
+            <span class="personal-details-heading-image"></span>
+            <span>Job Alert</span>
+              <div class="toggle-icon" id="toggleButton"></div>
+          </a>
+        </div>
+    <div id="collapsiblepersonaldetail2" class="collapse">
+      <div class="container form-elements">
+       <form name="aboutForm" novalidate autocomplete="off">
+          <div class="form-container checkbox-radio-specific">
+            <div class="form-left-container">I wish to get job notification by</div>
+            <div class="form-center-container">
+              <input id="radio-phone1" name="job-notification1" type="checkbox" ng-model="phone1" ng-true-value="true" ng-false-value="false">
+              <label class="checkbox"  for="radio-phone1"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-email" name="job-notification2" type="checkbox"  ng-model="email" ng-true-value="true" ng-false-value="false">
+              <label class="checkbox" for="radio-email"><span class="radio-button-text">Email</span></label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="aboutForm.$invalid" ng-click="submitRefCheckForDriverPart2();" class="btn btn-primary btn-lg custom-width" ng-hide="spDriverCotentMyProfile">
+                <input type="button" name="Next" value="next"  ng-click="submitRefCheckForElderPart2();" class="btn btn-primary btn-lg custom-width" ng-hide="spElderCareContentMyProfile">
+
+                <input type="button" name="Next" value="next" ng-disabled="aboutForm.$invalid" ng-click="submitRefCheckForChildPart2();" class="btn btn-primary btn-lg custom-width" ng-hide="spChildCareContentMyProfile">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  <!-- 
+    /*************************************************************************************************
+                                                          Resume Accordian Menu
+    *************************************************************************************************/
+  -->
+  <div class="panel">
+      <div class="panel-heading"  data-toggle="collapse" data-target="#collapsiblepersonaldetail3" data-parent="#myProfile" ng-click="getSelectedHeader('persoanlDetail3')" id="personDetail3">
+        <a class="accordion-toggle custom-header"  >
+            <span class="personal-details-heading-image"></span>
+            <span>Resume</span>
+              <div class="toggle-icon" id="toggleButton"></div>
+          </a>
+        </div>
+    <div id="collapsiblepersonaldetail3" class="collapse">
+      <div class="container form-elements">
+        <form name="aboutForm" novalidate autocomplete="off">
+            <div class="form-container">
+              <div class="flexslider carousel" id='carousel'>
+                  <ul class="slides">
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Basic Template</h3><h4>Free</h4><input type="button" name="join" value="Select" id="template1" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template1')" ><input type="hidden" name="resumename" ng-model="resumename" value="1" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 1</h3><h4>$2.00</h4><input type="button" name="join" value="Select" id="template2" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template2')"><input type="hidden" name="resumename" ng-model="resumename" value="2" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 2</h3><h4>$5.00</h4><input type="button" name="join" value="Select" id="template3" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template3')"><input type="hidden" name="resumename" ng-model="resumename" value="3" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 3</h3><h4>$2.00</h4><input type="button" name="join" value="Select" id="template4" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template4')"><input type="hidden" name="resumename" ng-model="resumename" value="4" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 4</h3><h4>$2.00</h4><input type="button" name="join" value="Select" id="template5" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template5')"><input type="hidden" name="resumename" ng-model="resumename" value="5" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 5</h3><h4>$5.00</h4><input type="button" name="join" value="Select" id="template6" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template6')"><input type="hidden" name="resumename" ng-model="resumename" value="6" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  <li class="slider-css">
+                      <div class="thumbnail">
+                          <div class="caption"><h3>Template 6</h3><h4>$6.00</h4><input type="button" name="join" value="Select" id="template7" class="btn btn-primary btn-lg custom-width" ng-click="selectResume('template7')"><input type="hidden" name="resumename" ng-model="resumename" value="7" class="resumenumber"></div>
+                      </div>
+                  </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="form-container checkbox-radio-specific">
+              <div class="form-left-container">I want to develop professionally made resume</div>
+              <div class="form-center-container">
+                  <input id="radio-resume-yes" name="radio-resume" type="radio" ng-model="enable_resume_service" value="true">
+                  <label class="radio"  for="radio-resume-yes"><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">
+                  <input id="radio-resume-no" name="radio-resume" type="radio" ng-model="enable_resume_service" value="false">
+                  <label class="radio" for="radio-resume-no"><span class="radio-button-text">No</span></label>
+              </div>
+          </div>
+        </form>
+      </div>
+        </div>
+  </div>
+  <div class="form-container">
+    <div class="panel-bottom">
+        <input type="checkbox" name="submitCheckBox" id="safe backup" value="submitCheckBox" class="custom-checkbox" ng-model="agreeDeclare" required ng-true-value="true" ng-false-value="false"/>
+        <label for="agreeDeclare" class="confirm-checkbox">I declare that the information I have given in this form (including any attachments) is true and correct and that I am authorised to disclose this information</label>
+      <div class="profile-form-submit" ng-hide="spDriverCotentMyProfile">
+          <input type="button" name="button" value="Submit" class="btn btn-primary btn-login btn-lg custom-width" ng-click="submitMyProfileDataDriverPart3();">
+      </div>
+      <div class="profile-form-submit" ng-hide="spElderCareContentMyProfile">
+          <input type="button" name="button" value="Submit" class="btn btn-primary btn-login btn-lg custom-width" ng-click="submitRefCheckForElderPart3();">
+      </div>
+      <div class="profile-form-submit" ng-hide="spChildCareContentMyProfile">
+          <input type="button" name="button" value="Submit" class="btn btn-primary btn-login btn-lg custom-width" ng-click="submitRefCheckForChildPart3();">
+      </div>
+    </div>       
+  </div>
+</div>

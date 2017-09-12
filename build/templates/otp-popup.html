@@ -1,0 +1,52 @@
+<div class="container" ng-controller="OtpCtrl">
+ 
+  <div id="otpModel" class="modal">
+    
+      <div class="modal-content popup-nav  margin-popup">
+        <!-- OTP HEADER -->
+        <div class="modal-header otp-modal-title popup-header">
+          <button type="button" class="close closePopup" ng-click="closePopup()" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-title">
+            <h2>Thank you</h2>
+            
+              <p class="input-help otp-msg" ng-bind="otpErrorMsg"></p>
+              <p class="input-help text-success" ng-bind="otpSuccessMsg"></p>
+              <p class="otp-text">Please enter the one time password sent via SMS to your phone number to activate your account and it will be valid only for 5 minutes.</p>
+          
+          </div>
+        </div>
+
+        <!-- OTP BODY -->
+        <div class="modal-body">
+          <div class="row otp-module">
+            
+              <form class="login-form" name="otpForm" novalidate autocomplete="off" class="form-inline">
+                <div class="row">
+                  <div class="">
+                    <div class="row otp-form forgot-pwd-form">
+                      <div class="">
+                        <input type="number" class="form-control input-lg otp-input" ng-model="otpCode" id="inputOTP" name="otpCode" ng-minlength="6" ng-maxlength="6" placeholder="One time password" required integer>
+                      </div>
+                      <div class="">
+                        <input type="button" class="btn btn-login btn-lg otp-subbtn" id="otpSubmit"  ng-disabled="otpForm.$invalid" ng-click="twoFactorAuth()" value="Submit">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          
+          </div>
+        </div>
+
+        <!-- OTP FOOTER -->
+        <div class="modal-footer">
+          <p class="otp-text">A confirmation email has been sent to {{emailId}} Click on the confirmation link in the email to activate your account</p>
+          <div class="otp-link">
+            <a href="" class="forgot-password" ng-click="resendEmail()">Resend Email</a>  |
+            <a href="" class="forgot-password" ng-click="resendOTP()">Resend OTP</a>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>

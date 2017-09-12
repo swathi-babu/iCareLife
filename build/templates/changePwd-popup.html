@@ -1,0 +1,54 @@
+<div class="container" ng-controller="landingCtrl">
+  <div id="changePwdModel" class="modal fade">
+    <div class="modal-dialog ">
+    <div class="modal-content popup-nav">
+      <div class="modal-header popup-header">
+        <button type="button" class="close closePopup" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title popup-title">
+          <h2 class="forgt-text">Reset your password</h2>
+          <p class="input-help forgotPwd-msg text-success" ng-bind="changeSuccessMsg"></p>
+          <p class="input-help forgotPwd-msg text-danger" ng-bind="changeFailedMsg"></p>
+        </h4>
+      </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 ">
+              <form class="changePwdForm" name="changePwdForm" novalidate autocomplete="off" class="form-inline">
+                <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 formAlignment reg-margin">
+                  <div class="row">
+                    <div class="col-xs-64 col-sm-64 col-md-10 col-lg-10 ">
+                      <span>New Password</span>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-30 col-lg-30 ">
+                      <input type="password" name="newPassword" class="form-control input-lg reg-label" ng-minlength="8" placeholder="Enter your new password" ng-model="newPassword" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 formAlignment">
+                  <div class="row">
+                    <div class="col-xs-64 col-sm-64 col-md-10 col-lg-10">
+                      <span>Confirm Password</span>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-30 col-lg-30">
+                      <input type="password" name="confirmPassword" changepassword class="form-control input-lg reg-label" ng-minlength="8" ng-model="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="col-xs-64 col-sm-64 col-md-24 col-lg-24">
+                      <p class="input-help text-danger" ng-show="!changePwdForm.confirmPassword.$pristine && changePwdForm.confirmPassword.$invalid">Password does not match.</p>
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-xs-64 col-sm-64 col-md-offset-28 col-md-33 col-lg-offset-28 col-lg-33">
+                    <input type="submit" class="btn-login btn-popup-login col-xs-64 col-sm-45 col-md-25 col-lg-25" ng-click="changePassword();" ng-disabled="changePwdForm.$invalid" value="Change">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        

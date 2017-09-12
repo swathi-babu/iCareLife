@@ -1,0 +1,84 @@
+<div class="clearfix" ng-controller="LoginCtrl">
+	
+	<!-- login form -->
+	<div class="login-container float-left">	
+		<h1 class="login-heading">Welcome to iCare</h1>
+		<div class="row">
+			<!-- error message from server -->
+			<span class="input-help" ng-bind="loginErrorMsg"></span>
+
+			<!-- email  -->
+			<!-- <span class="input-help" ng-show="loginForm.email.$error.required && !loginForm.email.$pristine">Email is required</span>
+			<span class="input-help" ng-show="loginForm.email.$error.email && !loginForm.email.$pristine">Enter a valid email id</span> -->
+
+			<!-- password  -->
+			<!-- <span class="input-help" ng-show="loginForm.password.$error.required && !loginForm.password.$pristine">Password is required</span> -->
+		</div>
+		<form class="login-form" name="loginForm" novalidate autocomplete="off">
+			<div class="row">
+				<input type="email" class="form-control user-email" name="email" ng-model="userData.email" placeholder="Email address" required>
+				<span class="email-icon"></span>
+				<input type="password" class="form-control user-pwd" name="password" ng-model="userData.password" placeholder="Password" required>
+				<span class="password-icon"></span>
+			</div>
+			<div class="row captcha-container" ng-show="isCaptcha">
+				<!-- Google reCAPTCHA -->
+				<div class="form-control">
+					<div id="recaptcha_widget">
+				   <div id="recaptcha_image"></div>
+				   <div class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrect please try again</div>
+				 
+				   <input type="text" class="form-control" id="recaptcha_response_field" name="recaptcha_response_field" />
+
+				   <div><a href="javascript:Recaptcha.reload()">Get another CAPTCHA</a></div>
+
+				 </div>
+				 <noscript>
+				   <iframe src="http://www.google.com/recaptcha/api/noscript?k=6Ld4iQsAAAAAAM3nfX_K0vXaUudl2Gk0lpTF3REf" height="300" width="500" frameborder="0"></iframe><br>
+				   <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+				   <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+				 </noscript>
+
+				</div>
+					
+			</div>
+			<div class="row">
+				<div class="remember-container inl-blk"><input type="checkbox" class="remember-me" name"rememberMe" ng-model="userData.remember_me" ng-default-value="0" ng-true-value="1" ng-false-value="0"> Remember me</div>
+				<a href="" class="forgot-password float-right" ng-click="forgotpwd-module();">Forgot Password ?</a>
+			</div>
+			<div class="row">
+				<input type="submit" class="btn btn-login" ng-disabled="loginForm.$invalid" ng-click="userLogin()" value="Login"> 
+			</div>
+		</form>
+	</div>
+
+	<!-- login separator -->
+	<div class="login-separator float-left"><strong class="blk">OR</strong></div>
+
+	<!-- social container -->
+	<div class="social-container float-right">
+		<div class="row">
+		<span class="fb-icon inl-blk"></span>
+			<button type="button" class="btn btn-fb">Login with Facebook</button>
+		</div>
+		<div class="row">
+		<span class="gplus-icon inl-blk"></span>
+			<button type="button" class="btn btn-gplus">Login with Google+</button>
+		</div>
+		<div class="row">
+		<span class="twitter-icon inl-blk"></span>
+			<button type="button" class="btn btn-twitter">Login with Twitter</button>
+		</div>
+	</div>
+
+	<!-- link below the modal -->
+    <div class="corporate-link clearfix">
+      <div class="float-left" ng-show="1 !== isSelected && 3 !== isSelected">
+        Member?<a class="inl" href="" ng-click="toggleMenu(1);"> Login</a>
+      </div>
+      <div class="float-left" ng-show="2 !== isSelected">
+        New to iCare?<a class="inl" href="" ng-click="toggleMenu(2);"> Register Here</a>
+      </div>
+      <div class="float-right">For business?<a class="inl" href=""> Click Here</a></div>
+    </div>
+</div>

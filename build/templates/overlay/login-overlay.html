@@ -1,0 +1,19 @@
+<section class="modal-container" ng-switch on="isSelected" ng-controller="LoginCtrl">    
+    <div class="container-login" ng-switch-when="1">
+      
+    </div>
+    <div class="container-signup" ng-switch-when="2">
+      
+    </div>
+    <div class="container-forgot" ng-switch-when="3">
+      <h2 class="heading">Forgot your password ?</h2>
+      <p class="content">Enter your registered email address and we'll get back to you with information on how to reset your password.</p>
+      <form name="forgotPwd" autocomplete="off" novalidate>
+        <input type="email" name="forgotEmail" ng-model="forgotEmail" class="form-control inl-blk" placeholder="Registered email address" required>
+        <input type="submit" class="btn btn-forgot-pwd" value="Send Mail" ng-disabled="forgotPwd.$invalid">
+      </form>
+      <div class="row">
+        <a class="btn btn-login blk" href="" ng-click="toggleMenu(1);">Login</a>
+      </div>
+    </div>
+</section>

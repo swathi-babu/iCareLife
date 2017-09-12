@@ -1,0 +1,503 @@
+<div class="main-wrapper content-learn-module" ng-controller="contentlibraryctrl">
+  <!-- HEADER -->
+<header ng-controller="headerCtrl">
+    <div class="new-container">
+        <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+        <nav>
+            <li ng-click="showcontent()"><a href="">Learn</a></li>
+            <li><a href="">Hire</a></li>
+            <li><a href="">Job</a></li>
+            <li><a href="">More</a></li>
+        </nav>
+        <span class="mobile-menu-icon" ng-click="mobileMenu()"></span>
+        
+        <div class="mobile-menu-container">
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="action-buttons-mobile">
+                <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+                <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+                <div ng-show="isLoginIn">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="user-details">
+                        <div class="username">John Paul</div>
+                        <div class="member-type gold">Gold</div>
+                    </div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <a href="" class="search-icon"></a>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            
+            <div class="button btn-grey-medium login-btn" ng-click="showLoginPopup()" ng-hide="isLoginIn">Login</div>
+            <div class="button btn-purple-medium usersignup-modal join-now-btn" ng-click="showRegisterPopup()" ng-hide="isLoginIn">Join Now</div>
+            
+            <div class="country" ng-hide="isLoginIn">
+              <a href=""><img src="/images/icon-country.png" alt=""></a>
+            </div>
+
+            <div ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+  <select class="selectpicker show-menu-arrow ">
+        <option>ALL</option>
+        <option>Learn</option>
+        </select>
+        <div class="container-dropdowns">
+          <select class="selectpicker ">
+          <option ng-repeat="row in filter[&quot;'filter'&quot;]" value="{{row}}">{{row}}</option>
+          </select>
+          <span>sort by</span>
+          <select class="selectpicker">
+          <option>Relevance</option>
+          <option>Default</option>
+
+          </select>
+          <span>view</span>
+          <img Src="/images/content-grid.png" class="views" ng-click="showgridview();">
+          <img Src="/images/content-list.png" class="views" ng-click="showlistview();">
+        </div>
+      <div class="new-container">
+
+        <div class="profile-contents">
+         <div class="profile-tabs content-tabs">
+                <ul>
+                    <li class="active"><a data-toggle="tab"  ng-click="showgridview()" >Browse</a></li>
+                    <li><a data-toggle="tab"  ng-click="showlistview()" >Recomended</a></li>
+                    
+                </ul>
+            </div>
+
+            <form name="userDetails">
+                <div class="tab-content">
+                    <div id="Browse" ng-hide="panel0" class="gridview">
+                      <div class="container-fluid content-background">
+        <div class="container form-elements container-learn">
+          <div class="form-container ">
+            <div class="flexslider carousel" id='carousel'>
+              <h3>recomended courses</h3>
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-driving.png" ng-click="showPopup()">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>{{userCount}}</p>
+                        <p>{{price}}</p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-chaffuer.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>{{userCount}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-safedrving.png">
+                       <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>{{userCount}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-care.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>{{userCount}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/1.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>{{userCount}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="container form-elements container-learn">
+        <div class="form-container">
+          <div class="flexslider carousel" id='carousel'>
+            <h3>Things to Learn</h3>
+              <ul class="slides">
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-learn.png">
+                    <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>{{userlikes}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-paralleparking.png">
+                       <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>{{userlikes}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntn-safedriving.png">
+                      <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>{{userlikes}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-eldercare.png">
+                       <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>{{userlikes}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/2.png">
+                       <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4>
+                          <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>{{userlikes}}</p>
+                        <p>{{price}}</p>
+                        </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+       <div class="container form-elements container-learn">
+          <div class="form-container">
+            <div class="flexslider carousel" id='carousel'>
+              <h3>Next in your course</h3>
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course-driving.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course-safedriving.png">
+                       <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-cource-learning.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course.png">
+                        <div class="cntnt-text"><h3>{{description}}</h3>
+                          <h4>{{moduels}}</h4></div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+      <section class="popup-module none">
+        <div class="modal-overlay"></div>
+
+        <div class="none content-module">
+            <div class="container" ng-controller="contentlibraryctrl">
+ 
+  <div class="popup-video">
+      
+          <video width="400" controls>
+			  <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+			</video> 
+    
+  <div>
+</div>
+
+   
+         </div>
+
+        
+
+       
+
+    </section>
+
+    </div>    
+                    </div>
+                    <div id="Recomended" ng-hide="panel1" class="listview">
+                       <div class="container-fluid content-background">
+        <div class="container form-elements container-learn">
+          <div class="form-container ">
+            <div class="flexslider carousel" id='carousel'>
+              
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-driving.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-chaffuer.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-safedrving.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                       </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/cntnt-care.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/1.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                          <div class="img-width"><img Src="/images/cntnt-user.png"></div>
+                        <p>5000 users enrolled</p>
+                        <p>$15</p>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="container form-elements container-learn">
+        <div class="form-container">
+          <div class="flexslider carousel" id='carousel'>
+            <h3>Things to Learn</h3>
+              <ul class="slides">
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-learn.png">
+                      <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>200likes</p>
+                        <p>$15</p>
+                      </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-paralleparking.png">
+                      <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>210likes</p>
+                        <p>$15</p>
+                      </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntn-safedriving.png">
+                     <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                      <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>215likes</p>
+                        <p>$15</p>
+                     </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/cntnt-eldercare.png">
+                      <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>225likes</p>
+                        <p>$15</p>
+                      </div>
+                  </div>
+              </li>
+              <li class="slider-css">
+                  <div class="thumbnail">
+                    <img Src="/images/2.png">
+                      <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4>
+                        <div class="img-width"><img Src="/images/cntnt-like.png"></div>
+                        <p>250likes</p>
+                        <p>$15</p>
+                      </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+       <div class="container form-elements container-learn">
+          <div class="form-container">
+            <div class="flexslider carousel" id='carousel'>
+              <h3>Next in your course</h3>
+                <ul class="slides">
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course-driving.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course-safedriving.png">
+                       <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-cource-learning.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4></div>
+                    </div>
+                </li>
+                <li class="slider-css">
+                    <div class="thumbnail">
+                      <img Src="/images/nxt-course.png">
+                        <div class="cntnt-text"><h3>Leassons on safe driving over hill areas</h3><h4>6 moduels,2 certifications</h4></div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+    </div>
+                    </div> 
+                </div>    
+            </form>
+      </div>
+  </div>
+</div>
+
+<section class="row join-us">
+  <div class="new-container">   
+   <div class="social-media-block">
+        <h3>Join us on</h3>
+        <a href="#" class="fb-share"> </a>
+        <a href="#" class="gl-share"> </a>
+        <a href="#" class="tw-share"> </a>
+    </div>
+  </div>
+</section>
+            <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="list-inline">
+            <li><a href="#"> About </a></li>
+            |
+            <li><a href="#"> Help </a></li>
+            |
+            <li><a href="#"> Career </a></li>
+            |
+            <li><a href="#"> Blog </a></li>
+            |
+            <li><a href="#"> Terms of Use </a></li>
+            |
+            <li><a href="#"> Policies </a></li>
+        </ul>
+    </footer>

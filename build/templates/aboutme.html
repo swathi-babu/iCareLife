@@ -1,0 +1,2543 @@
+<div class="main-container-color">
+    <header ng-controller="landingCtrl">
+        <div class="new-container">
+            <div class="logo"><a href="#/landing"><img src="/images/iCare-logo.png" class="img-responsive"></a></div>
+            <nav>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Hire</a></li>
+                <li><a href="">Job</a></li>
+                <li><a href="">More</a></li>
+            </nav>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <a href="" class="search-icon"></a>
+                </div>
+            </div>
+            <div class="action-buttons" ng-show="isLoginIn">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="images/user-avatar.png" alt="">
+                    </div>
+                </div>
+
+                <div class="user-details">
+                    <div class="username">John Paul</div>
+                    <div class="member-type gold">Gold</div>
+                    <a href="" class="button btn-grey-small btn-logout" ng-show="isLoginIn" ng-click="logout();">Logout</a>
+                </div>
+            </div>  
+         </div>
+    </header>
+
+    <div class="container main-container-color" ng-controller="boutmeCtrl">
+      
+    <div class="jumbotron profile-highlight-container">
+      <div class="row">
+        <div class="col-xs-64 col-sm-50 col-md-50 col-lg-50">
+          <p class="font-class">{{profile_highlight_header}}</p>
+          <div class="col-xs-64 col-sm-50 col-md-50 col-lg-42 custom-sub-header">{{profile_highlight_Message}}</div>
+        </div>
+        <div class="col-xs-64 col-sm-14 col-md-14 col-lg-14">
+          <input type="button" ng-click="showProfile()" class="btn btn-primary custom-width" value={{profile_highlight_buttonName}} id="profileHighlightButton">
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-64 col-sm-64 col-md-64 col-lg-64 head-center">
+          <h2 class="center-header-custom">{{centerHeadingMain}}</h2>
+          <p class="center-subheader-custom">{{centerHeadingMainSubText}}</p>
+        </div>
+      </div>
+            
+      <div class="row project-completion">
+        <div class="col-xs-64 col-sm-10 col-md-10 col-lg-10 hidden-xs"></div>
+        <div class="col-xs-64 col-sm-14 col-md-14 col-lg-14">
+          <p  class="hidden-xs project-alignment-title">{{projectCompletion}}</p>
+          <p  class="visible-xs project-alignment-title">{{projectCompletion}}</p>
+        </div>
+        <div class="col-xs-64 col-sm-30 col-md-30 col-lg-30">
+          <progress max="100" value="50" class="progress-striped active"  type="danger"></progress>
+        </div>
+        <div class="col-xs-64 col-sm-5 col-md-5 col-lg-5 progress-value">50%</div>
+      </div>
+      <ul class="nav nav-tabs tab-container-color menu-bar nav-tabs-responsive">
+            <li class="active"><a data-toggle="tab"  ng-click="selectTab(0)" ng-hide="onlyForServiceProvider">{{AboutMe}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(1)" ng-hide="onlyForServiceProvider">{{MySkills}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(2)" ng-hide="onlyForServiceProvider">{{MyPayment}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(3)" ng-hide="onlyForServiceProvider">{{MyReferences}}</a></li>
+            <li><a data-toggle="tab"  ng-click="selectTab(4)" ng-hide="onlyForServiceProvider">{{MyProfile}}</a></li>
+        </ul>
+          <div class="tab-content">
+            <div id="aboutMe" ng-hide="panel0">
+              
+              <div class="accordion" id="myAccordion-payment" ng-controller="MyPaymentsCtrl">
+	<form name="aboutForm" novalidate autocomplete="off">
+		<div class="panel">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-mypayment-1" data-parent="#myAccordion-payment" ng-click="getSelectedHeader('myPayments1')" id="myPayments1">
+	    	<a class="accordion-toggle custom-header"  >
+	        	<span class="personal-details-heading-image"></span>
+	        	<span>Membership Plans</span>
+	          	<div class="toggle-icon" id="toggleButton"></div>
+	      </a>
+      </div>
+			<div id="collapsible-mypayment-1" class="collapse">
+				<div class="container form-elements">
+					<div class="form-container">
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Basic</span>
+                	<h4 class="membership-subheading">Free</h4>
+                  <h4 class="membership-time-period">Forever</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+              <div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Silver</span>
+                	<h4 class="membership-subheading">$599.0</h4>
+                  <h4 class="membership-time-period">6 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                  <span class="membership-heading">Gold</span>
+                  <h4 class="membership-subheading">$999.0</h4>
+                  <h4 class="membership-time-period">12 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+          </div><div class="form-container">
+            <div class="form-left-container">Promotional Code</div>
+            <div class="form-center-container">
+              <input type="text" name="ifothers" class="custom-text-box-promo">
+            </div>
+            <div class="form-right-container">
+            	<input type="button" name="join" value="Upload" ng-click="getImage(2)" class="button-css"/>
+            </div>
+          </div>
+					<div class="form-container-payments">
+		        <div class="form-left-container">
+		        	<div class="payments-tabs">
+								<ul>
+				          <li class="active" data-toggle="tab" ng-click="selectPaymentMode(10)"><a   >Debit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(11)"><a ng-click="selectPaymentMode(11)">Credit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(12)"><a ng-click="selectPaymentMode(12)">NetBanking</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(13)"><a ng-click="selectPaymentMode(13)">Cash Card</a></li>
+		      			</ul>
+		  				</div>	
+		        </div>
+		        <div class="form-center-container-my-payment">
+		          <div class="tab-content">
+                <div id="debitCard" ng-hide="debitCardpanel">
+                Debit Card
+                </div>
+                <div id="creditCard" ng-hide="creditCardpanel" >
+                <div class="form-payment-container">
+                	<span>Enter your credit card details</span>
+                	<div class="card-number-slot">
+	                	<p>Card number</p>
+	                	<input type="text" name="cardnumber" class="custom-text-box-payment">
+                	</div>
+                	<div class="payment-info">
+	                	<p>Expiry Date</p>
+	                	<select class="custom-select-field-payment">
+	                		<option>1</option>
+	                		<option>2</option>
+	                		<option>3</option>
+	                	</select>
+	                	<select class="custom-select-field-payment">
+	                		<option></option>
+	                		<option></option>
+	                		<option></option>
+	                	</select>
+                	</div>
+                	<div class="payment-info">
+                		<p>CVV Code</p>
+                		<input type="text" name="cvvnumber" class="custom-text-box-cvv">
+                	</div>	
+                </div>
+                </div>
+                <div id="netBanking" ng-hide="NetBankingPanel">
+                Net Banking
+                </div>
+                <div id="cashCard" ng-hide="cashCardPanel" >
+                Cash Card
+                </div>
+              </div> 
+		        </div>
+		      </div>
+          <div class="form-container">
+            <div class="form-left-container">
+                Address
+            </div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line1" name="cc-address1" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line2" name="cc-address2" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line3" name="cc-address3" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{Country}}</div>
+            <div class="form-center-container">
+              <select name="ss.country" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{state}}</div>
+            <div class="form-center-container">
+              <select name="ss.state" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+           <div class="form-container">
+            <div class="form-left-container">city</div>
+            <div class="form-center-container">
+              <input type="text" class="custom-text-box" placeholder="city" ng-model="ss.city" name="city" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{landmark}}</div>
+            <div class="form-center-container">
+              <select name="ss-landmark" class="custom-select-field">
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+        </div>
+		 	</div>
+		</div>
+	</form>
+</div>
+   
+            </div>
+            <div id="mySkills" ng-hide="panel1" >
+              <div class="accordion" id="myAccordion1" ng-controller="MyskillsCtrl">
+		<div class="panel">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-myskills-1" data-parent="#myAccordion1" ng-click="getSelectedHeader('mySkillsHeader1')" id="mySkillsHeader1">
+	    	<a class="accordion-toggle custom-header"  >
+        	<span class="personal-details-heading-image"></span>
+        	<span>Experience</span>
+        	<div class="toggle-icon" id="toggleButton"></div>
+        </a>
+      </div>
+      <div id="collapsible-myskills-1" class="collapse">
+				<div class="container form-elements">
+  				<form name="mySkillsForm" novalidate autocomplete="off">
+            <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">I have experience in driving vehicles</div>
+              <div class="form-center-container">
+                <input id="radio-two-wheelers" name="radio-2vehicle" type="checkbox" ng-model="knowTwoWheeler">
+                <label class="checkbox"  for="radio-two-wheelers"><span class="radio-button-text">Two Wheelers</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-four-wheelers" name="radio-4vehicle" type="checkbox" ng-model="knowFourWheeler">
+                <label class="checkbox" for="radio-four-wheelers"><span class="radio-button-text">Four Wheelers</span></label>
+              </div>
+            </div>
+
+            <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-lcv" name="radio-lightwheel" type="checkbox" ng-model="knowLightVehicle">
+                <label class="checkbox"  for="radio-lcv"><span class="radio-button-text">Light Commercial Vehicles</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-hv" name="radio-heavyvehicle" type="checkbox" ng-model="knowHeavyVehicle">
+                <label class="checkbox" for="radio-hv"><span class="radio-button-text">Heavy Vehicles</span></label>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">I have experience as a driver/chauffeur for</div>
+              <div class="form-center-container">
+                <select name="carexp" class="custom-select-field" ng-model="selectedYear" ng-options="year.time for year in timeSelection track by year.id">
+                  <option value="" selected>Select year of experience</option>
+                </select>
+              </div>
+              <div class="form-right-container"></div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">I have experience in driving vehicle brands</div>
+              <div class="form-center-container">
+                <select name="cartype" class="custom-select-field" ng-options="car.name for car in vehicleBrands track by car.id" ng-model="selectedCar">
+                  <option value="" selected>Select car brand</option>
+                </select>
+              </div>
+              <div class="form-right-container"></div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">Cant find your brand? <span class="subtext">Please specify with name of the model</span></div>
+              <div class="form-center-container">
+                <input type="text" name="custom brand name" class="custom-text-box" placeholder="Brand name" ng-model="customBrandName" required>
+              </div>
+              <div class="form-right-container"></div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">I have experience in driving following car segment</div>
+              <div class="form-center-container">
+                <input type="text" class="custom-text-box" placeholder="Car segment" ng-model="carSegment"/>
+              </div>
+              <div class="form-right-container"></div>
+            </div>
+            
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container">My level of familiarity about city roads, landmarks, places of </div>
+              <div class="form-center-container">
+                <select name="country" class="custom-select-field" ng-change="selectCountryList();" ng-options="list.name for list in countries track by list.id" ng-model="selectedCountry">
+                  <option value="" selected>Select country</option>
+                </select>
+              </div>
+              <div class="form-right-container">
+              <span class="slider-text">Level of familiarity</span>
+                <slider floor="0" ceiling="10" step="1" precision="0" ng-model="CountryValue"></slider>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <select name="state" class="custom-select-field stateField" ng-model="selectedState" ng-options="state.name for state in states track by state.id" disabled>
+                  <option value="" selected>Select state</option>
+                </select>
+              </div>
+              <div class="form-right-container">
+                <slider floor="0" ceiling="10" step="1" precision="0" ng-model="StateValue"></slider>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input type="text" class="custom-text-box" placeholder="City" ng-model="cityID"/>
+              </div>
+              <div class="form-right-container">
+                <slider floor="0" ceiling="10" step="1" precision="0" ng-model="CityValue"></slider>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="driverCotentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input type="button" name="join" value="Add More" ng-click="getImage(2)" class="button-css"/>
+              </div>
+              <div class="form-right-container"></div>
+            </div>
+            <!-- 
+              /*************************************************************************************************
+                                                Elder Care Form Fields Start Here
+              *************************************************************************************************/
+            -->
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-center-container-myskills" >I have experience in handling elderlies</div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">Below 65 Years</div>
+              <div class="form-center-container">
+<!--                  <select name="years65" class="custom-select-field" >
+                    <option value="city">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careBelow65" class="custom-select-field" ng-model="below65" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">65 to 74 Years</div>
+              <div class="form-center-container">
+<!--                  <select name="years65-74" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careBetween65To75" class="custom-select-field" ng-model="between65To74" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">75 to 84 Years</div>
+              <div class="form-center-container">
+ <!--                 <select name="years75-84" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careBetween75To84" class="custom-select-field" ng-model="between75To84" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">85 Years and above</div>
+              <div class="form-center-container">
+<!--                  <select name="years85" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careAbove85" class="custom-select-field" ng-model="above85" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">I can handle  Numbers of elderlies at one time</div>
+              <div class="form-center-container">
+<!--                  <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="handlingEldersAtOnetime" class="custom-select-field" ng-model="eledersAtOneTime" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">I can handle difficult elderlies</div>
+              <div class="form-center-container">
+                <input id="handle-elderlies-yes" name="handle-elderlies" type="radio" ng-model="isHanleElderYes" ng-checked="isHanleElderYes" ng-true-value="'1'" ng-false-value="'0'" ng-click="isHandleElderlies('Yes')">
+                <label class="radio"  for="handle-elderlies-yes"><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="handle-elderlies-no" name="handle-elderlies" type="radio" ng-model="isHanleElderNo" ng-checked="isHanleElderNo" ng-true-value="'1'" ng-false-value="'0'" ng-click="isHandleElderlies('No')">
+                <label class="radio" for="handle-elderlies-no"><span class="radio-button-text">No</span></label>
+              </div>
+            </div>
+
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">I have experience in handling elderlies who are frail and often ill</div>
+              <div class="form-center-container">
+                <input id="handle-elderlies-patient-yes" name="handle-elderlies-patient" type="radio" ng-click="displayDiseaseType = !hideDiseaseType" >
+                <label class="radio"  for="handle-elderlies-patient-yes"><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">               
+                <input id="handle-elderlies-patient-no" name="handle-elderlies-patient" type="radio" ng-click="displayDiseaseType = hideDiseaseType ">
+                <label class="radio" for="handle-elderlies-patient-no"><span class="radio-button-text">No</span></label>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">I have experience in taking care of elderly as paid assistance</div>
+              <div class="form-center-container">
+<!--                  <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="paidAssitance" class="custom-select-field" ng-model="paidAssistance" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container checkbox-radio-specific" ng-hide="displayDiseaseType">
+              <div class="form-left-container">I have experience in caring elderly with</div>
+              <div class="form-center-container">
+                <input id="Cognitive" name="Cognitive" type="checkbox" ng-model="cognitiveIssue">
+                <label class="checkbox"  for="Cognitive"><span class="radio-button-text">Cognitive Challenges</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="Medical" name="Medical" type="checkbox" ng-model="medicalIssue">
+                <label class="checkbox" for="Medical"><span class="radio-button-text">Medical/Health Challenges</span></label>
+              </div>
+            </div>
+
+            <div class="form-container checkbox-radio-specific" ng-hide="displayDiseaseType">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="Physical" name="Physical" type="checkbox" ng-model="physicalIssue">
+                <label class="checkbox"  for="Physical"><span class="radio-button-text">Physical Challenges</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="Social" name="Social" type="checkbox" ng-model="socialIssue">
+                <label class="checkbox" for="Social"><span class="radio-button-text">Social/Emotional Challenges</span></label>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="elderCareContentMySkills">
+              <div class="form-center-container-myskills">I can take care of following conditions specifically and have experience as well</div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Alzheimer’s/Dementia
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careAlzheimer" class="custom-select-field" ng-model="alzheimer" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Arthritis
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careArthritis" class="custom-select-field" ng-model="arthritis" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Cancer
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careCancer" class="custom-select-field" ng-model="cancer" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Cystic Fibrosis
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careCysticFibrosis" class="custom-select-field" ng-model="cysticFibrosis" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Depression
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careDepression" class="custom-select-field" ng-model="depression" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Diabetes
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careDiabetes" class="custom-select-field" ng-model="diabetes" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Dyslexia
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careDyslexia" class="custom-select-field" ng-model="dyslexia" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Fragile X Syndrome
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careFragileSyndrome" class="custom-select-field" ng-model="fragileSyndrome" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Hearing Loss
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careHearingLoss" class="custom-select-field" ng-model="hearingLoss" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Heart Disease
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careHeartDisease" class="custom-select-field" ng-model="heartDisease" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Incontinence
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careIncontinence" class="custom-select-field" ng-model="incontinence" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Lung Disease
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careLungDisease" class="custom-select-field" ng-model="lungDisease" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Mental illness
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careMentalIllness" class="custom-select-field" ng-model="mentalIllness" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Muscular Dystrophy
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careMuscularDystrophy" class="custom-select-field" ng-model="muscularDystrophy" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Osteoporosis
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careOsteoporosis" class="custom-select-field" ng-model="osteoporosis" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Parkinson’s Disease
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careParkinsons" class="custom-select-field" ng-model="parkinsons" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Seizures
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careSeizures" class="custom-select-field" ng-model="seizures" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Sensory Integration Disorder
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careSensoryInteDis" class="custom-select-field" ng-model="sensoryInteDis" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-container" ng-hide="displayDiseaseType">
+              <div class="form-column-1">
+                Sleep Disorders
+              </div>
+              <div class="form-column-2">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careSleepDisorders" class="custom-select-field" ng-model="sleepDisorders" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Vision and Eye Diseases
+              </div>
+              <div class="form-column-4">
+<!--                 <select name="elderscount" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> -->
+                <select name="careVisionEyeDis" class="custom-select-field" ng-model="visionEyeDis" ng-options="year.id for year in timeSelection track by year.id" >
+                  <option value="" selected>Select year</option>
+                </select>
+              </div>
+            </div>
+            <!-- 
+              /*************************************************************************************************
+                                                    Service Provider Elder Care Form Ends
+              *************************************************************************************************/
+            --> 
+            <!-- 
+              /*************************************************************************************************
+                                                    Service Provider Child Care Form Start
+              *************************************************************************************************/
+            --> 
+            <div class="form-container" ng-hide="childCareContent">
+              <div class="form-center-container-myskills" >I have experience in handing children</div>
+            </div>
+            <div class="form-container" ng-hide="childCareContent">
+              <div class="form-left-container">1 Year - 3 Years</div>
+              <div class="form-center-container">
+                 <select name="years13" class="custom-select-field" >
+                    <option value="city">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childCareContent">
+              <div class="form-left-container">3 Years - 6 Years</div>
+              <div class="form-center-container">
+                 <select name="years3-6" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container">I can handle multiple children as one time</div>
+              <div class="form-center-container">
+                <input id="radio-multiple-children-yes" name="radio-multiple-children" type="radio"  ng-click="multipleChildField = !multipleChildField">
+                <label class="radio"  for="radio-multiple-children-yes" ><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-multiple-children-no" name="radio-multiple-children" type="radio" ng-click="multipleChildField ? multipleChildField = !multipleChildField : multipleChildField = !multipleChildField">
+                <label class="radio" for="radio-multiple-children-no"><span class="radio-button-text">No</span></label> 
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="multipleChildField">
+              <div class="form-left-container">1 Year – 3 Years</div>
+              <div class="form-center-container">
+                <select name="childcount1-3" class="custom-select-field" >
+                    <option value="Select">Number</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> 
+              </div>
+              <div class="form-right-container">
+                <select name="childexp1-3" class="custom-select-field" >
+                    <option value="Select">Months</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="multipleChildField">
+              <div class="form-left-container">3 Years – 6 Years</div>
+              <div class="form-center-container">
+                <select name="childcount3-6" class="custom-select-field" >
+                    <option value="Select">Number</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select> 
+              </div>
+              <div class="form-right-container">
+                <select name="childexp3-6" class="custom-select-field" >
+                    <option value="Select">Months</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container">I can handle sick children</div>
+              <div class="form-center-container">
+                <input id="sick-children-yes" name="sick-children" type="radio" >
+                <label class="radio"  for="sick-children-yes" ><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="sick-children-no" name="sick-children" type="radio">
+                <label class="radio" for="sick-children-no"><span class="radio-button-text">No</span></label> 
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container">I have experience in handling children with special needs</div>
+              <div class="form-center-container">
+                <input id="sick-children-needs-yes" name="sick-children-needs" type="radio" ng-click="childSpecialNeeds = !childSpecialNeeds">
+                <label class="radio"  for="sick-children-needs-yes" ><span class="radio-button-text">Yes</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="sick-children-needs-no" name="sick-children-needs" type="radio"  ng-click="childSpecialNeeds ? childSpecialNeeds = !childSpecialNeeds : childSpecialNeeds = !childSpecialNeeds">
+                <label class="radio" for="sick-children-needs-no"><span class="radio-button-text">No</span></label> 
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-center-container-myskills" >Age group of child(ren) I can handled</div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-left-container">1 Year - 3 Years</div>
+              <div class="form-center-container">
+                 <select name="childspecialneeds1-3" class="custom-select-field" >
+                    <option value="city">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-right-container">
+                <select name="childexp3-6" class="custom-select-field" >
+                    <option value="Select">Months</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-left-container">3 Years - 6 Years</div>
+              <div class="form-center-container">
+                 <select name="childspecialneeds3-6" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-right-container">
+                <select name="childexp3-6" class="custom-select-field" >
+                    <option value="Select">Months</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childSpecialNeeds">
+              <div class="form-left-container">I have experience in caring child(ren) with</div>
+              <div class="form-center-container">
+                <input id="radio-cc-Cognitive" name="cc-Cognitive" type="checkbox" >
+                <label class="checkbox"  for="radio-cc-Cognitive"><span class="radio-button-text">Cognitive Challenges</span></label>
+                <input id="radio-cc-challenge" name="cc-challenge" type="checkbox" >
+                <label class="checkbox" for="radio-cc-challenge"><span class="radio-button-text">​Medical/Health Challenges</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-cc-physical" name="cc-physical" type="checkbox" >
+                <label class="checkbox" for="radio-cc-physical"><span class="radio-button-text">Physical Challenges</span></label>
+                <input id="radio-cc-social" name="cc-social" type="checkbox" >
+                <label class="checkbox" for="radio-cc-social"><span class="radio-button-text">Social/Emotional Challenges</span></label>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-center-container-myskills" >I can take care of following conditions specifically and have experience as well</div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Alzheimer’s
+              </div>
+              <div class="form-column-2">
+                <select name="alz-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Asperger’s Syndrome
+              </div>
+              <div class="form-column-4">
+                <select name="asp-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Attention Deficit Hyperactivity Disorder (ADHD)
+              </div>
+              <div class="form-column-2">
+                <select name="adhd" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Attention Deficit Disorder
+              </div>
+              <div class="form-column-4">
+                <select name="att-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Autism
+              </div>
+              <div class="form-column-2">
+                <select name="aut-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Autism Spectrum
+              </div>
+              <div class="form-column-4">
+                <select name="aut-spec-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Cancer
+              </div>
+              <div class="form-column-2">
+                <select name="cancer-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Central Auditory Processing Disorder 
+              </div>
+              <div class="form-column-4">
+                <select name="capd-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Cerebral Palsy
+              </div>
+              <div class="form-column-2">
+                <select name="cele-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Cystic Fibrosis
+              </div>
+              <div class="form-column-4">
+                <select name="cys-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Delayed Speech
+              </div>
+              <div class="form-column-2">
+                <select name="delay-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Development Language Disorder
+              </div>
+              <div class="form-column-4">
+                <select name="dld-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+               Diabetes
+              </div>
+              <div class="form-column-2">
+                <select name="diab-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Down Syndrome​
+              </div>
+              <div class="form-column-4">
+                <select name="down-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Dwarfism
+              </div>
+              <div class="form-column-2">
+                <select name="dwar-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Dyslexia
+              </div>
+              <div class="form-column-4">
+                <select name="dys-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Epilepsy
+              </div>
+              <div class="form-column-2">
+                <select name="epil-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Fetal Alcohol Syndrome
+              </div>
+              <div class="form-column-4">
+                <select name="fetal-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Fragile X Syndrome
+              </div>
+              <div class="form-column-2">
+                <select name="fragile-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Hearing Loss
+              </div>
+              <div class="form-column-4">
+                <select name="hear-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Heart Defects
+              </div>
+              <div class="form-column-2">
+                <select name="heart-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Hydrocephaly
+              </div>
+              <div class="form-column-4">
+                <select name="hydro-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Juvenile Diabetes
+              </div>
+              <div class="form-column-2">
+                <select name="juven-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Juvenile Rheumatoid Arthritis
+              </div>
+              <div class="form-column-4">
+                <select name="juven-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Learning Disabilities
+              </div>
+              <div class="form-column-2">
+                <select name="learn-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Mental illness
+              </div>
+              <div class="form-column-4">
+                <select name="mental-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Muscular Dystrophy
+              </div>
+              <div class="form-column-2">
+                <select name="Muscular-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Pervasive Development Disorder
+              </div>
+              <div class="form-column-4">
+                <select name="Pervasive-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Premature Newborn
+              </div>
+              <div class="form-column-2">
+                <select name="Premature-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Rett Syndrome
+              </div>
+              <div class="form-column-4">
+                <select name="Rett-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Seizures
+              </div>
+              <div class="form-column-2">
+                <select name="Seizures-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Sensory Integration Disorder
+              </div>
+              <div class="form-column-4">
+                <select name="Sensory-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childSpecialNeeds">
+              <div class="form-column-1">
+                Tourette Syndrome
+              </div>
+              <div class="form-column-2">
+                <select name="Tourette-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+              <div class="form-column-3">
+                Visual Impairment
+              </div>
+              <div class="form-column-4">
+                <select name="Visual-disease" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-container" ng-hide="childCareContent">
+              <div class="form-left-container">I have experience in taking care of children as paid assistance for</div>
+              <div class="form-center-container">
+                 <select name="child-paid-assit" class="custom-select-field" >
+                    <option value="Select">Select</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                    <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <!-- 
+              /*************************************************************************************************
+                                                    Service Provider Child Care Form Ends
+              *************************************************************************************************/
+            --> 
+            <div class="form-container">
+              <div class="form-left-container"></div>
+              <div class="form-center-container"></div>
+              <div class="form-right-container button-position">
+                <a href="#" class="href-css href-css-myskills">{{skip}}</a>
+                <input type="button" name="join" value={{next}} ng-click="submitExpDetails();" class="btn btn-primary btn-lg custom-width">
+                <!-- ng-disabled="mySkillsForm.$invalid" -->
+              </div>
+            </div>	
+          </form>     
+        </div>
+      </div>
+    </div>
+		<!-- 
+      /*************************************************************************************************
+                                                            Availability Accordian Menu
+      *************************************************************************************************/
+    -->
+		<div class="panel">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-myskills-2" data-parent="#myAccordion1" ng-click="getSelectedHeader('mySkillsHeader2')" id="mySkillsHeader2">
+	    	<a class="accordion-toggle custom-header"  >
+	        	<span class="personal-details-heading-image"></span>
+	        	<span>Availability</span>
+	          	<div class="toggle-icon" id="toggleButton"></div>
+	        </a>
+      </div>
+			<div id="collapsible-myskills-2" class="collapse">
+      <form name="myAvailForm" novalidate autocomplete="off">
+				<div class="container form-elements">
+					<div class="form-container checkbox-radio-specific">
+	          <div class="form-left-container">Availability</div>
+	          <div class="form-center-container-my-skills">
+	          	
+              <input type="date" class="custom-text-box-my-skills available-date" value="MM/DD/YYYY" required>
+	          	
+              <input id="radio-date" name="radio-date" type="checkbox" ng-model="flexibleAvail" ng-true-value="'true'" ng-false-value="'false'">
+	            <label class="checkbox" for="radio-date"><span class="radio-button-text">My availability is flexible with immediate effect</span></label>
+	          </div>
+	         </div>
+	         <div class="form-container checkbox-radio-specific">
+	          <div class="form-left-container">I am interested in</div>
+	          <div class="form-center-container">
+	            <input id="radio-full-time" name="radio-job-type" type="radio" ng-model="fullTimeJob" ng-true-value="'1'" ng-false-value="'0'"  ng-click="showPartTimeTable = !hidePartTimeTable">
+	            <label class="radio"  for="radio-full-time" ><span class="radio-button-text">Full Time Job</span></label>
+	          </div>
+	          <div class="form-right-container">
+	            <input id="radio-part-time" name="radio-job-type" type="radio" ng-model="partTimeJob" ng-true-value="'1'" ng-false-value="'0'" ng-click="showPartTimeTable ? showPartTimeTable = !showPartTimeTable : showPartTimeTable = showPartTimeTable">
+	            <label class="radio" for="radio-part-time"><span class="radio-button-text">Part Time Job</span></label>
+	          </div>
+	        </div>
+	        <div class="form-container checkbox-radio-specific">
+	          <div class="form-left-container"></div>
+	          <div class="form-center-container">
+	            <input id="radio-temp-days" name="radio-job-type" type="radio" ng-model="tempTimeJobDay" ng-true-value="'1'" ng-false-value="'0'" ng-click="showPartTimeTable ? showPartTimeTable = !showPartTimeTable : showPartTimeTable = showPartTimeTable">
+	            <label class="radio"  for="radio-temp-days"><span class="radio-button-text">Temporary Job (Days)</span></label>
+	          </div>
+	          <div class="form-right-container">
+	            <input id="radio-temp-hours" name="radio-job-type" ng-model="tempTimeJobHour" ng-true-value="'1'" ng-false-value="'0'" type="radio" ng-click="showPartTimeTable ? showPartTimeTable = !showPartTimeTable : showPartTimeTable = showPartTimeTable">
+	            <label class="radio" for="radio-temp-hours"><span class="radio-button-text">Temporary Job (Hours)</span></label>
+	          </div>
+	        </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-center-container-myskills">Message: Please specify your available schedule (This will be active only when Temporary Job is chosen)</div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Days</div>
+            <div class="form-column-table-1">From</div>
+            <div class="form-column-table-1"></div>
+            <div class="form-column-table-1">To</div>
+            <div class="form-column-table-1"></div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Sunday</div>
+            <div class="form-column-table-1">                
+              <select name="sundayfromtime" class="custom-select-field" ng-model="sundayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+                <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="sundayfromshift" class="custom-select-field" ng-model="sundayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="sundaytotime" class="custom-select-field" ng-model="sundayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select Time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="sundaytoshift" class="custom-select-field" ng-model="sundayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Monday</div>
+            <div class="form-column-table-1">
+              <select name="mondayfromtime" class="custom-select-field" ng-model="mondayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="mondayfromshift" class="custom-select-field" ng-model="mondayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="mondaytotime" class="custom-select-field" ng-model="mondayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="mondaytoshift" class="custom-select-field" ng-model="mondayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Tuesday</div>
+            <div class="form-column-table-1">
+              <select name="tuesdayfromtime" class="custom-select-field" ng-model="tuesdayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="tuesdayfromshift" class="custom-select-field" ng-model="tuesdayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="tuesdaytotime" class="custom-select-field" ng-model="tuesdayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="tuesdaytoshift" class="custom-select-field" ng-model="tuesdayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Wednesday</div>
+            <div class="form-column-table-1">
+              <select name="wednesdayfromtime" class="custom-select-field" ng-model="wednesdayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="wednesdayfromshift" class="custom-select-field" ng-model="wednesdayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="wednesdaytotime" class="custom-select-field" ng-model="wednesdayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="wednesdaytoshift" class="custom-select-field" ng-model="wednesdayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Thursday</div>
+            <div class="form-column-table-1">
+              <select name="thursdayfromtime" class="custom-select-field" ng-model="thursdayFromTime" ng-options="year.id for year in timeSelection track by year.id" > 
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="thursdayfromshift" class="custom-select-field" ng-model="thursdayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="thursdaytotime" class="custom-select-field" ng-model="thursdayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="thursdaytoshift" class="custom-select-field" ng-model="thursdayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Friday</div>
+            <div class="form-column-table-1">
+              <select name="fridayfromtime" class="custom-select-field" ng-model="fridayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="fridayfromshift" class="custom-select-field" ng-model="fridayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="fridaytotime" class="custom-select-field" ng-model="fridayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="fridaytoshift" class="custom-select-field" ng-model="fridayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container" ng-hide="showPartTimeTable">
+            <div class="form-column-table-1">Saturday</div>
+            <div class="form-column-table-1">
+              <select name="saturdayfromtime" class="custom-select-field" ng-model="saturdayFromTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="saturdayfromshift" class="custom-select-field" ng-model="saturdayFromShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="saturdaytotime" class="custom-select-field" ng-model="saturdayToTime" ng-options="year.id for year in timeSelection track by year.id" >
+              <option value="" selected>Select time</option>
+              </select>
+            </div>
+            <div class="form-column-table-1">
+              <select name="saturdaytoshift" class="custom-select-field" ng-model="saturdayToShift" ng-options="year.shift for year in timeShift track by year.id" >
+              <option value="" selected>Select shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-container">
+	          <div class="form-left-container"></div>
+	          <div class="form-center-container"></div>
+	          <div class="form-right-container button-position">
+	          	<a href="#" class="href-css href-css-myskills">{{skip}}</a>
+	          	<input type="button" name="join" value={{next}} ng-disabled="myAvailForm.$invalid" ng-click="submitAvailForm();" class="btn btn-primary btn-lg custom-width">
+					  </div>
+	        </div>
+          </form>
+				</div>
+	    </div>
+		</div>
+		<!-- 
+      /*************************************************************************************************
+       J                                                     Capabilities Accordian Menu
+      *************************************************************************************************/
+    -->
+		<div class="panel">
+      <form name="myCapabilityForm" novalidate autocomplete="off">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-myskills-3" data-parent="#myAccordion1" ng-click="getSelectedHeader('mySkillsHeader3')" id="mySkillsHeader3">
+	    	<a class="accordion-toggle custom-header"  >
+	        	<span class="personal-details-heading-image"></span>
+	        	<span>Capablities</span>
+	          	<div class="toggle-icon" id="toggleButton"></div>
+	        </a>
+      </div>
+			<div id="collapsible-myskills-3" class="collapse">
+				<div class="container form-elements">
+					<div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container">I am professionally trained as a driver/ chauffeur</div>
+            <div class="form-center-container">
+              <input id="radio-school-yes" name="radio-school-info" ng-model="isProfessionalYes" ng-checked="isProfessionalYes" type="radio" ng-click="65('Yes');">
+              <label class="radio" for="radio-school-yes"><span class="radio-button-text">Yes</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-school-no" name="radio-school-info" ng-model="isProfessionalNo" ng-checked="isProfessionalNo" type="radio" ng-click="isProfDriver('No');">
+              <label class="radio" for="radio-school-no"><span class="radio-button-text">No</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Elder Care Form Start
+            *************************************************************************************************/
+            -->
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container">I am professionally trained as a Elder Care provider</div>
+            <div class="form-center-container">
+              <input id="ep-provider-yes" name="radio-ep-provider" type="radio" ng-checked="trainedProfessionalECYes" ng-click="isTrainedElderCare('Yes')">
+              <label class="radio"  for="ep-provider-yes"><span class="radio-button-text">Yes</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="ep-provider-no" name="radio-ep-provider" type="radio" ng-checked="trainedProfessionalECNo" ng-click="isTrainedElderCare('No')">
+              <label class="radio" for="ep-provider-no"><span class="radio-button-text">No</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Elder Care Form End
+            *************************************************************************************************/
+            -->
+            <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Child Care Form Start
+            *************************************************************************************************/
+            -->
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container">I am professionally trained in Child/Baby care</div>
+            <div class="form-center-container">
+              <input id="ep-cc-yes" name="radio-ep-cc" type="radio" >
+              <label class="radio"  for="ep-cc-yes"><span class="radio-button-text">Yes</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="ep-cc-no" name="radio-ep-cc" type="radio" >
+              <label class="radio" for="ep-cc-no"><span class="radio-button-text">No</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Child Care Form End
+            *************************************************************************************************/
+            -->
+            <!-- 
+            /*************************************************************************************************
+                  Driver starts
+            *************************************************************************************************/
+            -->
+          <div class="form-container">
+            <div class="form-left-container">if yes, please provide the name of the school/institution</div>
+            <div class="form-center-container">
+              <input type="text" name="schoolname1" id="schoolName" ng-model="institutionName" class="custom-text-box" placeholder="Name of the school" disabled="disabled">
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container">As a driver/chauffeur I also do</div>
+            <div class="form-center-container">
+              <input id="radio-maintenance" name="radio-driver-job1" type="checkbox" ng-model="maintenanceCheck" >
+              <label class="checkbox"  for="radio-maintenance"><span class="radio-button-text">Maintenance Check</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-car-cleaning" name="radio-driver-job2" type="checkbox" ng-model="carCleaning" >
+              <label class="checkbox" for="radio-car-cleaning"><span class="radio-button-text">Car Cleaning</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-minor-repair" name="radio-driver-job3" type="checkbox" ng-model="minorRepairs" >
+              <label class="checkbox"  for="radio-minor-repair"><span class="radio-button-text">Minor Repairs</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-car-service" name="radio-driver-job4" type="checkbox" ng-model="carServicing" >
+              <label class="checkbox" for="radio-car-service"><span class="radio-button-text">Car Servicing</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Elder Care Form Start
+            *************************************************************************************************/
+            -->
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container">My primary task/responsibilities</div>
+              <div class="form-center-container">
+                <input id="radio-Clothing" name="Clothing" type="checkbox" ng-model="elderCareCarCleaning">
+                <label class="checkbox" for="radio-Clothing"><span class="radio-button-text">Cleaning/Clothing</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-Accompanying" name="Accompanying" type="checkbox" mg-model="elderCareAccompanying">
+                <label class="checkbox" for="radio-Accompanying"><span class="radio-button-text">Accompanying Elder</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-Preparation" name="Preparation" type="checkbox" ng-modal="elderCareFoodPlanning">
+                <label class="checkbox"  for="radio-Preparation"><span class="radio-button-text">Food Planning/Preparation</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-pets" name="radio-pets" type="checkbox" mg-modal="elderCareAssitancePets">
+                <label class="checkbox" for="radio-pets"><span class="radio-button-text">Assistance with pets</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-Emotional" name="Emotional" type="checkbox" ng-modal="emotionalSupport">
+                <label class="checkbox"  for="radio-Emotional"><span class="radio-button-text">Emotional support</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-Safety" name="radio-Safety" type="checkbox" ng-modal="trendingSafetyNeeds">
+                <label class="checkbox" for="radio-Safety"><span class="radio-button-text">Tending to Safety Needs</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-Counselling" name="Counselling" type="checkbox" ng-modal="counselling">
+                <label class="checkbox"  for="radio-Counselling"><span class="radio-button-text">Counselling</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-Administration" name="radio-Administration" type="checkbox" ng-modal="medicalAssistance">
+                <label class="checkbox" for="radio-Administration"><span class="radio-button-text">Medical Assistance/Administration</span></label>
+              </div>
+            </div>
+            <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Elder Care Form End
+            *************************************************************************************************/
+            -->
+            <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Child Care Form Start
+            *************************************************************************************************/
+            -->
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container">My primary task/responsibilities</div>
+              <div class="form-center-container">
+                <input id="radio-cc-Clothing" name="cc-Clothing" type="checkbox" >
+                <label class="checkbox"  for="radio-cc-Clothing"><span class="radio-button-text">Cleaning/Clothing</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-cc-Accompanying" name="cc-Accompanying" type="checkbox" >
+                <label class="checkbox" for="radio-cc-Accompanying"><span class="radio-button-text">Accompanying to school</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-cc-Preparation" name="cc-Preparation" type="checkbox" >
+                <label class="checkbox"  for="radio-cc-Preparation"><span class="radio-button-text">Food Planning/Preparation</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-cc-pets" name="radio-cc-pets" type="checkbox" >
+                <label class="checkbox" for="radio-cc-pets"><span class="radio-button-text">Assistance with pets</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-cc-Emotional" name="cc-Emotional" type="checkbox" >
+                <label class="checkbox"  for="radio-cc-Emotional"><span class="radio-button-text">Emotional support</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-cc-Safety" name="radio-cc-Safety" type="checkbox" >
+                <label class="checkbox" for="radio-cc-Safety"><span class="radio-button-text">Tending to Safety Needs</span></label>
+              </div>
+            </div>
+            <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+              <div class="form-left-container"></div>
+              <div class="form-center-container">
+                <input id="radio-cc-Counselling" name="cc-Counselling" type="checkbox" >
+                <label class="checkbox"  for="radio-cc-Counselling"><span class="radio-button-text">Counselling</span></label>
+              </div>
+              <div class="form-right-container">
+                <input id="radio-cc-Administration" name="radio-cc-Administration" type="checkbox" >
+                <label class="checkbox" for="radio-cc-Administration"><span class="radio-button-text">Medical Assistance/Administration</span></label>
+              </div>
+            </div>
+            <!-- 
+            /*************************************************************************************************
+                                                            Service Provider Child Care Form End
+            *************************************************************************************************/
+            -->
+            <!-- 
+            /*************************************************************************************************
+                      Driver start here
+            *************************************************************************************************/
+            -->
+            <div class="form-container">
+            <div class="form-left-container">If others,</div>
+            <div class="form-center-container">
+            	<input type="text" name="otherchoice" class="custom-text-box" ng-model="otherChoice">
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+           <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container">In additional I can also assist in</div>
+            <div class="form-center-container">
+              <input id="radio-security" name="driver-service1" type="checkbox" ng-model="personalSecurity" >
+              <label class="checkbox"  for="radio-security"><span class="radio-button-text">Personal Security</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-first-aid" name="driver-service2" type="checkbox" ng-model="firstAidCare" >
+              <label class="checkbox" for="radio-first-aid"><span class="radio-button-text">First Aid Care</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-errands" name="driver-service3" type="checkbox" ng-model="runningErrand" >
+              <label class="checkbox"  for="radio-errands"><span class="radio-button-text">Running Errands</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-other-service" name="driver-service4" type="checkbox" ng-model="buyingGrocery" >
+              <label class="checkbox" for="radio-other-service"><span class="radio-button-text">Buying Grocery,  Vegetables</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                Service Provider Elder Care Form Start
+            *************************************************************************************************/
+            -->
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container">In additional I can also assist in</div>
+            <div class="form-center-container">
+              <input id="radio-Housekeeping" name="Housekeeping" type="checkbox" ng-model="lightHouseKeeping">
+              <label class="checkbox"  for="radio-Housekeeping"><span class="radio-button-text">Light Housekeeping</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-Laundry" name="Laundry" type="checkbox" ng-model="familyLaundry">
+              <label class="checkbox" for="radio-Laundry"><span class="radio-button-text">Family Laundry</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-Errands" name="Errands" type="checkbox" mg-model="runningErrands">
+              <label class="checkbox"  for="radio-Errands"><span class="radio-button-text">Running Errands</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-Shopping" name="radio-Shopping" type="checkbox" ng-model="groceryShopping">
+              <label class="checkbox" for="radio-Shopping"><span class="radio-button-text">Grocery Shopping</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-Cooking" name="Cooking" type="checkbox" ng-modal="elderCareCooking">
+              <label class="checkbox"  for="radio-Cooking"><span class="radio-button-text">Cooking</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-appointments" name="radio-appointments" type="checkbox" ng-model="elderMedicalAppoinments">
+              <label class="checkbox" for="radio-appointments"><span class="radio-button-text">Bring elderly for medical appointments</span></label>
+            </div>
+          </div>
+            <!-- 
+            /*************************************************************************************************
+                                                Service Provider Elder Care Form End
+            *************************************************************************************************/
+            -->
+            <!-- 
+            /*************************************************************************************************
+                                                Service Provider Child Care Form Start
+            *************************************************************************************************/
+            -->
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container">In additional I can also assist in</div>
+            <div class="form-center-container">
+              <input id="radio-cc-Homework" name="cc-Homework" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-Homework"><span class="radio-button-text">Homework Assistance</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-Cooking" name="cc-Cooking" type="checkbox" >
+              <label class="checkbox" for="radio-cc-Cooking"><span class="radio-button-text">Cooking</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-Grocery" name="cc-Grocery" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-Grocery"><span class="radio-button-text">Grocery Shopping</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-Swimming" name="radio-cc-Swimming" type="checkbox" >
+              <label class="checkbox" for="radio-cc-Swimming"><span class="radio-button-text">Swimming supervision</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-​Family" name="cc-​Family" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-​Family"><span class="radio-button-text">​Family Laundry</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-Running" name="radio-cc-Running" type="checkbox" >
+              <label class="checkbox" for="radio-cc-Running"><span class="radio-button-text">Running Errands</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-Housekeeping" name="cc-Housekeeping" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-Housekeeping"><span class="radio-button-text">​Light Housekeeping</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-Pickup" name="radio-cc-Pickup" type="checkbox" >
+              <label class="checkbox" for="radio-cc-Pickup"><span class="radio-button-text">Pickup and Drop</span></label>
+            </div>
+          </div>
+            <!-- 
+            /*************************************************************************************************
+                                                Service Provider Child Care Form End
+            *************************************************************************************************/
+            -->
+             <!-- 
+            /*************************************************************************************************
+               Driver starts
+            *************************************************************************************************/
+            -->
+           
+           <div class="form-container">
+            <div class="form-left-container">If others,</div>
+            <div class="form-center-container">
+            	<input type="text" name="otherchoice1" class="custom-text-box" ng-model="doOtherChoice">
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container">I hold following recognised qualifications</div>
+            <div class="form-center-container">
+              <input id="radio-firstaid-training" name="radio-qualifications1" type="checkbox"  ng-model="firstAidTraining" >
+              <label class="checkbox"  for="radio-firstaid-training"><span class="radio-button-text">First Aid Training</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cetified-inst" name="radio-qualifications2" type="checkbox" ng-model="certifiedInstructor" >
+              <label class="checkbox" for="radio-cetified-inst"><span class="radio-button-text">Certified Instructor</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="driverCotentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-icare-certified" name="radio-qualifications3" type="checkbox" ng-model="icareCertified" >
+              <label class="checkbox"  for="radio-icare-certified"><span class="radio-button-text">iCare Certified</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-dd" name="radio-qualifications4" type="checkbox" ng-model="defenceDriving" >
+              <label class="checkbox" for="radio-dd"><span class="radio-button-text">Defensive Driving</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                Service Provider Elder Care Form Start
+            *************************************************************************************************/
+          -->
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container">I hold following recognized qualifications</div>
+            <div class="form-center-container">
+              <input id="radio-aid-Training" name="aid-Training" type="checkbox" ng-model="firstAidTraining">
+              <label class="checkbox"  for="radio-aid-Training"><span class="radio-button-text">First Aid Training</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-CRN" name="CRN" type="checkbox" ng-model="elderCareCrn">
+              <label class="checkbox" for="radio-CRN"><span class="radio-button-text">CRN</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-CPR" name="CPR" type="checkbox" ng-model="elderCareCpr">
+              <label class="checkbox"  for="radio-CPR"><span class="radio-button-text">CPR</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-nurse" name="radio-nurse" type="checkbox" ng-model="elderCareCertifiedNurse">
+              <label class="checkbox" for="radio-nurse"><span class="radio-button-text">Certified Nurse</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="elderCareContentMySkills">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-special-needs" name="special-needs" type="checkbox" ng-model="specialNeedsCare">
+              <label class="checkbox"  for="radio-special-needs"><span class="radio-button-text">Special Needs Care</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-icare-certified" name="radio-icare-certified" type="checkbox" ng-model="icareCertified">
+              <label class="checkbox" for="radio-icare-certified"><span class="radio-button-text">iCare Certified</span></label>
+            </div>
+          </div>
+          <!-- 
+            /*************************************************************************************************
+                                                Service Provider Elder Care Form End
+            *************************************************************************************************/
+          -->
+          <!-- 
+            /*************************************************************************************************
+                                                Service Provider Child Care Form Start
+            *************************************************************************************************/
+            -->
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container">I hold following recognized qualifications</div>
+            <div class="form-center-container">
+              <input id="radio-cc-firstad" name="cc-firstad" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-firstad"><span class="radio-button-text">First Aid Training</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-CRN" name="cc-CRN" type="checkbox" >
+              <label class="checkbox" for="radio-cc-CRN"><span class="radio-button-text">CRN</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-ECE" name="cc-ECE" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-ECE"><span class="radio-button-text">Early Childhood Education (ECE)</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-CPR" name="radio-cc-CPR" type="checkbox" >
+              <label class="checkbox" for="radio-cc-CPR"><span class="radio-button-text">CPR</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-nurse" name="cc-nurse" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-nurse"><span class="radio-button-text">​Certified Nurse</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-CDA" name="radio-cc-CDA" type="checkbox" >
+              <label class="checkbox" for="radio-cc-CDA"><span class="radio-button-text">Child Development Associate (CDA)</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-snc" name="cc-snc" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-snc"><span class="radio-button-text">​Special Needs Care</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="radio-cc-teacher" name="radio-cc-teacher" type="checkbox" >
+              <label class="checkbox" for="radio-cc-teacher"><span class="radio-button-text">Certified Teacher</span></label>
+            </div>
+          </div>
+           <div class="form-container checkbox-radio-specific" ng-hide="childCareContent">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+              <input id="radio-cc-icare-certified" name="cc-icare-certified" type="checkbox" >
+              <label class="checkbox"  for="radio-cc-icare-certified"><span class="radio-button-text">​iCare Certified</span></label>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+            <!-- 
+            /*************************************************************************************************
+                                                Service Provider Child Care Form End
+            *************************************************************************************************/
+            -->
+          <div class="form-container">
+            <div class="form-left-container">If others,</div>
+            <div class="form-center-container">
+            	<input type="text" name="otherchoice2" class="custom-text-box" ng-model="otherOption">
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+	          <div class="form-left-container">Something more I know</div>
+	          <div class="form-center-container-my-skills">
+	          	<textarea rows="6" cols="60" ng-model="moreSomething"></textarea>
+	          </div>
+	        </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container"></div>
+            <div class="form-right-container button-position">
+              <a href="#" class="href-css href-css-myskills">{{skip}}</a>
+              <input type="button" name="join" value={{next}} ng-disabled="myCapabilityForm.$invalid" ng-click="submitCapabilityForm();" class="btn btn-primary btn-lg custom-width">
+            </div>
+          </div>
+				</div>
+	    </div>
+		</div>
+</div>
+
+            </div>
+            <div id="myPayments"  ng-hide="panel2">
+              <div class="accordion" id="myAccordion-payment" ng-controller="MyPaymentsCtrl">
+	<form name="aboutForm" novalidate autocomplete="off">
+		<div class="panel">
+    	<div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-mypayment-1" data-parent="#myAccordion-payment" ng-click="getSelectedHeader('myPayments1')" id="myPayments1">
+	    	<a class="accordion-toggle custom-header"  >
+	        	<span class="personal-details-heading-image"></span>
+	        	<span>Membership Plans</span>
+	          	<div class="toggle-icon" id="toggleButton"></div>
+	      </a>
+      </div>
+			<div id="collapsible-mypayment-1" class="collapse">
+				<div class="container form-elements">
+					<div class="form-container">
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Basic</span>
+                	<h4 class="membership-subheading">Free</h4>
+                  <h4 class="membership-time-period">Forever</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+              <div class="thumbnail">
+                <div class="caption">
+                	<span class="membership-heading">Silver</span>
+                	<h4 class="membership-subheading">$599.0</h4>
+                  <h4 class="membership-time-period">6 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+            <div class="container-payment-membership">
+            	<div class="thumbnail">
+                <div class="caption">
+                  <span class="membership-heading">Gold</span>
+                  <h4 class="membership-subheading">$999.0</h4>
+                  <h4 class="membership-time-period">12 Months</h4>
+                  <span class="course-info">Lorem Ipsum is simply Dummy text of the printing and type setting industry. Lorem Ipsum Has Beenfghfghfhgfhgfh</span>
+                </div>
+                <div class="purchase-button">
+                  <input type="button" name="join" value="Purchase" class="btn btn-primary btn-lg custom-width">  
+                </div>
+              </div>
+            </div>
+          </div><div class="form-container">
+            <div class="form-left-container">Promotional Code</div>
+            <div class="form-center-container">
+              <input type="text" name="ifothers" class="custom-text-box-promo">
+            </div>
+            <div class="form-right-container">
+            	<input type="button" name="join" value="Upload" ng-click="getImage(2)" class="button-css"/>
+            </div>
+          </div>
+					<div class="form-container-payments">
+		        <div class="form-left-container">
+		        	<div class="payments-tabs">
+								<ul>
+				          <li class="active" data-toggle="tab" ng-click="selectPaymentMode(10)"><a   >Debit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(11)"><a ng-click="selectPaymentMode(11)">Credit Card</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(12)"><a ng-click="selectPaymentMode(12)">NetBanking</a></li>
+				          <li data-toggle="tab" ng-click="selectPaymentMode(13)"><a ng-click="selectPaymentMode(13)">Cash Card</a></li>
+		      			</ul>
+		  				</div>	
+		        </div>
+		        <div class="form-center-container-my-payment">
+		          <div class="tab-content">
+                <div id="debitCard" ng-hide="debitCardpanel">
+                Debit Card
+                </div>
+                <div id="creditCard" ng-hide="creditCardpanel" >
+                <div class="form-payment-container">
+                	<span>Enter your credit card details</span>
+                	<div class="card-number-slot">
+	                	<p>Card number</p>
+	                	<input type="text" name="cardnumber" class="custom-text-box-payment">
+                	</div>
+                	<div class="payment-info">
+	                	<p>Expiry Date</p>
+	                	<select class="custom-select-field-payment">
+	                		<option>1</option>
+	                		<option>2</option>
+	                		<option>3</option>
+	                	</select>
+	                	<select class="custom-select-field-payment">
+	                		<option></option>
+	                		<option></option>
+	                		<option></option>
+	                	</select>
+                	</div>
+                	<div class="payment-info">
+                		<p>CVV Code</p>
+                		<input type="text" name="cvvnumber" class="custom-text-box-cvv">
+                	</div>	
+                </div>
+                </div>
+                <div id="netBanking" ng-hide="NetBankingPanel">
+                Net Banking
+                </div>
+                <div id="cashCard" ng-hide="cashCardPanel" >
+                Cash Card
+                </div>
+              </div> 
+		        </div>
+		      </div>
+          <div class="form-container">
+            <div class="form-left-container">
+                Address
+            </div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line1" name="cc-address1" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line2" name="cc-address2" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container"></div>
+            <div class="form-center-container">
+                 <input type="text" class="custom-text-box" placeholder={{addressPlaceHolder1}} ng-model="cc.line3" name="cc-address3" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{Country}}</div>
+            <div class="form-center-container">
+              <select name="ss.country" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{state}}</div>
+            <div class="form-center-container">
+              <select name="ss.state" class="custom-select-field">
+                <option>{{statePlaceHolder}}</option>
+                <option>Select</option>
+                <option>Select</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+           <div class="form-container">
+            <div class="form-left-container">city</div>
+            <div class="form-center-container">
+              <input type="text" class="custom-text-box" placeholder="city" ng-model="ss.city" name="city" required/>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">{{landmark}}</div>
+            <div class="form-center-container">
+              <select name="ss-landmark" class="custom-select-field">
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+                <option value="india">India</option>
+              </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+        </div>
+		 	</div>
+		</div>
+	</form>
+</div>
+
+            </div>
+            <div id="myReference"  ng-hide="panel3">
+              <div class="accordion" id="myAccordionReferene" ng-controller="myReferenceCtrl">
+  <div class="panel">
+    <div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-reference-1" data-parent="#myAccordionReferene" ng-click="getSelectedHeader('myRef1')" id="myRef1">
+      <a class="accordion-toggle custom-header"  >
+        <span class="personal-details-heading-image"></span>
+        <span>Reference Check</span>
+        <div class="toggle-icon" id="toggleButton"></div>
+      </a>
+    </div>
+    <div id="collapsible-reference-1" class="collapse">
+      <div class="container form-elements">
+        <form name="referenceForm" novalidate autocomplete="off">
+          <div class="form-container checkbox-radio-specific" ng-hide="sschildCareContent">
+            <div class="form-left-container">I wish to get job notification by</div>
+            <div class="form-center-container">
+              <input id="checkbox-job-phone" name="checkbox-job1" type="checkbox" >
+              <label class="checkbox"  for="checkbox-job-phone"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="checkbox-email" name="checkbox-job2" type="checkbox" >
+              <label class="checkbox" for="checkbox-email"><span class="radio-button-text">Email</span></label>
+            </div>
+          </div>
+          <div class="form-container checkbox-radio-specific" ng-hide="sselderCareContent">
+            <div class="form-left-container">I wish to get job notification by</div>
+            <div class="form-center-container">
+              <input id="checkbox-job-phone" name="checkbox-job1" type="checkbox" >
+              <label class="checkbox"  for="checkbox-job-phone"><span class="radio-button-text">Phone</span></label>
+            </div>
+            <div class="form-right-container">
+              <input id="checkbox-email" name="checkbox-job2" type="checkbox" >
+              <label class="checkbox" for="checkbox-email"><span class="radio-button-text">Email</span></label>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Name</div>
+            <div class="form-center-container">
+              <input type="text" name="firstName" class="custom-text-box" placeholder="First Name" ng-model="firstName" required> 
+            </div>
+            <div class="form-right-container">
+              <input type="text" name="lastName" class="custom-text-box" placeholder="Last Name" ng-model="lastName" required>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Email</div>
+            <div class="form-center-container">
+              <input type="email" name="emailId" class="custom-text-box" placeholder="Enter Your Email" ng-model="emailId" required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Relationship</div>
+            <div class="form-center-container">
+	      <select name="relationship" class="custom-select-field" ng-model="selectedRelationship" ng-options="relationship.name for relationship in relationships track by relationship.id">
+		<option value="" selected>Relationship</option>
+	      </select>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">No of years known</div>
+            <div class="form-center-container">
+              <input type="number" name="knowDuration" class="custom-text-box" placeholder="No of years known" min="0" ng-model="knowDuration" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">Mobile no</div>
+            <div class="form-center-container">
+              <input type="number" name="mobileNo" class="custom-text-box" placeholder="Mobile number" min="3" ng-model="mobileNo" integer required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-container">
+            <div class="form-left-container">iCare membership id</div>
+            <div class="form-center-container">
+              <input type="text" name="membershipId" class="custom-text-box" placeholder="iCare membership id" ng-model="membershipId" required>
+            </div>
+            <div class="form-right-container"></div>
+          </div>
+          <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="referenceForm.$invalid" ng-click="submitRefCheck();" class="btn btn-primary btn-lg custom-width">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 
+       /*************************************************************************************************
+       Background Check Accordian Menu
+       *************************************************************************************************/
+    -->
+  <form name="aboutForm" novalidate autocomplete="off">
+    <div class="panel">
+      <div class="panel-heading"  data-toggle="collapse" data-target="#collapsible-reference-2" data-parent="#myAccordionReferene" ng-click="getSelectedHeader('myRef2'); " id="myRef2" ng-hide="onlyForServiceProvider">
+        <a class="accordion-toggle custom-header"  ><span class="personal-details-heading-image"></span><span>Background Check</span><div class="toggle-icon" id="toggleButton"></div></a>
+      </div>
+      <div id="collapsible-reference-2" class="collapse">
+        <div class="container form-elements">
+          <div class="form-container" ng-hide="driverCotentMyReference">
+            <div class="flexslider carousel" id='carousel'>
+              <ul class="slides">
+                <li class="slider-css" ng-repeat="list in verificationType">
+                  <div class="thumbnail bgSelection">
+                    <div class="caption">
+                      <h3>{{list.plan_name}}</h3>
+                      <h4>{{list.price}}</h4>
+                      <ul class="listOfBg">
+                        <li ng-repeat="type in list" class="list-dot txt-left" ng-value="{{list.id}}">
+                          {{type.name}}
+                        </li>
+                      </ul>
+                      <input type="radio" class="hide" name="bgSelection" ng-model="backgroundSelction" required>
+                      <input type="button" name="join" value="Select" ng-click="selectBackgroudCheck($event);" class="btn btn-primary btn-lg custom-width">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row" >
+              <div class="col-xs-64 col-sm-10 col-md-14 col-lg-10 span-customize"></div>
+              <div class="col-xs-64 col-sm-39 col-md-39 col-lg-30"></div>
+              <div class="col-xs-64 col-sm-12 col-md-10 col-lg-20 skip-next" >
+                <input type="button" name="Next" value="next" ng-disabled="aboutBgForm.$invalid" ng-click="submitBgCheck();" class="btn btn-primary btn-lg custom-width">
+                <a href="#" class="href-css">skip</a>
+              </div>
+            </div>
+          </div>
+
+	  <div class="form-container">
+	    <div class="form-center-container-myskills">I wish to add Background check tag to my profile</div>
+	  </div>
+	  <div class="form-container">
+	    <div class="form-column-table-1">Parameters</div>
+	    <div class="form-column-table-1" ng-repeat="plans in planName">{{plans}}</div>
+	  </div>
+	  <div class="form-container">
+	    <div class="form-column-table-1">Price</div>
+	    <div class="form-column-table-1" ng-repeat="price in price">{{price}}</div>
+	  </div>
+
+	  <div class="form-container checkbox-radio-specific" ng-repeat="(key,values) in hash_map">
+	    <div class="form-column-table-1"> {{key | humanize}} </div>
+	    <div class="form-column-table-1 checkbox-radio-specific" ng-repeat="v in values track by $index">
+	      <input id="{{key}}-{{$index}}" name="radio-Verification-high" type="checkbox" ng-disabled="true" ng-checked="{{v}}" ng-false-value="0" ng-true-value="1">
+	      <label class="checkbox" for="radio-Verification-high">
+		<span class="radio-button-text"></span></label>
+	    </div>
+	  </div>
+
+	  <div class="profile-form-submit form-container">
+	    <div class="form-column-table-1"></div>
+	    <div class="form-column-table-1"  ng-repeat="type in verificationType">
+              <input type="button" name="button" value="Purchase" class="btn btn-primary btn-login btn-lg custom-width" ng-click="submitRefCheckForChildPart3();">
+	    </div>
+	  </div>
+	  
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+            </div>
+            <div id="myProfile"  ng-hide="panel4">
+              
+            </div>
+         </div> 
+    </div>
+</div>
+
+    
+    
