@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>iCareLife</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="bower/_bower.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- THIRD PARTY SCRIPTS -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+
+  <body ng-app="iCareLife-Web" class="layout-icare">
+    <!-- MAIN CONTENT -->
+    <div ui-view style="overflow: scroll;"></div>
+    
+    <!-- CUSTOM SCRIPTS -->
+    <script type="text/javascript" src="bower/_bower.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var count = true;
+    </script>
+      <style>
+        /*.flexslider .slides > li {
+          width: 210px;
+          float: left;
+          display: block;
+        }*/
+      </style>
+      <style type="text/css">
+        .modal-dialog {
+          position: relative !important;
+          width: 50% !important;
+          top: 0% !important;
+          left: 0% !important; 
+        }
+        .modal {
+          overflow-y:auto;
+        }
+      </style>
+  </body>
+</html>
